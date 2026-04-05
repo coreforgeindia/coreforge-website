@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Segoe UI Variable", "Segoe UI", Arial, sans-serif;
+  color: #111111;
+  background: #f3f3f1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 28%),
+    linear-gradient(180deg, #fbfbfa 0%, #efefec 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.grid-lines {
+  background-image:
+    linear-gradient(rgba(17, 17, 17, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.64);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.ink-shadow {
+  box-shadow: 0 20px 80px rgba(17, 17, 17, 0.1);
+}
+
+.soft-border {
+  border: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+.section-shell {
+  position: relative;
+  margin: 0 auto;
+  width: min(100% - 1.5rem, 88rem);
+}
+
+.spotlight-cursor {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  background: radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%), rgba(255,255,255,0.18), transparent 16%);
+}
