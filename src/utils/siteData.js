@@ -1,39 +1,37 @@
 export const coreServices = [
-  'IoT and Embedded Solutions',
-  'PCB Design and Development',
-  'Static Website Development',
-  'Dynamic Website Development',
-  'Website with Forms',
-  'Lead Generation Websites',
-  'App Development',
-  'Workshops',
-  'Tech Support',
+  'Embedded Systems Development',
+  'PCB Design & Prototyping',
+  'Web & App Development',
+  'Brand Management',
+  'Technical Consultation',
+  'Technical Workshops',
+  'IoT Solutions',
 ]
 
 export const featuredServices = [
   {
-    title: 'IoT and Embedded Solutions',
-    description: 'Practical embedded architecture, firmware, connected systems, and device-level implementation.',
+    title: 'Embedded Systems Development',
+    description: 'Design and development of embedded system solutions, microcontroller-based projects, and hardware and firmware interfacing.',
   },
   {
-    title: 'PCB Design and Development',
-    description: 'Schematics, board layouts, design refinement, prototyping, and implementation support.',
+    title: 'PCB Design & Prototyping',
+    description: 'Custom multilayer PCB design, small batch production, component sourcing, bare boards or assembled PCB, and quality verification.',
   },
   {
-    title: 'Website Development',
-    description: 'Static websites, dynamic websites, websites with forms, and lead-generation focused website systems.',
+    title: 'Web, App & Brand Management',
+    description: 'End-to-end web and app development with brand re-imaging and management of public image.',
   },
   {
-    title: 'App Development',
-    description: 'Web apps and software interfaces designed for smoother workflows and business operations.',
+    title: 'Technical Consultation',
+    description: 'Expert guidance for embedded systems and electronics projects, PCB and analog design support, and mentoring for students and startups.',
   },
   {
-    title: 'Workshops',
-    description: 'Hands-on sessions designed to turn engineering theory into practical understanding.',
+    title: 'Technical Workshops',
+    description: 'Hands-on training in electronics and embedded systems, workshops on IoT, PCB design and microcontrollers with one-on-one guidance.',
   },
   {
-    title: 'Tech Support',
-    description: 'Technical guidance, troubleshooting, project support, and practical implementation assistance.',
+    title: 'IoT Solutions',
+    description: 'Connected device ecosystems, smart product development, IoT integration, and end-to-end system deployment.',
   },
 ]
 

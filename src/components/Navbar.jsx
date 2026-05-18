@@ -9,7 +9,7 @@ const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
   { href: '/products', label: 'Products' },
-  { href: '/contact', label: 'Contact Us' },
+  { href: '/faqs', label: 'FAQ' },
 ]
 
 export default function Navbar() {
@@ -53,10 +53,10 @@ export default function Navbar() {
 
           <div className="hidden md:block">
             <Link
-              to="/contact#quote"
+              to="/contact"
               className="inline-flex items-center rounded-full bg-black px-5 py-3 text-sm font-semibold !text-white transition hover:bg-neutral-800 hover:!text-white"
             >
-              Get Quotation
+              Contact Us
             </Link>
           </div>
 
@@ -85,11 +85,11 @@ export default function Navbar() {
                   </NavLink>
                 ))}
                 <Link
-                  to="/contact#quote"
+                  to="/contact"
                   className="mt-2 inline-flex items-center justify-center rounded-full bg-black px-5 py-3 text-sm font-semibold !text-white hover:!text-white"
                   onClick={() => setOpen(false)}
                 >
-                  Get Quotation
+                  Contact Us
                 </Link>
               </div>
             </motion.nav>

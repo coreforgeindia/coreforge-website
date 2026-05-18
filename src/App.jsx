@@ -18,6 +18,7 @@ import WebWithAnalytics from './pages/WebWithAnalytics'
 import WebsiteWithForms from './pages/WebsiteWithForms'
 import AppDevelopment from './pages/AppDevelopment'
 import Company from './pages/Company'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -42,7 +43,7 @@ function App() {
             <Route path="/faqs" element={<FAQ />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsAndConditions />} />
-            <Route path="*" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

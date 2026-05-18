@@ -5,6 +5,7 @@ export default function BorderGlow({
   glowColor = '60 60 60',
   backgroundColor = '#ffffff',
   borderRadius = 28,
+  className = '',
 }) {
   const [style, setStyle] = useState({})
 
@@ -19,13 +20,13 @@ export default function BorderGlow({
 
   return (
     <div
-      className="relative overflow-hidden border border-black/8"
+      className={`relative overflow-hidden border border-black/8 ${className}`}
       onMouseMove={updateGlow}
       onMouseLeave={() => setStyle({})}
       style={{ borderRadius, backgroundColor }}
     >
       <div className="absolute inset-0 transition duration-300" style={style} />
-      <div className="relative">{children}</div>
+      <div className="relative h-full">{children}</div>
     </div>
   )
 }

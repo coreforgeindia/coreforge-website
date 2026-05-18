@@ -61,7 +61,7 @@ export default function ContactSection() {
             description="Use the contact form for collaboration, support, product discussions, partnerships, or general project conversations."
           />
           <div className="mt-8 space-y-3 text-sm text-neutral-600">
-            <p>Email: coreforge.in@gmail.com</p>
+            <p>Email: info@coreforgeindia.com</p>
             <p>Phone: +91 93808 41227</p>
             <p>Location: Bengaluru, Karnataka</p>
           </div>

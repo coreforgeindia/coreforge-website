@@ -23,12 +23,12 @@ export default function Services() {
       />
       <section className="px-4 py-14 sm:px-6 lg:py-20">
         <div className="section-shell">
-          <motion.div variants={stagger} initial="hidden" animate="visible" className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <motion.div variants={stagger} initial="hidden" animate="visible" className="grid gap-5 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr">
             {featuredServices.map((service) => (
-              <motion.div key={service.title} variants={fadeUp}>
-                <BorderGlow glowColor="32 32 32">
-                  <div className="rounded-[28px] p-6">
-                    <h2 className="text-2xl font-semibold tracking-[-0.05em] text-neutral-950">{service.title}</h2>
+              <motion.div key={service.title} variants={fadeUp} className="h-full">
+                <BorderGlow glowColor="32 32 32" className="h-full">
+                  <div className="flex h-full flex-col rounded-[28px] p-6">
+                    <h2 className="text-xl font-semibold tracking-[-0.04em] text-neutral-950">{service.title}</h2>
                     <p className="mt-4 text-sm leading-7 text-neutral-600">{service.description}</p>
                   </div>
                 </BorderGlow>
@@ -52,7 +52,7 @@ export default function Services() {
               <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">Web service pages</p>
               <div className="mt-6 grid gap-3">
                 {webPages.map((item) => (
-                  <Link key={item.to} to={item.to} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm font-medium text-neutral-200 transition hover:bg-white hover:text-black">
+                  <Link key={item.to} to={item.to} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm font-medium !text-neutral-200 transition hover:bg-white hover:!text-black">
                     {item.label}
                   </Link>
                 ))}
