@@ -34,8 +34,9 @@ export default function ContactSection() {
       setStatus({ type: '', message: '' })
       await fetch(endpoint, {
         method: 'POST',
+        mode: 'no-cors',
         body: JSON.stringify({ ...form, formType: 'contact', sourcePage: window.location.pathname + window.location.hash }),
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'text/plain' },
       })
       trackLeadEvent('contact_submit', {
         formName: 'contact',
