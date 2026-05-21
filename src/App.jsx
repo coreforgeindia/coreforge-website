@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import CookieConsent from './components/CookieConsent'
 import ScrollProgress from './components/ScrollProgress'
 import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
@@ -47,7 +46,6 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        <CookieConsent />
       </div>
     </BrowserRouter>
   )
