@@ -10,6 +10,7 @@ const navLinks = [
   { href: '/services', label: 'Services' },
   { href: '/products', label: 'Products' },
   { href: '/faqs', label: 'FAQ' },
+  { href: '/careers', label: 'Careers' },
 ]
 
 export default function Navbar() {

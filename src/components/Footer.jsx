@@ -88,6 +88,7 @@ export default function Footer() {
                 <Link to="/services">Services</Link>
                 <Link to="/products">Products</Link>
                 <Link to="/faqs">FAQ</Link>
+                <Link to="/careers">Careers</Link>
                 <Link to="/contact">Contact Us</Link>
               </div>
             </div>
@@ -141,6 +142,7 @@ export default function Footer() {
               <Link to="/services" className="hover:text-white transition">Services</Link>
               <Link to="/products" className="hover:text-white transition">Products</Link>
               <Link to="/faqs" className="hover:text-white transition">FAQ</Link>
+              <Link to="/careers" className="hover:text-white transition">Careers</Link>
               <Link to="/contact" className="hover:text-white transition">Contact Us</Link>
             </div>
           </div>

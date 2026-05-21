@@ -17,6 +17,7 @@ import WebWithAnalytics from './pages/WebWithAnalytics'
 import WebsiteWithForms from './pages/WebsiteWithForms'
 import AppDevelopment from './pages/AppDevelopment'
 import Company from './pages/Company'
+import Careers from './pages/Careers'
 import NotFound from './pages/NotFound'
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faqs" element={<FAQ />} />
+            <Route path="/careers" element={<Careers />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsAndConditions />} />
             <Route path="*" element={<NotFound />} />

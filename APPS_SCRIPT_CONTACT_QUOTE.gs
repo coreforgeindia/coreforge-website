@@ -1,14 +1,15 @@
 const CONFIG = {
   spreadsheetId: '1kZKPslOLyuH9cm4Pc1UJYn77e3PwySRV31-7S6R1MDk',
   sheetName: 'Sheet1',
-  companyRecipients: ['fgdhanush@gmail.com', 'coreforge.in@gmail.com'],
+  companyRecipients: ['info@coreforgeindia.com'],
   companyName: 'CoreForge',
-  companyEmail: 'coreforge.in@gmail.com',
+  companyEmail: 'info@coreforgeindia.com',
   websiteUrl: 'https://coreforgeindia.info',
 }
 
 const CONTACT_COLUMNS = [
   'timestamp',
+  'referenceNo',
   'formType',
   'name',
   'email',
@@ -16,14 +17,12 @@ const CONTACT_COLUMNS = [
   'service',
   'message',
   'details',
-  'sourcePage',
   'mailToLeadSent',
   'mailToLeadSentAt',
   'mailToCompanySent',
   'mailToCompanySentAt',
   'mailStatus',
   'mailError',
-  'payloadJson',
 ]
 
 function doPost(e) {
@@ -53,14 +52,47 @@ function resendPendingEmails() {
   for (let i = 1; i < values.length; i += 1) {
     const rowNumber = i + 1
     const row = values[i]
-    const status = String(row[13] || '')
-    const leadSent = String(row[9] || '').toUpperCase() === 'YES'
-    const companySent = String(row[11] || '').toUpperCase() === 'YES'
+    const statusCol = CONTACT_COLUMNS.indexOf('mailStatus')
+    const leadSentCol = CONTACT_COLUMNS.indexOf('mailToLeadSent')
+    const companySentCol = CONTACT_COLUMNS.indexOf('mailToCompanySent')
+
+    const status = String(row[statusCol] || '')
+    const leadSent = String(row[leadSentCol] || '').toUpperCase() === 'YES'
+    const companySent = String(row[companySentCol] || '').toUpperCase() === 'YES'
 
     if (status !== 'SENT' || !leadSent || !companySent) {
       processRowMail_(sheet, rowNumber)
     }
   }
+}
+
+function generateReferenceNo_(sheet, timestamp) {
+  const d = new Date(timestamp)
+  const dd = String(d.getDate()).padStart(2, '0')
+  const mm = String(d.getMonth() + 1).padStart(2, '0')
+  const yy = String(d.getFullYear()).slice(-2)
+  const prefix = 'CF' + dd + mm + yy
+
+  const lastRow = sheet.getLastRow()
+  let nextSeq = 1
+
+  if (lastRow > 1) {
+    const refCol = CONTACT_COLUMNS.indexOf('referenceNo') + 1
+    const allRefs = sheet.getRange(2, refCol, lastRow - 1, 1).getValues()
+    for (let i = allRefs.length - 1; i >= 0; i--) {
+      const ref = String(allRefs[i][0] || '')
+      if (ref.startsWith('CF') && ref.length >= 9) {
+        const seqPart = ref.slice(-3)
+        const parsed = parseInt(seqPart, 10)
+        if (!isNaN(parsed)) {
+          nextSeq = parsed + 1
+          break
+        }
+      }
+    }
+  }
+
+  return prefix + String(nextSeq).padStart(3, '0')
 }
 
 function processRowMail_(sheet, rowNumber) {
@@ -71,33 +103,44 @@ function processRowMail_(sheet, rowNumber) {
   let companyMailSent = String(record.mailToCompanySent || '').toUpperCase() === 'YES'
   let lastError = ''
 
+  const leadSentColNum = CONTACT_COLUMNS.indexOf('mailToLeadSent') + 1
+  const leadSentAtColNum = CONTACT_COLUMNS.indexOf('mailToLeadSentAt') + 1
+  const companySentColNum = CONTACT_COLUMNS.indexOf('mailToCompanySent') + 1
+  const companySentAtColNum = CONTACT_COLUMNS.indexOf('mailToCompanySentAt') + 1
+  const mailStatusColNum = CONTACT_COLUMNS.indexOf('mailStatus') + 1
+  const mailErrorColNum = CONTACT_COLUMNS.indexOf('mailError') + 1
+
   try {
     if (record.email && !leadMailSent) {
       sendLeadAcknowledgement_(record)
-      sheet.getRange(rowNumber, 10).setValue('YES')
-      sheet.getRange(rowNumber, 11).setValue(new Date())
+      sheet.getRange(rowNumber, leadSentColNum).setValue('YES')
+      sheet.getRange(rowNumber, leadSentAtColNum).setValue(new Date())
       leadMailSent = true
     }
 
     if (!companyMailSent) {
       sendCompanyNotification_(record)
-      sheet.getRange(rowNumber, 12).setValue('YES')
-      sheet.getRange(rowNumber, 13).setValue(new Date())
+      sheet.getRange(rowNumber, companySentColNum).setValue('YES')
+      sheet.getRange(rowNumber, companySentAtColNum).setValue(new Date())
       companyMailSent = true
     }
 
-    sheet.getRange(rowNumber, 14).setValue(leadMailSent && companyMailSent ? 'SENT' : 'PARTIAL')
-    sheet.getRange(rowNumber, 15).setValue('')
+    sheet.getRange(rowNumber, mailStatusColNum).setValue(leadMailSent && companyMailSent ? 'SENT' : 'PARTIAL')
+    sheet.getRange(rowNumber, mailErrorColNum).setValue('')
   } catch (error) {
     lastError = error.message
-    sheet.getRange(rowNumber, 14).setValue('FAILED')
-    sheet.getRange(rowNumber, 15).setValue(lastError)
+    sheet.getRange(rowNumber, mailStatusColNum).setValue('FAILED')
+    sheet.getRange(rowNumber, mailErrorColNum).setValue(lastError)
   }
 }
 
 function appendContactRow_(sheet, payload) {
+  const now = new Date()
+  const refNo = generateReferenceNo_(sheet, now)
+
   const cleaned = {
-    timestamp: new Date(),
+    timestamp: now,
+    referenceNo: refNo,
     formType: payload.formType || 'contact',
     name: payload.name || '',
     email: payload.email || '',
@@ -105,14 +148,12 @@ function appendContactRow_(sheet, payload) {
     service: payload.service || '',
     message: payload.message || '',
     details: payload.details || '',
-    sourcePage: payload.sourcePage || '',
     mailToLeadSent: 'NO',
     mailToLeadSentAt: '',
     mailToCompanySent: 'NO',
     mailToCompanySentAt: '',
     mailStatus: 'PENDING',
     mailError: '',
-    payloadJson: JSON.stringify(payload),
   }
 
   const row = CONTACT_COLUMNS.map((column) => cleaned[column])
@@ -121,31 +162,41 @@ function appendContactRow_(sheet, payload) {
 }
 
 function sendLeadAcknowledgement_(record) {
-  const subject =
-    record.formType === 'quotation'
-      ? 'CoreForge quotation request received'
-      : 'CoreForge contact request received'
+  const isQuotation = record.formType === 'quotation'
+  const subject = isQuotation
+    ? `Your CoreForge Quotation Request — Ref: ${record.referenceNo}`
+    : `Thank You for Contacting CoreForge — Ref: ${record.referenceNo}`
+
+  const submittedLines = [
+    `Name    : ${record.name || '-'}`,
+    `Email   : ${record.email || '-'}`,
+  ]
+  if (record.phone) submittedLines.push(`Phone   : ${record.phone}`)
+  if (record.service) submittedLines.push(`Service : ${record.service}`)
+  const msgText = record.message || record.details
+  if (msgText) submittedLines.push(`Message : ${msgText}`)
 
   const body = [
-    `Hi ${record.name || 'there'},`,
+    `Dear ${record.name || 'there'},`,
     '',
-    'We have received your request successfully.',
+    isQuotation
+      ? 'Thank you for reaching out to CoreForge for a quotation. We have received your request and our team will review it promptly.'
+      : 'Thank you for contacting CoreForge. We have received your enquiry and our team will get back to you shortly.',
     '',
-    record.formType === 'quotation'
-      ? 'Our team has received your quotation request and we will get back to you soon with the next steps.'
-      : 'Our team has received your message and we will get back to you soon.',
+    `Your Reference Number: ${record.referenceNo}`,
     '',
-    'Submitted details:',
-    `Name: ${record.name || '-'}`,
-    `Email: ${record.email || '-'}`,
-    `Phone: ${record.phone || '-'}`,
-    `Service: ${record.service || '-'}`,
-    `Message: ${record.message || record.details || '-'}`,
+    '─────────────────────────────',
+    'YOUR SUBMITTED DETAILS',
+    '─────────────────────────────',
+    ...submittedLines,
+    '─────────────────────────────',
     '',
-    `Website: ${CONFIG.websiteUrl}`,
+    'We will respond within 24–48 hours.',
     '',
-    `Regards,`,
-    `${CONFIG.companyName}`,
+    'Warm regards,',
+    'CoreForge Engineering Lab',
+    CONFIG.websiteUrl,
+    'Email: ' + CONFIG.companyEmail,
   ].join('\n')
 
   MailApp.sendEmail({
@@ -158,21 +209,20 @@ function sendLeadAcknowledgement_(record) {
 }
 
 function sendCompanyNotification_(record) {
-  const subject = `[${CONFIG.companyName}] New ${record.formType || 'contact'} submission from ${record.name || 'Unknown'}`
+  const subject = `[CoreForge] New ${record.formType || 'contact'} — ${record.name || 'Unknown'} | Ref: ${record.referenceNo}`
+
   const body = [
-    `A new ${record.formType || 'contact'} submission has been received.`,
+    `New ${record.formType || 'contact'} submission received.`,
     '',
-    `Timestamp: ${record.timestamp || new Date()}`,
-    `Name: ${record.name || '-'}`,
-    `Email: ${record.email || '-'}`,
-    `Phone: ${record.phone || '-'}`,
-    `Service: ${record.service || '-'}`,
-    `Source Page: ${record.sourcePage || '-'}`,
+    `Reference No : ${record.referenceNo || '-'}`,
+    `Timestamp    : ${record.timestamp || new Date()}`,
+    `Name         : ${record.name || '-'}`,
+    `Email        : ${record.email || '-'}`,
+    `Phone        : ${record.phone || '-'}`,
+    `Service      : ${record.service || '-'}`,
     '',
-    'Submitted content:',
+    'Message / Details:',
     record.message || record.details || '-',
-    '',
-    `Payload JSON: ${record.payloadJson || '-'}`,
   ].join('\n')
 
   MailApp.sendEmail({
@@ -191,8 +241,10 @@ function getOrCreateSheet_(spreadsheetId, sheetName, headers) {
   if (sheet.getLastRow() === 0) {
     sheet.appendRow(headers)
   } else {
-    const headerRange = sheet.getRange(1, 1, 1, headers.length)
-    headerRange.setValues([headers])
+    const existing = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0]
+    if (existing.join(',') !== headers.join(',')) {
+      sheet.getRange(1, 1, 1, headers.length).setValues([headers])
+    }
   }
 
   return sheet
