@@ -1,44 +1,38 @@
 export const coreServices = [
-  'Embedded Systems Development',
-  'PCB Design & Prototyping',
-  'Web & App Development',
-  'Brand Management',
+  'Workshops & Training',
+  'DIY Kits & Hardware Products',
+  'Software & Tech Services',
+  'Hardware Design Services',
   'Technical Consultation',
-  'Technical Workshops',
-  'IoT Solutions',
 ]
 
 export const featuredServices = [
   {
-    title: 'Embedded Systems Development',
-    description: 'Design and development of embedded system solutions, microcontroller-based projects, and hardware and firmware interfacing.',
+    title: 'Workshops & Training',
+    description: 'Hands-on Sunday classes covering PCB basic design, IoT projects, embedded systems, end-to-end PCB design, web development, and app development — with one-on-one guidance.',
   },
   {
-    title: 'PCB Design & Prototyping',
-    description: 'Custom multilayer PCB design, small batch production, component sourcing, bare boards or assembled PCB, and quality verification.',
+    title: 'DIY Kits — Hardware Products',
+    description: 'Custom-designed IoT and embedded kits that bridge theory to practice. Includes a Kit Exchange Program (swap for a different kit) and Kit Upgrade Program (upgrade to a newer version).',
   },
   {
-    title: 'Web, App & Brand Management',
-    description: 'End-to-end web and app development with brand re-imaging and management of public image.',
+    title: 'Software & Tech Services',
+    description: 'Brand-specialized CRM tailored to your brand identity, and fully custom software development — built to your exact requirements with no compromise on functionality.',
+  },
+  {
+    title: 'Hardware Design Services',
+    description: 'End-to-end PCB design and development — from schematic capture to fabrication-ready files, including component sourcing, prototyping, and quality verification.',
   },
   {
     title: 'Technical Consultation',
-    description: 'Expert guidance for embedded systems and electronics projects, PCB and analog design support, and mentoring for students and startups.',
-  },
-  {
-    title: 'Technical Workshops',
-    description: 'Hands-on training in electronics and embedded systems, workshops on IoT, PCB design and microcontrollers with one-on-one guidance.',
-  },
-  {
-    title: 'IoT Solutions',
-    description: 'Connected device ecosystems, smart product development, IoT integration, and end-to-end system deployment.',
+    description: 'Expert guidance for embedded system and electronics projects, support for PCB and analog electronics design, design and performance review, and mentoring for students and startups.',
   },
 ]
 
 export const faqItems = [
-  ['What does CoreForge build?', 'CoreForge works across embedded systems, PCB design, custom hardware, IoT products, websites, web apps, admin panels, and API integrations.'],
-  ['Do you support academic and final year projects?', 'Yes. We support final year project solutions, engineering project execution, technical mentorship, and prototype guidance.'],
-  ['Can you build business websites with forms and analytics?', 'Yes. We offer static, dynamic, analytics-enabled, and lead-generation websites with CRM and form integration.'],
-  ['Can quotation and contact forms connect to Google Apps Script?', 'Yes. The forms can submit to a Google Apps Script backend using a POST request and can be extended to Google Sheets workflows.'],
-  ['Will the website be mobile responsive?', 'Yes. The site structure is designed for mobile, tablet, and desktop layouts with a consistent premium feel.'],
+  ['What services does CoreForge offer?', 'CoreForge covers five core areas: Workshops & Training (PCB, IoT, embedded systems, web & app development), DIY Hardware Kits (with exchange and upgrade programs), Software & Tech Services (custom CRM and software), Hardware Design Services (end-to-end PCB design), and Technical Consultation.'],
+  ['Do you run regular workshops or training programs?', 'Yes. We run Sunday classes covering PCB basic design, IoT projects, embedded systems, advanced PCB design pipelines, web development, and app development — with hands-on, one-on-one guidance.'],
+  ['What is the Kit Exchange and Kit Upgrade Program?', 'The Kit Exchange Program lets you swap your existing kit for a different one, while the Kit Upgrade Program lets you upgrade to a newer or more advanced version — so your hardware investment keeps growing with you.'],
+  ['Can you build a fully custom CRM or software system?', 'Yes. We build brand-specialized CRMs tailored to your identity and fully custom software — developed to your exact requirements with no compromise on functionality.'],
+  ['What does Technical Consultation cover?', 'Expert guidance for embedded system and electronics projects, PCB and analog electronics design support, design and performance reviews, and mentoring for students and startups at any stage.'],
 ]

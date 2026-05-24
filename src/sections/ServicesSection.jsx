@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion'
 import {
-  HiChip,
-  HiOutlineCube,
-  HiOutlineGlobeAlt,
-  HiOutlineLightningBolt,
-  HiOutlinePuzzle,
-  HiOutlineViewGridAdd,
+  HiOutlineAcademicCap,
+  HiOutlineBeaker,
+  HiOutlineCode,
+  HiOutlineChip,
+  HiOutlineLightBulb,
 } from 'react-icons/hi'
 import SectionIntro from '../components/SectionIntro'
 import BorderGlow from '../components/ui/BorderGlow'
@@ -14,42 +13,38 @@ import { fadeUp, stagger } from '../utils/motion'
 
 const featuredServices = [
   {
-    icon: HiChip,
-    title: 'Embedded Systems Development',
-    description: 'Design and development of embedded system solutions, microcontroller-based project development, and hardware and firmware interfacing.',
+    icon: HiOutlineAcademicCap,
+    title: 'Workshops & Training',
+    description: 'Sunday classes covering PCB basic design, IoT projects, embedded systems, end-to-end PCB design, web development, and app development — with one-on-one guidance.',
   },
   {
-    icon: HiOutlineCube,
-    title: 'PCB Design & Prototyping',
-    description: 'Custom multilayer PCB design, prototyping and small batch production, component and board sourcing, bare boards or fully assembled PCB, and testing and quality verification.',
+    icon: HiOutlineBeaker,
+    title: 'DIY Kits — Hardware Products',
+    description: 'Custom-designed IoT and embedded kits that bridge theory to practice. Includes Kit Exchange and Kit Upgrade Programs so your hardware grows with you.',
   },
   {
-    icon: HiOutlineGlobeAlt,
-    title: 'Web, App & Brand Management',
-    description: 'End-to-end web and app development with ease of access to users, brand re-imaging and management of public image.',
+    icon: HiOutlineCode,
+    title: 'Software & Tech Services',
+    description: 'Brand-specialized CRM tailored to your identity, and fully custom software development — built to your exact requirements with no compromise on functionality.',
   },
   {
-    icon: HiOutlinePuzzle,
+    icon: HiOutlineChip,
+    title: 'Hardware Design Services',
+    description: 'End-to-end PCB design and development — from schematic capture to fabrication-ready files, including component sourcing, prototyping, and quality verification.',
+  },
+  {
+    icon: HiOutlineLightBulb,
     title: 'Technical Consultation',
     description: 'Expert guidance for embedded system and electronics projects, support for PCB and analog electronics design, design and performance review, and mentoring for students and startups.',
-  },
-  {
-    icon: HiOutlineLightningBolt,
-    title: 'Technical Workshops',
-    description: 'Hands-on training in electronics and embedded systems, workshops on IoT, PCB design and microcontrollers, exposure to industry-standard tools, and one-on-one guidance.',
-  },
-  {
-    icon: HiOutlineViewGridAdd,
-    title: 'IoT Solutions',
-    description: 'Connected device ecosystems, smart product development, IoT integration, and end-to-end IoT system deployment for business and research use cases.',
   },
 ]
 
 const flowingItems = [
-  { link: '/services', text: 'IoT & Embedded', image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80' },
-  { link: '/services', text: 'PCB Development', image: 'https://images.unsplash.com/photo-1597764690523-15bea4c581c9?auto=format&fit=crop&w=1200&q=80' },
-  { link: '/services', text: 'Website Systems', image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1200&q=80' },
-  { link: '/services', text: 'App Development', image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80' },
+  { link: '/services', text: 'Workshops & Training', image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80' },
+  { link: '/services', text: 'DIY Kits', image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80' },
+  { link: '/services', text: 'Software & Tech', image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1200&q=80' },
+  { link: '/services', text: 'Hardware Design', image: 'https://images.unsplash.com/photo-1597764690523-15bea4c581c9?auto=format&fit=crop&w=1200&q=80' },
+  { link: '/services', text: 'Technical Consultation', image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80' },
 ]
 
 export default function ServicesSection() {
@@ -93,7 +88,7 @@ export default function ServicesSection() {
           <div className="border-b border-black/8 bg-black px-5 py-4 text-white sm:px-6 sm:py-5">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-neutral-400">Signature focus areas</p>
           </div>
-          <div className="h-[280px] sm:h-[320px]">
+          <div className="h-[560px] sm:h-[400px]">
             <FlowingMenu items={flowingItems} speed={16} />
           </div>
         </div>
