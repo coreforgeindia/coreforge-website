@@ -1,0 +1,168 @@
+/* ── Hero Section: Premium Black, White & Grey Monochrome Theme ── */
+
+.hero-dark {
+  position: relative;
+  height: calc(100dvh - 80px);
+  min-height: 560px;
+  max-height: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #050505 0%, #0d0d0d 50%, #080808 100%);
+  overflow: hidden;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Subtle ambient monochrome glow */
+.hero-dark::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -5%;
+  width: 50%;
+  height: 60%;
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-dark::after {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  right: -10%;
+  width: 40%;
+  height: 50%;
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Monochrome Floating Blobs ── */
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.25;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.hero-blob--1 {
+  width: 380px;
+  height: 380px;
+  top: -10%;
+  right: 5%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12), rgba(200, 200, 200, 0.04), transparent 70%);
+  animation: blob-float-1 20s ease-in-out infinite;
+}
+
+.hero-blob--2 {
+  width: 280px;
+  height: 280px;
+  bottom: 10%;
+  left: 10%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08), rgba(150, 150, 150, 0.02), transparent 70%);
+  animation: blob-float-2 24s ease-in-out infinite;
+}
+
+@keyframes blob-float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(25px, -30px) scale(1.05); }
+}
+
+@keyframes blob-float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-25px, 20px) scale(0.95); }
+}
+
+/* ── Grid Overlay ── */
+.hero-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+  pointer-events: none;
+}
+
+/* ── Primary CTA Button ── */
+.hero-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  padding: 11px 24px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+}
+
+.hero-cta-primary:hover {
+  background: #e5e5e5;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(255, 255, 255, 0.25);
+}
+
+/* ── Secondary CTA Button ── */
+.hero-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 160px;
+  padding: 11px 20px;
+  border-radius: 10px;
+  background: transparent;
+  color: #d1d5db;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hero-cta-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ── Monochrome Service Tags ── */
+.hero-service-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #a3a3a3;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.hero-service-tag:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* ── Metallic Gradient Text ── */
+.text-metallic {
+  background: linear-gradient(90deg, #ffffff 0%, #d1d5db 50%, #a3a3a3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

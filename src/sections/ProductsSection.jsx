@@ -4,33 +4,36 @@ import { fadeUp, stagger } from '../utils/motion'
 
 const offerings = [
   {
-    title: 'Core Engineering Services',
+    title: 'Hardware Design & Embedded Systems',
     items: [
-      'Embedded Systems Development',
-      'PCB Design & Prototyping',
-      'Custom Hardware Development',
-      'IoT Product Development',
-      'Firmware Development',
+      'Electronics Product Design',
+      'PCB Design & Multi-Layer Boards',
+      'Embedded Systems (STM32, ESP32, Arduino)',
+      'Firmware & Driver Development',
+      'End-to-End PCB Development',
+      'Hardware Consulting & Optimization',
     ],
   },
   {
-    title: 'Project & Innovation Services',
+    title: 'Software & Tech Solutions',
     items: [
-      'Engineering Project Development',
-      'Final Year Project Solutions',
-      'Project Ideation & Consulting',
-      'Technical Mentorship',
-      'Rapid Prototyping Support',
+      'Custom ERP & CRM Systems',
+      'Corporate & E-Commerce Websites',
+      'Web Applications & Customer Portals',
+      'Android, iOS & Cross-Platform Apps',
+      'Business Intelligence & Dashboards',
+      'API Integrations & Backend Systems',
     ],
   },
   {
-    title: 'Web, Software & App Services',
+    title: 'Workshops, Training & DIY Kits',
     items: [
-      'Static and Dynamic Website Development',
-      'Business Websites with Analytics',
-      'Lead Generation Websites with CRM + Forms',
-      'Web Application Development',
-      'Dashboard, Admin Panel, and API Integration',
+      'Embedded Systems & IoT Training',
+      'PCB & Electronics Design Courses',
+      'Web & Mobile Development Programs',
+      'Faculty Development Programs',
+      'DIY Kits (IoT, Robotics, Embedded)',
+      'Final Year & Competition Projects',
     ],
   },
 ]
@@ -55,9 +58,9 @@ export default function ProductsSection() {
           className="mt-12 grid gap-5 lg:grid-cols-3"
         >
           {offerings.map((group) => (
-            <motion.article key={group.title} variants={fadeUp} className="flex min-h-[430px] flex-col rounded-[30px] border border-black/8 bg-black p-7 text-white">
-              <p className="text-xs uppercase tracking-[0.28em] text-neutral-500">CoreForge</p>
-              <h3 className="mt-4 text-3xl font-semibold tracking-[-0.05em]">{group.title}</h3>
+            <motion.article key={group.title} variants={fadeUp} className="flex min-h-[430px] flex-col rounded-[30px] border border-white/10 bg-[#222224] p-7 text-white shadow-xl transition-transform hover:-translate-y-1">
+              <p className="text-xs uppercase tracking-[0.28em] text-neutral-400">CoreForge</p>
+              <h3 className="mt-4 text-2xl font-bold tracking-[-0.04em] text-white">{group.title}</h3>
               <div className="mt-8 space-y-3">
                 {group.items.map((item) => (
                   <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm leading-6 text-neutral-200">

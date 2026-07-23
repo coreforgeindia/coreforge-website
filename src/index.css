@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  font-family: "Segoe UI Variable", "Segoe UI", Arial, sans-serif;
+  font-family: "Nunito", sans-serif;
   color: #111111;
   background: #f3f3f1;
   font-synthesis: none;
@@ -76,4 +76,10 @@ select {
   pointer-events: none;
   z-index: 10;
   background: radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%), rgba(255,255,255,0.18), transparent 16%);
+}
+
+/* Infinite marquee for client logos */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }

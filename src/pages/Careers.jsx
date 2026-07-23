@@ -10,7 +10,7 @@ const roles = [
     type: 'Paid Internship',
     mode: 'Onsite + Hybrid',
     stipend: '₹5,000 / month',
-    duration: 'June – August 2026 · 3 Months',
+    duration: 'June - August 2026 · 3 Months',
     overview: 'Build real-world projects with a hands-on engineering team. Exposure to full stack development, live deployments, and professional workflows.',
     requirements: [
       'Basic knowledge of Java',
@@ -27,7 +27,7 @@ const roles = [
       'Team collaboration experience',
       'Professional mentorship',
     ],
-    fullTimeNote: 'Based on performance, candidates may be converted to full-time employees with a package of ₹2.4 LPA – ₹3.4 LPA.',
+    fullTimeNote: 'Based on performance, candidates may be converted to full-time employees with a package of ₹2.4 LPA - ₹3.4 LPA.',
   },
   {
     id: 'content-social',
@@ -36,7 +36,7 @@ const roles = [
     type: 'Paid Internship',
     mode: 'Onsite + Hybrid',
     stipend: '₹5,000 / month',
-    duration: 'June – August 2026 · 3 Months',
+    duration: 'June - August 2026 · 3 Months',
     overview: 'Drive CoreForge\'s social presence across Instagram and LinkedIn. Create content that resonates with engineers, students, and startups.',
     requirements: [
       'Passion for content creation and social media',
@@ -147,7 +147,7 @@ function RoleCard({ role }) {
 
               <div className="mt-5 flex flex-wrap items-center gap-3">
                 <a
-                  href={`mailto:info@coreforgeindia.com?subject=Internship Application — ${role.title}`}
+                  href={`mailto:info@coreforgeindia.com?subject=Internship Application ${role.title}`}
                   className="inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800"
                 >
                   <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
