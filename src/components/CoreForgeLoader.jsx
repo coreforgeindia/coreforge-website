@@ -4,97 +4,97 @@ export default function CoreForgeLoader({ duration = 3 }) {
   return (
     <motion.div
       initial={{ opacity: 1 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
       className="fixed inset-0 z-[9999] flex h-screen w-screen items-center justify-center bg-[#050505] selection:bg-none"
     >
-      <div className="relative flex flex-col items-center justify-center">
-        {/* Subtle background glow */}
-        <div className="absolute h-48 w-48 rounded-full bg-white/5 blur-3xl animate-pulse" />
+      <div className="relative flex flex-col items-center justify-center px-4 w-full">
+        {/* Ambient background glow */}
+        <div className="absolute h-72 w-72 rounded-full bg-white/10 blur-3xl animate-pulse" />
 
+        {/* Large, prominent SVG container (Double size) */}
         <svg
-          viewBox="0 0 500 100"
+          viewBox="0 0 650 120"
           xmlns="http://www.w3.org/2000/svg"
-          className="h-auto w-full max-w-[85vw] select-none sm:max-w-[550px]"
+          className="h-auto w-full max-w-[85vw] select-none sm:max-w-[750px] lg:max-w-[900px]"
           preserveAspectRatio="xMidYMid meet"
         >
           <defs>
-            <linearGradient
-              id="silverGradient"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="0%"
+            {/* Smooth moving silver shimmer gradient */}
+            <motion.linearGradient
+              id="continuousSilverGradientLarge"
+              gradientUnits="userSpaceOnUse"
+              initial={{ x1: '-100%', x2: '0%' }}
+              animate={{ x1: ['-100%', '100%'], x2: ['0%', '200%'] }}
+              transition={{
+                duration: 2.0,
+                repeat: Infinity,
+                ease: 'linear',
+              }}
             >
-              <stop offset="0%" stopColor="#666666" />
-              <stop offset="25%" stopColor="#ffffff" />
-              <stop offset="50%" stopColor="#aaaaaa" />
-              <stop offset="75%" stopColor="#ffffff" />
-              <stop offset="100%" stopColor="#666666" />
-            </linearGradient>
+              <stop offset="0%" stopColor="#555555" />
+              <stop offset="25%" stopColor="#999999" />
+              <stop offset="50%" stopColor="#ffffff" />
+              <stop offset="75%" stopColor="#aaaaaa" />
+              <stop offset="100%" stopColor="#555555" />
+            </motion.linearGradient>
           </defs>
 
-          {/* Base faint text outline */}
+          {/* Faint base text */}
           <text
             x="50%"
             y="50%"
             textAnchor="middle"
             dominantBaseline="middle"
-            stroke="rgba(255,255,255,0.15)"
-            strokeWidth="0.8"
+            stroke="rgba(255,255,255,0.2)"
+            strokeWidth="1.2"
             fill="none"
             style={{
               fontFamily: "'Nunito', 'Segoe UI', sans-serif",
               fontWeight: 900,
-              fontSize: '60px',
-              letterSpacing: '4px',
+              fontSize: '76px',
+              letterSpacing: '8px',
             }}
           >
             COREFORGE
           </text>
 
-          {/* Animated drawing stroke text */}
+          {/* Continuous smooth shimmering silver text */}
           <motion.text
             x="50%"
             y="50%"
             textAnchor="middle"
             dominantBaseline="middle"
-            stroke="url(#silverGradient)"
-            strokeWidth="1.2"
-            fill="url(#silverGradient)"
-            initial={{
-              strokeDasharray: 1000,
-              strokeDashoffset: 1000,
-              fillOpacity: 0,
-            }}
-            animate={{
-              strokeDashoffset: [1000, 0, 0],
-              fillOpacity: [0, 0.2, 1],
-            }}
+            stroke="url(#continuousSilverGradientLarge)"
+            strokeWidth="1.6"
+            fill="url(#continuousSilverGradientLarge)"
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: [0, 1, 1], scale: [0.96, 1, 1] }}
             transition={{
               duration: duration,
-              times: [0, 0.65, 1],
-              ease: 'easeInOut',
+              times: [0, 0.3, 1],
+              ease: 'easeOut',
             }}
             style={{
               fontFamily: "'Nunito', 'Segoe UI', sans-serif",
               fontWeight: 900,
-              fontSize: '60px',
-              letterSpacing: '4px',
+              fontSize: '76px',
+              letterSpacing: '8px',
             }}
           >
             COREFORGE
           </motion.text>
         </svg>
 
-        {/* Subtitle pulse indicator */}
+        {/* Subtitle / Tagline: Innovate. Engineer. Deliver. */}
         <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: [0, 1, 0.8] }}
-          transition={{ duration: 1.5, delay: 0.5 }}
-          className="mt-4 text-[11px] font-bold uppercase tracking-[0.35em] text-neutral-400"
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: [0, 1, 0.9] }}
+          transition={{ duration: 1.2, delay: 0.2 }}
+          className="mt-4 text-xs sm:text-sm font-extrabold uppercase tracking-[0.35em] text-neutral-300 text-center"
         >
-          Engineering Lab
+          Innovate. Engineer. Deliver.
         </motion.p>
       </div>
     </motion.div>
