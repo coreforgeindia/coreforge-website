@@ -1,307 +1,169 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
+import WorkflowSection from '../sections/WorkflowSection'
+import WebPackagesSection from '../sections/WebPackagesSection'
 import { fadeUp, stagger } from '../utils/motion'
 import {
-  HiOutlineCode,
   HiOutlineChip,
+  HiOutlineCode,
   HiOutlineAcademicCap,
-  HiOutlineGlobe,
-  HiOutlineDeviceMobile,
-  HiOutlineDatabase,
-  HiOutlineLightBulb,
-  HiOutlineCog,
-  HiOutlineBeaker,
-  HiOutlinePuzzle,
-  HiOutlineClipboardCheck,
-  HiOutlineDesktopComputer,
+  HiArrowRight,
+  HiCheck,
 } from 'react-icons/hi'
 
-const services = [
+const mainServices = [
   {
-    id: 'software',
+    slug: 'software',
     number: '01',
     title: 'Software & Tech Solutions',
     tagline: 'Digital Solutions Designed Around Your Business',
-    description:
-      'Every business is unique. That\'s why we build technology specifically for your workflow instead of forcing your business to adapt to generic software.',
-    subsections: [
-      {
-        title: 'Custom Software Development',
-        icon: HiOutlineCode,
-        description: 'Tailor-made software built specifically for your business operations.',
-        items: [
-          'ERP Solutions: Complete Enterprise Resource Planning systems for manufacturing, retail, healthcare, education, logistics, and more',
-          'CRM Solutions: Manage leads, customers, sales pipelines, and customer support efficiently',
-        ],
-      },
-      {
-        title: 'Web Development',
-        icon: HiOutlineGlobe,
-        items: [
-          'Corporate Websites',
-          'Business Websites',
-          'E-Commerce',
-          'Web Applications',
-          'Customer Portals',
-        ],
-      },
-      {
-        title: 'Mobile App Development',
-        icon: HiOutlineDeviceMobile,
-        items: [
-          'Android Apps',
-          'iOS Apps',
-          'Cross Platform Apps',
-        ],
-      },
-      {
-        title: 'Business Intelligence',
-        icon: HiOutlineDatabase,
-        description: 'Interactive dashboards, reports, KPIs, analytics, and decision-making tools.',
-      },
+    description: "Every business is unique. We build technology specifically for your workflow instead of forcing your business to adapt to generic software.",
+    icon: HiOutlineCode,
+    subLinks: [
+      { name: 'Custom Software Development', path: '/services/software/custom-software' },
+      { name: 'Web Development & E-Commerce', path: '/services/software/web-development' },
+      { name: 'Mobile App Development (Android & iOS)', path: '/services/software/mobile-apps' },
+      { name: 'Business Intelligence & Dashboards', path: '/services/software/business-intelligence' },
     ],
-    industries: ['Manufacturing', 'Healthcare', 'Education', 'Retail', 'Logistics', 'Startups', 'SMEs', 'Enterprises'],
+    industries: ['Manufacturing', 'Healthcare', 'Education', 'Retail', 'Logistics', 'Startups', 'Enterprises'],
   },
   {
-    id: 'hardware',
+    slug: 'hardware',
     number: '02',
     title: 'Hardware Design & Embedded Systems',
     tagline: 'Turning Electronic Ideas into Real Products',
-    description:
-      'CoreForge specializes in complete electronic product development from concept and schematic design to PCB manufacturing support and embedded firmware.',
-    subsections: [
-      {
-        title: 'Electronics Product Design',
-        icon: HiOutlineLightBulb,
-        items: [
-          'Circuit Design',
-          'Product Architecture',
-          'Component Selection',
-          'Prototype Development',
-        ],
-      },
-      {
-        title: 'PCB Design Services',
-        icon: HiOutlineChip,
-        items: [
-          'Schematic Design',
-          'PCB Layout',
-          'Multi-Layer PCB',
-          'High-Speed PCB',
-          'Design Review',
-        ],
-      },
-      {
-        title: 'Embedded Systems',
-        icon: HiOutlineCog,
-        items: [
-          'STM32 Development',
-          'ESP32 Development',
-          'Arduino Solutions',
-          'RTOS',
-          'Firmware Development',
-          'Driver Development',
-        ],
-      },
-      {
-        title: 'End-to-End PCB Development',
-        icon: HiOutlineClipboardCheck,
-        items: [
-          'Requirement Analysis',
-          'Schematic Capture',
-          'PCB Layout',
-          'Gerber Generation',
-          'Manufacturing Support',
-          'Assembly Support',
-          'Testing',
-          'Validation',
-        ],
-      },
-      {
-        title: 'Consulting Services',
-        icon: HiOutlinePuzzle,
-        items: [
-          'Hardware Design Review',
-          'PCB Optimization',
-          'Embedded Consulting',
-          'Product Development Guidance',
-        ],
-      },
+    description: 'CoreForge specializes in complete electronic product development: from concept and schematic design to PCB manufacturing support, RTOS, and embedded firmware.',
+    icon: HiOutlineChip,
+    subLinks: [
+      { name: 'Electronics Product Design', path: '/services/hardware/product-design' },
+      { name: 'PCB Design Services (2-layer to 8+ layer)', path: '/services/hardware/pcb-design' },
+      { name: 'Embedded Systems & Firmware (STM32/ESP32)', path: '/services/hardware/embedded-systems' },
+      { name: 'End-to-End PCB Development & Testing', path: '/services/hardware/end-to-end-pcb' },
+      { name: 'Hardware Consulting & Design Review', path: '/services/hardware/consulting' },
     ],
+    industries: ['IoT & Smart Devices', 'Industrial Automation', 'Consumer Electronics', 'Healthcare Devices', 'Automotive'],
   },
   {
-    id: 'training',
+    slug: 'training',
     number: '03',
     title: 'Workshops, Training & DIY Kits',
     tagline: 'Learn by Building',
-    description:
-      'We believe engineering is best learned through practical experience. CoreForge conducts hands-on workshops, industrial training, and technical bootcamps that prepare students and professionals for real-world engineering challenges.',
-    subsections: [
-      {
-        title: 'Training Programs',
-        icon: HiOutlineAcademicCap,
-        groups: [
-          {
-            label: 'Embedded Systems',
-            items: ['Embedded C', 'STM32', 'ESP32', 'Arduino', 'IoT'],
-          },
-          {
-            label: 'Hardware Design',
-            items: ['PCB Design', 'Analog Electronics', 'Digital Electronics', 'Circuit Design'],
-          },
-          {
-            label: 'Software Development',
-            items: ['Web Development', 'Mobile App Development', 'Full Stack Development'],
-          },
-        ],
-      },
-      {
-        title: 'Corporate & College Workshops',
-        icon: HiOutlineDesktopComputer,
-        items: [
-          'Faculty Development Programs',
-          'Industrial Workshops',
-          'Student Bootcamps',
-          'Internship Programs',
-        ],
-      },
-      {
-        title: 'DIY Electronics Kits',
-        icon: HiOutlineBeaker,
-        items: [
-          'Beginner Kits',
-          'IoT Kits',
-          'Robotics Kits',
-          'Embedded Learning Kits',
-          'Custom Project Kits',
-        ],
-      },
-      {
-        title: 'Projects',
-        icon: HiOutlinePuzzle,
-        items: [
-          'Final Year Projects',
-          'Competition Projects',
-          'Research Prototypes',
-        ],
-      },
+    description: 'We believe engineering is best learned through practical experience. CoreForge conducts hands-on workshops, industrial training, and technical bootcamps that prepare students and engineers for real-world engineering challenges.',
+    icon: HiOutlineAcademicCap,
+    subLinks: [
+      { name: 'Embedded Systems & IoT Bootcamps', path: '/services/training/embedded-training' },
+      { name: 'Hardware & PCB Design Courses', path: '/services/training/hardware-courses' },
+      { name: 'Software Development Programs', path: '/services/training/software-programs' },
+      { name: 'Corporate & College Workshops (FDPs)', path: '/services/training/workshops' },
+      { name: 'DIY Electronics & Robotics Kits', path: '/services/training/diy-kits' },
+      { name: 'Academic & Competition Project Guidance', path: '/services/training/academic-projects' },
     ],
+    industries: ['Engineering Colleges', 'Universities', 'Corporate R&D', 'Makerspaces', 'Polytechnics'],
   },
 ]
-
-function ServiceSubsection({ sub }) {
-  const Icon = sub.icon
-  return (
-    <div className="rounded-[20px] border border-black/6 bg-white/60 p-5 sm:p-6">
-      <div className="flex items-start gap-3">
-        {Icon && (
-          <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-black text-white">
-            <Icon className="h-5 w-5" />
-          </div>
-        )}
-        <div className="flex-1">
-          <h4 className="text-lg font-bold tracking-[-0.03em] text-neutral-950">{sub.title}</h4>
-          {sub.description && (
-            <p className="mt-2 text-sm leading-7 text-neutral-600">{sub.description}</p>
-          )}
-        </div>
-      </div>
-
-      {sub.items && (
-        <ul className="mt-4 grid gap-y-1.5 sm:grid-cols-2">
-          {sub.items.map((item) => (
-            <li key={item} className="flex items-start gap-2.5 text-sm text-neutral-700">
-              <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-neutral-900" />
-              {item}
-            </li>
-          ))}
-        </ul>
-      )}
-
-      {sub.groups && (
-        <div className="mt-4 space-y-4">
-          {sub.groups.map((group) => (
-            <div key={group.label}>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-400">{group.label}</p>
-              <ul className="mt-2 grid gap-y-1.5 sm:grid-cols-2 lg:grid-cols-3">
-                {group.items.map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm text-neutral-700">
-                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-neutral-900" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  )
-}
 
 export default function Services() {
   return (
     <>
       <PageHero
-        eyebrow="Our Main Categories"
-        title="Everything we offer: built for clarity, speed, and real results."
-        description="From custom software and hardware design to hands-on training and DIY kits, CoreForge covers the full engineering lifecycle."
+        eyebrow="ENGINEERING CAPABILITIES"
+        title="Everything we build: engineered for clarity, speed, and real results."
+        description="From custom software and multi-layer PCB design to hands-on training and DIY kits, CoreForge covers the full engineering lifecycle."
       />
 
-      <section className="px-4 py-14 sm:px-6 lg:py-20">
+      {/* Main Categories Deep Dive */}
+      <section className="px-4 py-16 sm:px-6 lg:py-24">
         <div className="section-shell">
           <motion.div
             variants={stagger}
             initial="hidden"
             animate="visible"
-            className="space-y-8"
+            className="space-y-12"
           >
-            {services.map((service) => (
-              <motion.div
-                key={service.number}
-                variants={fadeUp}
-                id={service.id}
-                className="overflow-hidden rounded-[30px] border border-black/8 bg-white/80"
-              >
-                {/* Service Header */}
-                <div className="border-b border-black/8 bg-black px-6 py-6 sm:px-8">
-                  <div className="flex items-baseline gap-4">
-                    <span className="text-xs font-semibold tracking-[0.3em] text-neutral-500">{service.number}</span>
-                    <h2 className="text-xl font-bold tracking-[-0.04em] text-white sm:text-2xl">{service.title}</h2>
-                  </div>
-                  <p className="mt-2 pl-10 text-sm font-medium text-neutral-300">{service.tagline}</p>
-                </div>
-
-                {/* Service Body */}
-                <div className="p-6 sm:p-8">
-                  <p className="max-w-3xl text-sm leading-7 text-neutral-600">{service.description}</p>
-
-                  {/* Subsections grid */}
-                  <div className="mt-6 grid gap-4 lg:grid-cols-2">
-                    {service.subsections.map((sub) => (
-                      <ServiceSubsection key={sub.title} sub={sub} />
-                    ))}
-                  </div>
-
-                  {/* Industries */}
-                  {service.industries && (
-                    <div className="mt-6 border-t border-black/6 pt-5">
-                      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-400">Industries We Serve</p>
-                      <div className="mt-3 flex flex-wrap gap-2">
-                        {service.industries.map((industry) => (
-                          <span key={industry} className="rounded-full bg-black px-4 py-1.5 text-xs font-medium text-white">
-                            {industry}
+            {mainServices.map((service) => {
+              const Icon = service.icon
+              return (
+                <motion.div
+                  key={service.slug}
+                  variants={fadeUp}
+                  id={service.slug}
+                  className="overflow-hidden rounded-[32px] border border-black/10 bg-white shadow-sm transition-all duration-300 hover:shadow-md"
+                >
+                  {/* Category Header */}
+                  <div className="border-b border-black/10 bg-neutral-950 p-6 sm:p-8 text-white">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                      <div className="flex items-center gap-4">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-white">
+                          <Icon className="h-6 w-6" />
+                        </div>
+                        <div>
+                          <span className="text-xs font-mono font-bold tracking-widest text-[#0d9488]">
+                            CATEGORY {service.number}
                           </span>
-                        ))}
+                          <h2 className="font-heading text-2xl sm:text-3xl font-bold text-white mt-0.5">
+                            {service.title}
+                          </h2>
+                        </div>
                       </div>
+                      <Link
+                        to={`/services/${service.slug}`}
+                        className="btn-primary !bg-white !text-black hover:!bg-neutral-200 self-start sm:self-auto !text-xs !py-2.5 !px-5"
+                      >
+                        Explore Vertical Overview
+                        <HiArrowRight className="h-4 w-4" />
+                      </Link>
                     </div>
-                  )}
-                </div>
-              </motion.div>
-            ))}
+                    <p className="mt-4 text-xs sm:text-sm text-neutral-300 max-w-2xl leading-6">
+                      {service.description}
+                    </p>
+                  </div>
+
+                  {/* Sub-Services List */}
+                  <div className="p-6 sm:p-8">
+                    <p className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-4">
+                      Dedicated Specializations Under This Category
+                    </p>
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      {service.subLinks.map((sub) => (
+                        <Link
+                          key={sub.path}
+                          to={sub.path}
+                          className="group flex items-center justify-between rounded-xl border border-black/5 bg-[#fafafa] p-4 transition-all duration-200 hover:bg-black hover:text-white"
+                        >
+                          <div className="flex items-center gap-3">
+                            <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-black text-white group-hover:bg-white group-hover:text-black">
+                              <HiCheck className="h-3 w-3" />
+                            </span>
+                            <span className="text-xs sm:text-sm font-bold">{sub.name}</span>
+                          </div>
+                          <HiArrowRight className="h-4 w-4 text-neutral-400 group-hover:text-white transition-transform group-hover:translate-x-1" />
+                        </Link>
+                      ))}
+                    </div>
+
+                    {/* Industries */}
+                    <div className="mt-8 pt-6 border-t border-black/5 flex flex-wrap items-center gap-2">
+                      <span className="text-xs font-bold text-neutral-400 mr-2">Industries:</span>
+                      {service.industries.map((ind) => (
+                        <span key={ind} className="rounded-full bg-black/5 px-3 py-1 text-[11px] font-bold text-neutral-700">
+                          {ind}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              )
+            })}
           </motion.div>
         </div>
       </section>
+
+      {/* 8-Step Engineering Workflow Pipeline */}
+      <WorkflowSection />
+
+      {/* Web Development Packages & Checklists */}
+      <WebPackagesSection />
     </>
   )
 }

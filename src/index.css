@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  font-family: "Nunito", sans-serif;
+  /* Typography */
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  font-family: var(--font-body);
   color: #111111;
   background: #f3f3f1;
   font-synthesis: none;
@@ -21,6 +25,7 @@ body {
   background:
     radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 28%),
     linear-gradient(180deg, #fbfbfa 0%, #efefec 100%);
+  overflow-x: hidden;
 }
 
 * {
@@ -43,6 +48,78 @@ select {
   min-height: 100vh;
 }
 
+/* ── Typography Helpers ── */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* ── Layout ── */
+.section-shell {
+  position: relative;
+  margin: 0 auto;
+  width: min(100% - 1.5rem, 88rem);
+}
+
+/* ── Global Unified Button Styles ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid #000000;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #000000;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #ffffff !important;
+  color: #111111 !important;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.btn-secondary:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #000000;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+/* ── Utility Classes ── */
 .grid-lines {
   background-image:
     linear-gradient(rgba(17, 17, 17, 0.06) 1px, transparent 1px),
@@ -51,35 +128,69 @@ select {
 }
 
 .glass-panel {
-  background: rgba(255, 255, 255, 0.64);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-
-.ink-shadow {
-  box-shadow: 0 20px 80px rgba(17, 17, 17, 0.1);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .soft-border {
   border: 1px solid rgba(17, 17, 17, 0.08);
 }
 
-.section-shell {
-  position: relative;
-  margin: 0 auto;
-  width: min(100% - 1.5rem, 88rem);
+/* ── High-Performance Smooth Marquee ── */
+@keyframes marquee-left {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
 }
 
-.spotlight-cursor {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 10;
-  background: radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%), rgba(255,255,255,0.18), transparent 16%);
+@keyframes marquee-right {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
 }
 
-/* Infinite marquee for client logos */
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee-left {
+  animation: marquee-left 28s linear infinite;
+}
+
+.marquee-right {
+  animation: marquee-right 28s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ── Crisp Clean Client Logos (No boxes, no cards, natural colors) ── */
+.client-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  opacity: 0.85;
+}
+
+.client-logo-item:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.client-logo-img {
+  height: 3.5rem;
+  max-width: 13rem;
+  object-fit: contain;
+  filter: none !important;
+}
+
+@media (min-width: 640px) {
+  .client-logo-img {
+    height: 4.25rem;
+    max-width: 15rem;
+  }
 }

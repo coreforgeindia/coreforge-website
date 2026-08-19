@@ -105,6 +105,18 @@ export default function Contact() {
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-neutral-400">Location</p>
                   <p className="mt-0.5 text-neutral-900">Bengaluru, Karnataka</p>
                 </div>
+                <a
+                  href="https://www.google.com/maps?um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KT2-XDnSPa47MSQTT28xNSGU&daddr=352,+4th+Cross+Rd,+Rajagopala+Nagar,+Peenya,+Bengaluru,+Karnataka+560058"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-5 py-2.5 text-sm font-semibold text-neutral-800 transition-all duration-300 hover:bg-black hover:text-white hover:shadow-lg"
+                >
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  Get Directions
+                </a>
               </div>
             </div>
 

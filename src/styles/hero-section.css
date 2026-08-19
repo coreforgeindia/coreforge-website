@@ -1,168 +1,100 @@
-/* ── Hero Section: Premium Black, White & Grey Monochrome Theme ── */
+/* ── Hero Section: Clean Light Architectural Aesthetic with Line-Art UI ── */
 
-.hero-dark {
+.hero-light {
   position: relative;
-  height: calc(100dvh - 80px);
-  min-height: 560px;
-  max-height: 900px;
+  min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background: linear-gradient(135deg, #050505 0%, #0d0d0d 50%, #080808 100%);
+  justify-content: center;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(147, 51, 234, 0.03) 0%, transparent 40%),
+    linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
   overflow: hidden;
-  font-family: 'Nunito', sans-serif;
+  font-family: var(--font-body);
 }
 
-/* Subtle ambient monochrome glow */
-.hero-dark::before {
-  content: '';
-  position: absolute;
-  top: -20%;
-  left: -5%;
-  width: 50%;
-  height: 60%;
-  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.hero-dark::after {
-  content: '';
-  position: absolute;
-  bottom: 10%;
-  right: -10%;
-  width: 40%;
-  height: 50%;
-  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.04) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-/* ── Monochrome Floating Blobs ── */
-.hero-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.25;
-  pointer-events: none;
-  will-change: transform;
-}
-
-.hero-blob--1 {
-  width: 380px;
-  height: 380px;
-  top: -10%;
-  right: 5%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.12), rgba(200, 200, 200, 0.04), transparent 70%);
-  animation: blob-float-1 20s ease-in-out infinite;
-}
-
-.hero-blob--2 {
-  width: 280px;
-  height: 280px;
-  bottom: 10%;
-  left: 10%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.08), rgba(150, 150, 150, 0.02), transparent 70%);
-  animation: blob-float-2 24s ease-in-out infinite;
-}
-
-@keyframes blob-float-1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(25px, -30px) scale(1.05); }
-}
-
-@keyframes blob-float-2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-25px, 20px) scale(0.95); }
-}
-
-/* ── Grid Overlay ── */
-.hero-grid-overlay {
+/* Subtle background architectural blueprint grid */
+.hero-light-grid {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 64px 64px;
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
   pointer-events: none;
 }
 
-/* ── Primary CTA Button ── */
-.hero-cta-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 160px;
-  padding: 11px 24px;
-  border-radius: 10px;
+/* Isometric line-art device illustration container */
+.wireframe-container {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+.wireframe-card {
+  border: 1.5px solid #111111;
   background: #ffffff;
-  color: #000000;
-  font-size: 0.875rem;
-  font-weight: 700;
-  transition: all 0.2s ease;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
-.hero-cta-primary:hover {
-  background: #e5e5e5;
-  color: #000000;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 28px rgba(255, 255, 255, 0.25);
+.wireframe-subcard {
+  border: 1.2px solid #111111;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
 }
 
-/* ── Secondary CTA Button ── */
-.hero-cta-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-width: 160px;
-  padding: 11px 20px;
-  border-radius: 10px;
-  background: transparent;
-  color: #d1d5db;
-  font-size: 0.875rem;
-  font-weight: 600;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: all 0.2s ease;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.hero-cta-secondary:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
-  transform: translateY(-2px);
-}
-
-/* ── Monochrome Service Tags ── */
-.hero-service-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 6px 14px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #a3a3a3;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  cursor: default;
-}
-
-.hero-service-tag:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.25);
+/* Pantone Accent Badges */
+.pantone-blue {
+  background-color: #2563eb;
   color: #ffffff;
 }
 
-/* ── Metallic Gradient Text ── */
-.text-metallic {
-  background: linear-gradient(90deg, #ffffff 0%, #d1d5db 50%, #a3a3a3 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.pantone-green {
+  background-color: #16a34a;
+  color: #ffffff;
+}
+
+.pantone-purple {
+  background-color: #9333ea;
+  color: #ffffff;
+}
+
+.pantone-yellow {
+  background-color: #eab308;
+  color: #000000;
+}
+
+.pantone-teal {
+  background-color: #0d9488;
+  color: #ffffff;
+}
+
+.pantone-rose {
+  background-color: #f43f5e;
+  color: #ffffff;
+}
+
+/* Pulse dots for line-art mockup */
+.pulse-dot {
+  position: relative;
+}
+
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 9999px;
+  background: inherit;
+  opacity: 0.4;
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  100% { transform: scale(2.2); opacity: 0; }
 }

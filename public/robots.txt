@@ -1,4 +1,20 @@
 User-agent: *
 Allow: /
 
+# Explicitly allow major AI search engines and research crawlers for AEO / GEO
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://coreforgeindia.info/sitemap.xml

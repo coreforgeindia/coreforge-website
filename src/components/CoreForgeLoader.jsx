@@ -1,19 +1,25 @@
 import { motion } from 'framer-motion'
 
-export default function CoreForgeLoader({ duration = 3 }) {
+/**
+ * CoreForge fullscreen loader.
+ *
+ * @param {number}  duration  – animation cycle length in seconds (default 3)
+ * @param {boolean} loop      – if true the shimmer repeats forever (use when offline / buffering)
+ */
+export default function CoreForgeLoader({ duration = 3, loop = false }) {
   return (
     <motion.div
       initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5, ease: 'easeInOut' }}
+      transition={{ duration: 0.6, ease: 'easeInOut' }}
       className="fixed inset-0 z-[9999] flex h-screen w-screen items-center justify-center bg-[#050505] selection:bg-none"
     >
       <div className="relative flex flex-col items-center justify-center px-4 w-full">
         {/* Ambient background glow */}
         <div className="absolute h-72 w-72 rounded-full bg-white/10 blur-3xl animate-pulse" />
 
-        {/* Large, prominent SVG container (Double size) */}
+        {/* SVG logo animation */}
         <svg
           viewBox="0 0 650 120"
           xmlns="http://www.w3.org/2000/svg"
@@ -21,9 +27,9 @@ export default function CoreForgeLoader({ duration = 3 }) {
           preserveAspectRatio="xMidYMid meet"
         >
           <defs>
-            {/* Smooth moving silver shimmer gradient */}
+            {/* Continuous silver shimmer gradient */}
             <motion.linearGradient
-              id="continuousSilverGradientLarge"
+              id="continuousSilverGradient"
               gradientUnits="userSpaceOnUse"
               initial={{ x1: '-100%', x2: '0%' }}
               animate={{ x1: ['-100%', '100%'], x2: ['0%', '200%'] }}
@@ -60,21 +66,26 @@ export default function CoreForgeLoader({ duration = 3 }) {
             COREFORGE
           </text>
 
-          {/* Continuous smooth shimmering silver text */}
+          {/* Shimmering silver text */}
           <motion.text
             x="50%"
             y="50%"
             textAnchor="middle"
             dominantBaseline="middle"
-            stroke="url(#continuousSilverGradientLarge)"
+            stroke="url(#continuousSilverGradient)"
             strokeWidth="1.6"
-            fill="url(#continuousSilverGradientLarge)"
+            fill="url(#continuousSilverGradient)"
             initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: [0, 1, 1], scale: [0.96, 1, 1] }}
+            animate={{
+              opacity: loop ? [0, 1, 0.85, 1] : [0, 1, 1],
+              scale: loop ? [0.96, 1, 1, 1] : [0.96, 1, 1],
+            }}
             transition={{
-              duration: duration,
-              times: [0, 0.3, 1],
+              duration: loop ? duration * 1.2 : duration,
+              times: loop ? [0, 0.2, 0.7, 1] : [0, 0.3, 1],
               ease: 'easeOut',
+              repeat: loop ? Infinity : 0,
+              repeatType: 'loop',
             }}
             style={{
               fontFamily: "'Nunito', 'Segoe UI', sans-serif",
@@ -87,7 +98,7 @@ export default function CoreForgeLoader({ duration = 3 }) {
           </motion.text>
         </svg>
 
-        {/* Subtitle / Tagline: Innovate. Engineer. Deliver. */}
+        {/* Tagline */}
         <motion.p
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: [0, 1, 0.9] }}
@@ -96,6 +107,18 @@ export default function CoreForgeLoader({ duration = 3 }) {
         >
           Innovate. Engineer. Deliver.
         </motion.p>
+
+        {/* "Reconnecting…" message shown only in loop/offline mode */}
+        {loop && (
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: [0, 0.7, 0.4, 0.7] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            className="mt-6 text-xs font-medium uppercase tracking-[0.2em] text-neutral-500 text-center"
+          >
+            Reconnecting…
+          </motion.p>
+        )}
       </div>
     </motion.div>
   )

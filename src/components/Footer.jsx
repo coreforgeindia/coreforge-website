@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import heroLogo from '../assets/hero.webp'
+import logoImg from '../assets/logos/FInal Logo (9).png'
 
 function InstagramIcon() {
   return (
@@ -42,7 +42,7 @@ export default function Footer() {
           <div>
             <Link to="/" className="group inline-flex items-center gap-3">
               <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 transition-colors group-hover:bg-white/10">
-                <img src={heroLogo} alt="CoreForge logo" className="h-7 w-7 object-contain" />
+              <img src={logoImg} alt="CoreForge logo" className="h-7 w-7 object-contain" />
               </div>
               <div>
                 <p className="text-xl font-bold tracking-[-0.04em] text-white">CoreForge</p>
@@ -73,9 +73,10 @@ export default function Footer() {
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-neutral-500">Navigation</p>
             <div className="grid gap-2.5 text-xs text-neutral-400">
               <Link to="/" className="hover:text-white transition">Home</Link>
-              <Link to="/about" className="hover:text-white transition">About</Link>
+              <Link to="/portfolio" className="hover:text-white transition">Portfolio</Link>
               <Link to="/services" className="hover:text-white transition">Services</Link>
               <Link to="/products" className="hover:text-white transition">Products</Link>
+              <Link to="/blog" className="hover:text-white transition">Blog</Link>
               <Link to="/faqs" className="hover:text-white transition">FAQ</Link>
               <Link to="/careers" className="hover:text-white transition">Careers</Link>
               <Link to="/contact" className="hover:text-white transition">Contact Us</Link>
@@ -100,6 +101,18 @@ export default function Footer() {
               <a href="mailto:info@coreforgeindia.com" className="hover:text-white transition">info@coreforgeindia.com</a>
               <a href="tel:+919380841227" className="hover:text-white transition">+91 93808 41227</a>
               <p>Bengaluru, Karnataka</p>
+              <a
+                href="https://www.google.com/maps?um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KT2-XDnSPa47MSQTT28xNSGU&daddr=352,+4th+Cross+Rd,+Rajagopala+Nagar,+Peenya,+Bengaluru,+Karnataka+560058"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 hover:text-white transition mt-1"
+              >
+                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Get Directions
+              </a>
             </div>
             {/* Small Footer Map Embed */}
             <div className="mt-4 overflow-hidden rounded-xl border border-white/10">
