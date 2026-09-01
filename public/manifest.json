@@ -1,8 +1,11 @@
 {
   "name": "CoreForge India",
   "short_name": "CoreForge",
+  "description": "Practical engineering solutions across IoT, PCB design, embedded systems, custom software, web development, and technical training — Bengaluru, India.",
   "start_url": "/",
   "display": "standalone",
+  "scope": "/",
+  "lang": "en-IN",
   "background_color": "#ffffff",
   "theme_color": "#111111",
   "icons": [
@@ -10,6 +13,11 @@
       "src": "/hero.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ]
 }

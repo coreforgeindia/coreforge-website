@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CoreForge Engineering Blog</title>
+    <link>https://coreforgeindia.com/</link>
+    <description>Engineering insights, IoT, PCB design, embedded systems, software development, and technical training from CoreForge — a Bengaluru-based technology company.</description>
+    <language>en-in</language>
+    <managingEditor>info@coreforgeindia.com (CoreForge)</managingEditor>
+    <webMaster>info@coreforgeindia.com (CoreForge)</webMaster>
+    <lastBuildDate>Mon, 01 Sep 2026 00:00:00 +0530</lastBuildDate>
+    <atom:link href="https://coreforgeindia.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <!-- Add blog items below as you publish -->
+    <!--
+    <item>
+      <title>Article Title Here</title>
+      <link>https://coreforgeindia.com/blog/article-slug</link>
+      <description>Brief description of the article content.</description>
+      <pubDate>Mon, 01 Sep 2026 00:00:00 +0530</pubDate>
+      <guid isPermaLink="true">https://coreforgeindia.com/blog/article-slug</guid>
+    </item>
+    -->
+
+  </channel>
+</rss>

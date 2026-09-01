@@ -1,4 +1,10 @@
+# CoreForge - Robots.txt
+# Primary domain: coreforgeindia.com
+# Secondary domain: coreforgeindia.info
+
 User-agent: *
 Allow: /
 
+# Sitemaps
+Sitemap: https://coreforgeindia.com/sitemap.xml
 Sitemap: https://coreforgeindia.info/sitemap.xml

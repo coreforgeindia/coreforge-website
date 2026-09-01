@@ -1,0 +1,12 @@
+/* TEAM */
+CoreForge Engineering & Technology Team
+Website: https://coreforgeindia.com/
+Contact: info@coreforgeindia.com
+Phone: +91-93808-41227
+Location: Bengaluru, Karnataka, India
+
+/* SITE */
+Standards: HTML5, CSS3, JavaScript, React
+Built with: Vite, React Router
+Focus: Engineering, IoT, PCB Design, Embedded Systems, Software, Web Development, Technical Training
+Last Updated: 2026-09-01

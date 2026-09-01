@@ -1,0 +1,115 @@
+# CoreForge
+
+> CoreForge is a Bengaluru-based engineering and technology company providing practical hardware, embedded systems, IoT, PCB design, custom software, web development, mobile applications, and technical training. Founded in October 2024, CoreForge turns theory into practical, production-ready engineering.
+
+## Company
+
+CoreForge helps businesses, startups, institutions, engineers, and students turn engineering ideas into practical, production-ready systems.
+
+- Primary Location: Bengaluru, Karnataka, India
+- Address: #104 Vinayaka Layout, Sir M Vishveswaraya Layout, Bengaluru 560056
+- Website: https://coreforgeindia.com/
+- Alternate Website: https://coreforgeindia.info/
+- Email: info@coreforgeindia.com
+- Phone: +91-93808-41227
+- Founded: October 2024
+- Registration: MSME Registered
+
+## Primary Services
+
+- Hardware Design & PCB Development
+- Multi-Layer PCB Design & Manufacturing
+- Embedded Systems Development (STM32, ESP32, Arduino)
+- Firmware Development
+- IoT Solutions & Integration
+- Electronics Product Development
+- Custom Software Development
+- ERP & CRM Development
+- Web Development (Static, Dynamic, E-Commerce)
+- Mobile App Development
+- Web Analytics & Lead Generation Systems
+- Business Intelligence Dashboards
+- Embedded Systems Training & Workshops
+- IoT Training
+- PCB Design Training
+- Engineering Workshops & DIY Kits
+- Final Year Engineering Projects
+
+## Hardware & Embedded Engineering
+
+CoreForge develops electronic and embedded solutions from concept and architecture through PCB design, firmware, integration, testing, and deployment. Areas include:
+
+- Embedded Systems (STM32, ESP32, Arduino, ARM Cortex)
+- Microcontroller Programming & Firmware
+- Sensor Integration & Calibration
+- Wireless Communication (WiFi, Bluetooth, MQTT, CoAP)
+- IoT Device Development & Deployment
+- PCB Schematic Design & Layout
+- Multi-Layer PCB Prototyping & Manufacturing
+- Circuit Design & Simulation
+- Electronics Product Development
+- Low-Power Design & RTOS Development
+- Data Acquisition Systems
+- Automation & Control Systems
+
+## Software & Web Development
+
+CoreForge develops custom software tailored to business workflows. Services include:
+
+- Custom ERP & CRM Systems
+- Corporate Websites & Landing Pages
+- Static Websites (Informational, Portfolio)
+- Dynamic Websites (CMS, User Portals)
+- E-Commerce Websites
+- Web Applications with Analytics Integration
+- Lead Capture & Form Systems
+- Mobile Applications (Android & iOS)
+- Backend Systems & API Development
+- Business Intelligence Dashboards
+
+## Training & Education
+
+CoreForge provides practical engineering education including:
+
+- Embedded Systems & IoT Workshops
+- PCB Design Courses
+- Electronics Project Training
+- Web & Mobile Development Training
+- Faculty Development Programs
+- Corporate Tech Workshops
+- DIY Electronics Kits
+- Final Year Engineering Project Guidance
+- STEM Education Programs
+
+## Geographic Focus
+
+- Primary: Bengaluru, Karnataka, India
+- Service Area: Pan-India & Global Remote
+
+## Important Pages
+
+- Homepage: https://coreforgeindia.com/
+- About: https://coreforgeindia.com/about
+- Company: https://coreforgeindia.com/company
+- Services: https://coreforgeindia.com/services
+- Products: https://coreforgeindia.com/products
+- Contact: https://coreforgeindia.com/contact
+- FAQs: https://coreforgeindia.com/faqs
+- Careers: https://coreforgeindia.com/careers
+
+## Service Pages
+
+- Static Website Development: https://coreforgeindia.com/services/static-website
+- Dynamic Website Development: https://coreforgeindia.com/services/dynamic-website
+- Web Analytics Integration: https://coreforgeindia.com/services/web-analytics
+- Lead Capture Systems: https://coreforgeindia.com/services/lead-capture
+- App Development: https://coreforgeindia.com/services/app-development
+
+## Social Media
+
+- LinkedIn: https://www.linkedin.com/company/coreforge-india/
+- Instagram: https://www.instagram.com/core.forge.in/
+
+## Preferred Description
+
+CoreForge is a Bengaluru-based technology partner specializing in practical engineering solutions across hardware, PCB design, embedded systems, IoT, custom software, websites, mobile applications, and technical training. Founded in October 2024, CoreForge bridges theory and practice for businesses, startups, and institutions.

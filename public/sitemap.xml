@@ -1,45 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://coreforgeindia.info/</loc>
+    <loc>https://coreforgeindia.com/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.info/about</loc>
+    <loc>https://coreforgeindia.com/about</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.info/company</loc>
+    <loc>https://coreforgeindia.com/company</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.info/services</loc>
+    <loc>https://coreforgeindia.com/services</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.info/services/static-website</loc>
+    <loc>https://coreforgeindia.com/services/static-website</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.info/services/dynamic-website</loc>
+    <loc>https://coreforgeindia.com/services/dynamic-website</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.info/services/web-analytics</loc>
+    <loc>https://coreforgeindia.com/services/web-analytics</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.info/services/lead-capture</loc>
+    <loc>https://coreforgeindia.com/services/lead-capture</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.info/services/app-development</loc>
+    <loc>https://coreforgeindia.com/services/app-development</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.info/products</loc>
+    <loc>https://coreforgeindia.com/products</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.info/contact</loc>
+    <loc>https://coreforgeindia.com/contact</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.info/faqs</loc>
+    <loc>https://coreforgeindia.com/faqs</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.info/privacy</loc>
+    <loc>https://coreforgeindia.com/careers</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.info/terms</loc>
+    <loc>https://coreforgeindia.com/privacy</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://coreforgeindia.com/terms</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
