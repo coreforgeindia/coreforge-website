@@ -1,38 +1,29 @@
 export const coreServices = [
-  'Workshops & Training',
-  'DIY Kits & Hardware Products',
-  'Software & Tech Services',
-  'Hardware Design Services',
-  'Technical Consultation',
+  'Hardware Design Services & Tech Consulting',
+  'Software & Tech Solutions',
+  'Workshops, Training & DIY Kits',
 ]
 
 export const featuredServices = [
   {
-    title: 'Workshops & Training',
-    description: 'Hands-on Sunday classes covering PCB basic design, IoT projects, embedded systems, end-to-end PCB design, web development, and app development — with one-on-one guidance.',
+    title: 'Hardware Design Services & Tech Consulting',
+    description: 'Complete electronic product development from concept and schematic design to PCB manufacturing support and embedded firmware.',
   },
   {
-    title: 'DIY Kits — Hardware Products',
-    description: 'Custom-designed IoT and embedded kits that bridge theory to practice. Includes a Kit Exchange Program (swap for a different kit) and Kit Upgrade Program (upgrade to a newer version).',
+    title: 'Software & Tech Solutions',
+    description: 'Digital solutions designed around your business. Custom software, ERP, CRM, web development, mobile apps, and business intelligence tools.',
   },
   {
-    title: 'Software & Tech Services',
-    description: 'Brand-specialized CRM tailored to your brand identity, and fully custom software development — built to your exact requirements with no compromise on functionality.',
-  },
-  {
-    title: 'Hardware Design Services',
-    description: 'End-to-end PCB design and development — from schematic capture to fabrication-ready files, including component sourcing, prototyping, and quality verification.',
-  },
-  {
-    title: 'Technical Consultation',
-    description: 'Expert guidance for embedded system and electronics projects, support for PCB and analog electronics design, design and performance review, and mentoring for students and startups.',
+    title: 'Workshops, Training & DIY Kits',
+    description: 'Hands-on workshops, industrial training, technical bootcamps, and DIY electronics kits that prepare students and professionals for real-world engineering.',
   },
 ]
 
 export const faqItems = [
-  ['What services does CoreForge offer?', 'CoreForge covers five core areas: Workshops & Training (PCB, IoT, embedded systems, web & app development), DIY Hardware Kits (with exchange and upgrade programs), Software & Tech Services (custom CRM and software), Hardware Design Services (end-to-end PCB design), and Technical Consultation.'],
-  ['Do you run regular workshops or training programs?', 'Yes. We run Sunday classes covering PCB basic design, IoT projects, embedded systems, advanced PCB design pipelines, web development, and app development — with hands-on, one-on-one guidance.'],
-  ['What is the Kit Exchange and Kit Upgrade Program?', 'The Kit Exchange Program lets you swap your existing kit for a different one, while the Kit Upgrade Program lets you upgrade to a newer or more advanced version — so your hardware investment keeps growing with you.'],
-  ['Can you build a fully custom CRM or software system?', 'Yes. We build brand-specialized CRMs tailored to your identity and fully custom software — developed to your exact requirements with no compromise on functionality.'],
-  ['What does Technical Consultation cover?', 'Expert guidance for embedded system and electronics projects, PCB and analog electronics design support, design and performance reviews, and mentoring for students and startups at any stage.'],
+  ['What services does CoreForge offer?', 'CoreForge covers three core areas: Hardware Design Services & Tech Consulting (PCB design, embedded systems, electronics product development), Software & Tech Solutions (custom software, ERP, CRM, web & app development, business intelligence), and Workshops, Training & DIY Kits (embedded systems training, hardware design courses, software development programs, and DIY electronics kits).'],
+  ['Do you run regular workshops or training programs?', 'Yes. We conduct hands-on workshops, industrial training, and technical bootcamps covering Embedded Systems (Embedded C, STM32, ESP32, Arduino, IoT), Hardware Design (PCB, analog/digital electronics), and Software Development (web, mobile, full stack). We also run Faculty Development Programs, Student Bootcamps, and Internship Programs.'],
+  ['What DIY kits do you offer?', 'We offer Beginner Kits, IoT Kits, Robotics Kits, Embedded Learning Kits, and Custom Project Kits. We also support Final Year Projects, Competition Projects, and Research Prototypes.'],
+  ['Can you build a fully custom software solution?', 'Yes. We build tailor-made software including complete ERP solutions, CRM systems, corporate and e-commerce websites, web applications, customer portals, and cross-platform mobile apps: all designed specifically for your business workflow.'],
+  ['What does your Hardware Design service include?', 'Our hardware design covers electronics product design, circuit and PCB design (schematic, layout, multi-layer, high-speed), embedded systems development (STM32, ESP32, Arduino, RTOS, firmware), end-to-end PCB development (from requirement analysis to manufacturing and assembly support), and consulting services including design review and optimization.'],
+  ['What industries do you serve?', 'We serve Manufacturing, Healthcare, Education, Retail, Logistics, Startups, SMEs, and Enterprises with tailored technology solutions.'],
 ]

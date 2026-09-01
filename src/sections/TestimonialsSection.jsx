@@ -1,139 +1,94 @@
-import { useState, useEffect, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { HiArrowLeft, HiArrowRight } from 'react-icons/hi'
-import SectionIntro from '../components/SectionIntro'
-import { fadeUp } from '../utils/motion'
+import { motion } from 'framer-motion'
+import { HiStar } from 'react-icons/hi'
+import { fadeUp, stagger } from '../utils/motion'
 
 const testimonials = [
   {
-    name: 'Prof. Keerthi',
-    role: 'Professor, Global Academy of Technology',
-    quote: 'CoreForge brings a rare combination of academic depth and practical execution. Their hands-on approach to embedded systems and workshops has genuinely helped students bridge the gap between classroom theory and real engineering work.',
-  },
-  {
     name: 'Abhishek Metri',
     role: 'Anand Technologies',
-    quote: 'Working with CoreForge was seamless from start to finish. They understood our technical requirements quickly and delivered with precision. A team that truly knows their craft and communicates clearly throughout.',
+    quote: 'Working with CoreForge was seamless from start to finish. They understood our technical requirements quickly and delivered with precision. A team that truly knows their craft.',
   },
   {
     name: 'Manoj',
     role: 'CEO, Omega Cocktails',
-    quote: 'CoreForge built us a clean, professional digital presence that actually reflects our brand. They handled everything: design, development, and delivery, without us having to chase them once. Exactly what a business needs.',
+    quote: 'CoreForge built us a clean, professional digital presence that actually reflects our brand. They handled everything: design, development, and delivery without delays.',
   },
   {
     name: 'Sujan',
     role: 'Founder, VyomTronics',
-    quote: 'As a fellow engineering startup, I know how hard it is to find people who get both the technical and business side. CoreForge does. Our collaboration has been straightforward, honest, and results-driven.',
+    quote: 'As an engineering startup, finding people who understand both hardware and business is rare. CoreForge does. Our collaboration was honest, straightforward, and results-driven.',
   },
   {
-    name: 'Robert',
-    role: 'General Manager, Hospitality & Brewery Group',
-    quote: 'We needed a website that could handle multiple brand identities and serve different customer segments cleanly. CoreForge delivered a solution that looks premium and works reliably across all our properties.',
-  },
-  {
-    name: 'Dhanush Satya',
-    role: 'Co-Founder, V-Nurture',
-    quote: 'CoreForge helped us shape our digital strategy at a critical stage. Their guidance on web systems and execution support gave us the foundation we needed to grow with confidence.',
-  },
-  {
-    name: 'Vijay Gupta',
-    role: 'Infinity Prolabs',
-    quote: 'Technically sharp, delivery-focused, and easy to work with. CoreForge handled our embedded systems requirements with a level of detail and professionalism that set them apart from others we have worked with.',
-  },
-  {
-    name: 'Madhavi Mallam',
-    role: 'HOD ECE, Global Academy of Technology',
-    quote: 'CoreForge has been a valuable partner in providing our students with real-world engineering exposure. Their workshops are well-structured, industry-relevant, and delivered with genuine enthusiasm for the subject.',
+    name: 'Prof. Keerthi',
+    role: 'Professor, GAT Bengaluru',
+    quote: 'CoreForge brings a rare combination of academic depth and practical execution. Their hands-on workshops help students bridge the gap between classroom theory and real engineering.',
   },
 ]
 
 export default function TestimonialsSection() {
-  const [current, setCurrent] = useState(0)
-  const [paused, setPaused] = useState(false)
-
-  const next = useCallback(() => setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1)), [])
-  const prev = () => setCurrent((c) => (c === 0 ? testimonials.length - 1 : c - 1))
-
-  useEffect(() => {
-    if (paused) return
-    const timer = setInterval(next, 3000)
-    return () => clearInterval(timer)
-  }, [paused, next])
-
-  const t = testimonials[current]
-
   return (
-    <section className="px-4 py-14 sm:px-6 sm:py-18 lg:py-24">
+    <section className="px-4 py-16 sm:px-6 lg:py-24">
       <div className="section-shell">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} variants={fadeUp}>
-          <SectionIntro
-            eyebrow="Testimonials"
-            title="Trusted by the people we build for."
-            description="Words from clients, collaborators, and educators who have worked with CoreForge."
-          />
+        {/* Section Header */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-80px' }}
+          variants={fadeUp}
+          className="text-center max-w-3xl mx-auto"
+        >
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-neutral-400">
+            WHAT CLIENTS SAY
+          </p>
+          <h2 className="mt-3 text-3xl font-extrabold tracking-[-0.03em] text-neutral-950 sm:text-4xl lg:text-5xl">
+            Trusted by Growing Brands
+          </h2>
+          <p className="mt-3 text-sm sm:text-base leading-7 text-neutral-600">
+            Real feedback from client teams, founders, and educators who build with CoreForge.
+          </p>
         </motion.div>
 
-        <div
-          className="mt-12 relative"
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
+        {/* 4 Card Grid matching Screenshot 2 */}
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-80px' }}
+          className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
         >
-          <AnimatePresence mode="wait">
+          {testimonials.map((t) => (
             <motion.div
-              key={current}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.35, ease: 'easeOut' }}
-              className="rounded-[32px] border border-white/10 bg-black p-8 text-white sm:p-10"
+              key={t.name}
+              variants={fadeUp}
+              className="flex flex-col justify-between rounded-2xl border border-black/8 bg-white p-6 shadow-[0_4px_20px_rgba(17,17,17,0.03)] transition-all hover:-translate-y-1 hover:shadow-[0_12px_36px_rgba(17,17,17,0.07)]"
             >
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-                {current + 1} / {testimonials.length}
-              </p>
-              <blockquote className="mt-6 text-xl font-medium leading-[1.6] tracking-[-0.02em] text-white sm:text-2xl lg:text-[1.6rem]">
-                "{t.quote}"
-              </blockquote>
-              <div className="mt-8 flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/10 text-lg font-bold uppercase text-white">
+              <div>
+                {/* 5 Stars */}
+                <div className="flex gap-1 text-black">
+                  {[...Array(5)].map((_, i) => (
+                    <HiStar key={i} className="h-4 w-4 text-neutral-900" />
+                  ))}
+                </div>
+
+                {/* Quote */}
+                <p className="mt-4 text-xs sm:text-sm leading-6 text-neutral-700 italic">
+                  "{t.quote}"
+                </p>
+              </div>
+
+              {/* Author Strip */}
+              <div className="mt-6 flex items-center gap-3 border-t border-black/5 pt-4">
+                <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-neutral-100 text-xs font-extrabold text-neutral-900 border border-black/10">
                   {t.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-semibold tracking-[-0.03em] text-white">{t.name}</p>
-                  <p className="text-sm text-neutral-400">{t.role}</p>
+                  <p className="text-xs font-extrabold text-neutral-950">{t.name}</p>
+                  <p className="text-[11px] font-medium text-neutral-500">{t.role}</p>
                 </div>
               </div>
             </motion.div>
-          </AnimatePresence>
-
-          <div className="mt-6 flex items-center justify-between">
-            <div className="flex gap-2">
-              {testimonials.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrent(idx)}
-                  aria-label={`Go to testimonial ${idx + 1}`}
-                  className={`h-2 rounded-full transition-all duration-300 ${idx === current ? 'w-8 bg-black' : 'w-2 bg-black/20'}`}
-                />
-              ))}
-            </div>
-            <div className="flex gap-3">
-              <button
-                onClick={prev}
-                aria-label="Previous testimonial"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white text-black transition hover:bg-black hover:text-white"
-              >
-                <HiArrowLeft className="h-4 w-4" />
-              </button>
-              <button
-                onClick={next}
-                aria-label="Next testimonial"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-black text-white transition hover:bg-neutral-800"
-              >
-                <HiArrowRight className="h-4 w-4" />
-              </button>
-            </div>
-          </div>
-        </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   )

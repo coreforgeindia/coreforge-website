@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { fadeUp } from '../utils/motion'
+import { HiOutlineBriefcase } from 'react-icons/hi'
 
-const roles = [
+const internships = [
   {
     id: 'java-fullstack',
     tag: 'Engineering',
@@ -10,7 +11,7 @@ const roles = [
     type: 'Paid Internship',
     mode: 'Onsite + Hybrid',
     stipend: '₹5,000 / month',
-    duration: 'June – August 2026 · 3 Months',
+    duration: 'June - August 2026 · 3 Months',
     overview: 'Build real-world projects with a hands-on engineering team. Exposure to full stack development, live deployments, and professional workflows.',
     requirements: [
       'Basic knowledge of Java',
@@ -27,7 +28,7 @@ const roles = [
       'Team collaboration experience',
       'Professional mentorship',
     ],
-    fullTimeNote: 'Based on performance, candidates may be converted to full-time employees with a package of ₹2.4 LPA – ₹3.4 LPA.',
+    fullTimeNote: 'Based on performance, candidates may be converted to full-time employees with a package of ₹2.4 LPA - ₹3.4 LPA.',
   },
   {
     id: 'content-social',
@@ -36,7 +37,7 @@ const roles = [
     type: 'Paid Internship',
     mode: 'Onsite + Hybrid',
     stipend: '₹5,000 / month',
-    duration: 'June – August 2026 · 3 Months',
+    duration: 'June - August 2026 · 3 Months',
     overview: 'Drive CoreForge\'s social presence across Instagram and LinkedIn. Create content that resonates with engineers, students, and startups.',
     requirements: [
       'Passion for content creation and social media',
@@ -57,6 +58,11 @@ const roles = [
   },
 ]
 
+const tabs = [
+  { id: 'jobs', label: 'Jobs' },
+  { id: 'internships', label: 'Internships' },
+]
+
 function RoleCard({ role }) {
   const [open, setOpen] = useState(false)
 
@@ -67,24 +73,24 @@ function RoleCard({ role }) {
       whileInView="visible"
       viewport={{ once: true, margin: '-60px' }}
       variants={fadeUp}
-      className="rounded-[24px] border border-black/8 bg-white shadow-[0_4px_24px_rgba(17,17,17,0.06)] overflow-hidden"
+      className="rounded-[24px] border border-black/8 bg-white shadow-[0_4px_24px_rgba(17,17,17,0.04)] overflow-hidden"
     >
       <div className="p-6 sm:p-8">
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">
             <div className="flex flex-wrap items-center gap-2 mb-3">
-              <span className="rounded-full bg-black/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">
+              <span className="rounded-full bg-black/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-600">
                 {role.tag}
               </span>
-              <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
+              <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800">
                 {role.type}
               </span>
-              <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+              <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-800">
                 {role.mode}
               </span>
             </div>
-            <h2 className="text-xl font-bold tracking-[-0.04em] text-neutral-950">{role.title}</h2>
-            <div className="mt-2 flex flex-wrap gap-4 text-sm text-neutral-500">
+            <h2 className="font-heading text-xl font-bold tracking-[-0.04em] text-neutral-950">{role.title}</h2>
+            <div className="mt-2 flex flex-wrap gap-4 text-sm text-neutral-500 font-medium">
               <span>{role.stipend}</span>
               <span>·</span>
               <span>{role.duration}</span>
@@ -94,10 +100,10 @@ function RoleCard({ role }) {
           <button
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? 'Collapse' : 'Expand'}
-            className="flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-neutral-50 transition hover:bg-black hover:text-white"
+            className="flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-neutral-50 transition-all duration-200 hover:bg-black hover:text-white"
           >
             <svg
-              className={`h-4 w-4 transition-transform duration-300 ${open ? 'rotate-90' : ''}`}
+              className={`h-4 w-4 transition-transform duration-200 ${open ? 'rotate-90' : ''}`}
               fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -112,7 +118,7 @@ function RoleCard({ role }) {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
               className="overflow-hidden"
             >
               <div className="mt-6 grid gap-6 border-t border-black/6 pt-6 sm:grid-cols-2">
@@ -145,10 +151,10 @@ function RoleCard({ role }) {
                 <p className="text-sm text-neutral-600">{role.fullTimeNote}</p>
               </div>
 
-              <div className="mt-5 flex flex-wrap items-center gap-3">
+              <div className="mt-6 flex flex-wrap items-center gap-3">
                 <a
-                  href={`mailto:info@coreforgeindia.com?subject=Internship Application — ${role.title}`}
-                  className="inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800"
+                  href={`mailto:info@coreforgeindia.com?subject=Internship Application: ${role.title}`}
+                  className="btn-primary"
                 >
                   <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -159,7 +165,7 @@ function RoleCard({ role }) {
                   href="https://wa.me/919380841227"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-black/10 px-6 py-3 text-sm font-semibold text-neutral-700 transition hover:bg-black hover:text-white"
+                  className="btn-secondary"
                 >
                   WhatsApp Us
                 </a>
@@ -174,24 +180,83 @@ function RoleCard({ role }) {
 }
 
 export default function Careers() {
+  const [activeTab, setActiveTab] = useState('internships')
+
   return (
     <section className="px-4 py-14 sm:px-6 sm:py-20">
       <div className="section-shell">
-        <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-12">
+        <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-10">
           <p className="text-xs font-semibold uppercase tracking-[0.34em] text-neutral-400">Careers at CoreForge</p>
-          <h1 className="mt-4 text-[2.6rem] font-bold leading-[1] tracking-[-0.07em] text-neutral-950 sm:text-5xl">
+          <h1 className="mt-4 font-heading text-[2.6rem] font-bold leading-[1] tracking-[-0.04em] text-neutral-950 sm:text-5xl">
             Build with us.
           </h1>
           <p className="mt-4 max-w-xl text-base leading-8 text-neutral-500">
-            We're a small, focused engineering lab. Every intern here works on real projects, ships real work, and grows fast. No busy work.
+            We're a small, focused engineering lab. Every team member works on real projects, ships real work, and grows fast. No busy work.
           </p>
         </motion.div>
 
-        <div className="flex flex-col gap-5">
-          {roles.map((role) => (
-            <RoleCard key={role.id} role={role} />
+        {/* Tab Switcher */}
+        <div className="mb-8 inline-flex rounded-full border border-black/10 bg-neutral-50 p-1">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-200 ${
+                activeTab === tab.id
+                  ? 'bg-black text-white shadow-sm'
+                  : 'text-neutral-500 hover:text-black'
+              }`}
+            >
+              {tab.label}
+            </button>
           ))}
         </div>
+
+        {/* Tab Content */}
+        <AnimatePresence mode="wait">
+          {activeTab === 'jobs' && (
+            <motion.div
+              key="jobs"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.25 }}
+            >
+              <div className="rounded-[24px] border border-black/8 bg-white px-8 py-14 text-center shadow-[0_4px_24px_rgba(17,17,17,0.03)]">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-neutral-100 mb-5">
+                  <HiOutlineBriefcase className="h-8 w-8 text-neutral-500" />
+                </div>
+                <h3 className="font-heading text-2xl font-bold text-neutral-950">No open positions right now</h3>
+                <p className="mt-3 max-w-md mx-auto text-sm leading-7 text-neutral-500">
+                  We're always looking for talented engineers and creators. Send your resume and we'll reach out when something opens up.
+                </p>
+                <div className="mt-7">
+                  <a
+                    href="mailto:info@coreforgeindia.com?subject=Job Application: General Inquiry"
+                    className="btn-primary"
+                  >
+                    Send Resume
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {activeTab === 'internships' && (
+            <motion.div
+              key="internships"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.25 }}
+              className="flex flex-col gap-5"
+            >
+              {internships.map((role) => (
+                <RoleCard key={role.id} role={role} />
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         <motion.div
           initial="hidden"

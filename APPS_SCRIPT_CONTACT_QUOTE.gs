@@ -164,8 +164,8 @@ function appendContactRow_(sheet, payload) {
 function sendLeadAcknowledgement_(record) {
   const isQuotation = record.formType === 'quotation'
   const subject = isQuotation
-    ? `Your CoreForge Quotation Request — Ref: ${record.referenceNo}`
-    : `Thank You for Contacting CoreForge — Ref: ${record.referenceNo}`
+    ? `Your CoreForge Quotation Request Ref: ${record.referenceNo}`
+    : `Thank You for Contacting CoreForge Ref: ${record.referenceNo}`
 
   const submittedLines = [
     `Name    : ${record.name || '-'}`,
@@ -209,7 +209,7 @@ function sendLeadAcknowledgement_(record) {
 }
 
 function sendCompanyNotification_(record) {
-  const subject = `[CoreForge] New ${record.formType || 'contact'} — ${record.name || 'Unknown'} | Ref: ${record.referenceNo}`
+  const subject = `[CoreForge] New ${record.formType || 'contact'} ${record.name || 'Unknown'} | Ref: ${record.referenceNo}`
 
   const body = [
     `New ${record.formType || 'contact'} submission received.`,

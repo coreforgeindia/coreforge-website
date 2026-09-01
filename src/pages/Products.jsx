@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { fadeUp } from '../utils/motion'
-import heroLogo from '../assets/hero.png'
-import vtLogo from '../assets/VT Logo/VyomTronic_logo_no_BG.png'
+import heroLogo from '../assets/hero1.webp'
+import vtLogo from '../assets/logos/VyomTronic.webp'
 
 export default function Products() {
   return (
