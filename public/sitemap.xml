@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Pages -->
   <url>
-    <loc>https://coreforgeindia.com/</loc>
+    <loc>https://www.coreforgeindia.com/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/about</loc>
+    <loc>https://www.coreforgeindia.com/about</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/company</loc>
+    <loc>https://www.coreforgeindia.com/company</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/portfolio</loc>
+    <loc>https://www.coreforgeindia.com/portfolio</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services</loc>
+    <loc>https://www.coreforgeindia.com/services</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
@@ -34,31 +34,31 @@
 
   <!-- Service 1: Software & Tech Solutions -->
   <url>
-    <loc>https://coreforgeindia.com/services/software</loc>
+    <loc>https://www.coreforgeindia.com/services/software</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/software/custom-software</loc>
+    <loc>https://www.coreforgeindia.com/services/software/custom-software</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/software/web-development</loc>
+    <loc>https://www.coreforgeindia.com/services/software/web-development</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/software/mobile-apps</loc>
+    <loc>https://www.coreforgeindia.com/services/software/mobile-apps</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/software/business-intelligence</loc>
+    <loc>https://www.coreforgeindia.com/services/software/business-intelligence</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -66,37 +66,37 @@
 
   <!-- Service 2: Hardware Design & Embedded Systems -->
   <url>
-    <loc>https://coreforgeindia.com/services/hardware</loc>
+    <loc>https://www.coreforgeindia.com/services/hardware</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/hardware/product-design</loc>
+    <loc>https://www.coreforgeindia.com/services/hardware/product-design</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/hardware/pcb-design</loc>
+    <loc>https://www.coreforgeindia.com/services/hardware/pcb-design</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/hardware/embedded-systems</loc>
+    <loc>https://www.coreforgeindia.com/services/hardware/embedded-systems</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/hardware/end-to-end-pcb</loc>
+    <loc>https://www.coreforgeindia.com/services/hardware/end-to-end-pcb</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/hardware/consulting</loc>
+    <loc>https://www.coreforgeindia.com/services/hardware/consulting</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -104,43 +104,43 @@
 
   <!-- Service 3: Workshops, Training & DIY Kits -->
   <url>
-    <loc>https://coreforgeindia.com/services/training</loc>
+    <loc>https://www.coreforgeindia.com/services/training</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/training/embedded-training</loc>
+    <loc>https://www.coreforgeindia.com/services/training/embedded-training</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/training/hardware-courses</loc>
+    <loc>https://www.coreforgeindia.com/services/training/hardware-courses</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/training/software-programs</loc>
+    <loc>https://www.coreforgeindia.com/services/training/software-programs</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/training/workshops</loc>
+    <loc>https://www.coreforgeindia.com/services/training/workshops</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/training/diy-kits</loc>
+    <loc>https://www.coreforgeindia.com/services/training/diy-kits</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/training/academic-projects</loc>
+    <loc>https://www.coreforgeindia.com/services/training/academic-projects</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -148,31 +148,31 @@
 
   <!-- Legacy Service Pages -->
   <url>
-    <loc>https://coreforgeindia.com/services/static-website</loc>
+    <loc>https://www.coreforgeindia.com/services/static-website</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/dynamic-website</loc>
+    <loc>https://www.coreforgeindia.com/services/dynamic-website</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/web-analytics</loc>
+    <loc>https://www.coreforgeindia.com/services/web-analytics</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/lead-capture</loc>
+    <loc>https://www.coreforgeindia.com/services/lead-capture</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/services/app-development</loc>
+    <loc>https://www.coreforgeindia.com/services/app-development</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -180,61 +180,61 @@
 
   <!-- Products, Blog, Careers, FAQ, Contact -->
   <url>
-    <loc>https://coreforgeindia.com/products</loc>
+    <loc>https://www.coreforgeindia.com/products</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/blog</loc>
+    <loc>https://www.coreforgeindia.com/blog</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/blog/how-coreforge-builds-iot-solutions</loc>
+    <loc>https://www.coreforgeindia.com/blog/how-coreforge-builds-iot-solutions</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/blog/custom-software-vs-off-the-shelf-erp</loc>
+    <loc>https://www.coreforgeindia.com/blog/custom-software-vs-off-the-shelf-erp</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/blog/why-practical-embedded-training-matters</loc>
+    <loc>https://www.coreforgeindia.com/blog/why-practical-embedded-training-matters</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/careers</loc>
+    <loc>https://www.coreforgeindia.com/careers</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/faqs</loc>
+    <loc>https://www.coreforgeindia.com/faqs</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/contact</loc>
+    <loc>https://www.coreforgeindia.com/contact</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/privacy</loc>
+    <loc>https://www.coreforgeindia.com/privacy</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://coreforgeindia.com/terms</loc>
+    <loc>https://www.coreforgeindia.com/terms</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

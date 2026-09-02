@@ -22,5 +22,6 @@ User-agent: CCBot
 Allow: /
 
 # Sitemaps
+Sitemap: https://www.coreforgeindia.com/sitemap.xml
+Sitemap: https://www.coreforgeindia.com/image-sitemap.xml
 Sitemap: https://coreforgeindia.com/sitemap.xml
-Sitemap: https://coreforgeindia.info/sitemap.xml
