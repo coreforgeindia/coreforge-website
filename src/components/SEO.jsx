@@ -6,7 +6,7 @@ export default function SEO({
   keywords,
   canonicalUrl,
   ogType = 'website',
-  ogImage = 'https://coreforgeindia.com/og-image.png',
+  ogImage = 'https://www.coreforgeindia.com/og-image.jpg',
   jsonLd,
 }) {
   useEffect(() => {

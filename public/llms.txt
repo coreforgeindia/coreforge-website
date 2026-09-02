@@ -1,116 +1,43 @@
 # CoreForge
 
-> CoreForge is a Bengaluru-based engineering and technology company providing practical hardware, embedded systems, IoT, PCB design, custom software, web development, mobile applications, and technical training. Founded in October 2024, CoreForge turns theory into practical, production-ready engineering.
+> CoreForge is a Bengaluru-based engineering and technology company providing practical hardware, embedded systems, IoT, PCB design, custom software, web development, mobile applications, and technical training.
 
-## Company
+## Core Pages
 
-CoreForge helps businesses, startups, institutions, engineers, and students turn engineering ideas into practical, production-ready systems.
+- [Homepage](https://coreforgeindia.com/): Primary engineering portal and company overview.
+- [About CoreForge](https://coreforgeindia.com/about): Company background, mission, and MSME engineering team.
+- [Engineering Services](https://coreforgeindia.com/services): Hardware design, embedded firmware, custom software, and workshops.
+- [Portfolio & Case Studies](https://coreforgeindia.com/portfolio): Delivered engineering projects, PCB prototypes, and software platforms.
+- [Products & Hardware Kits](https://coreforgeindia.com/products): Hardware development kits, DIY electronics, and prototyping equipment.
+- [Engineering FAQs](https://coreforgeindia.com/faqs): Technical FAQs, service processes, and project timelines.
+- [Careers & Internships](https://coreforgeindia.com/careers): Job openings and paid engineering internships in Bengaluru.
+- [Contact CoreForge](https://coreforgeindia.com/contact): Inquiries, technical consultation, and custom project quotes.
+- [Engineering Blog](https://coreforgeindia.com/blog): Technical articles, IoT architecture tutorials, and PCB design guides.
 
-- Primary Location: Bengaluru, Karnataka, India
-- Address: #104 Vinayaka Layout, Sir M Vishveswaraya Layout, Bengaluru 560056
-- Website: https://coreforgeindia.com/
-- Alternate Website: https://coreforgeindia.info/
-- Email: info@coreforgeindia.com
-- Phone: +91-93808-41227
-- Founded: October 2024
-- Registration: MSME Registered
+## Hardware & Embedded Solutions
 
-## Primary Services
+- [PCB Design Services](https://coreforgeindia.com/services/hardware/pcb-design): Multi-layer PCB schematic design, high-speed routing, and prototyping.
+- [Embedded Systems & Firmware](https://coreforgeindia.com/services/hardware/embedded-systems): STM32, ESP32, FreeRTOS programming, and sensor integration.
+- [Electronics Product Design](https://coreforgeindia.com/services/hardware/product-design): End-to-end electronic product engineering from concept to assembly.
+- [Hardware Consulting](https://coreforgeindia.com/services/hardware/consulting): Design reviews, thermal analysis, and component selection.
 
-- Hardware Design & PCB Development
-- Multi-Layer PCB Design & Manufacturing
-- Embedded Systems Development (STM32, ESP32, Arduino)
-- Firmware Development
-- IoT Solutions & Integration
-- Electronics Product Development
-- Custom Software Development
-- ERP & CRM Development
-- Web Development (Static, Dynamic, E-Commerce)
-- Mobile App Development
-- Web Analytics & Lead Generation Systems
-- Business Intelligence Dashboards
-- Embedded Systems Training & Workshops
-- IoT Training
-- PCB Design Training
-- Engineering Workshops & DIY Kits
-- Final Year Engineering Projects
+## Software & Digital Solutions
 
-## Hardware & Embedded Engineering
-
-CoreForge develops electronic and embedded solutions from concept and architecture through PCB design, firmware, integration, testing, and deployment. Areas include:
-
-- Embedded Systems (STM32, ESP32, Arduino, ARM Cortex)
-- Microcontroller Programming & Firmware
-- Sensor Integration & Calibration
-- Wireless Communication (WiFi, Bluetooth, MQTT, CoAP)
-- IoT Device Development & Deployment
-- PCB Schematic Design & Layout
-- Multi-Layer PCB Prototyping & Manufacturing
-- Circuit Design & Simulation
-- Electronics Product Development
-- Low-Power Design & RTOS Development
-- Data Acquisition Systems
-- Automation & Control Systems
-
-## Software & Web Development
-
-CoreForge develops custom software tailored to business workflows. Services include:
-
-- Custom ERP & CRM Systems
-- Corporate Websites & Landing Pages
-- Static Websites (Informational, Portfolio)
-- Dynamic Websites (CMS, User Portals)
-- E-Commerce Websites
-- Web Applications with Analytics Integration
-- Lead Capture & Form Systems
-- Mobile Applications (Android & iOS)
-- Backend Systems & API Development
-- Business Intelligence Dashboards
+- [Custom Software Development](https://coreforgeindia.com/services/software/custom-software): Enterprise ERP, CRM, and automated business platforms.
+- [Web Development & E-Commerce](https://coreforgeindia.com/services/software/web-development): Fast web platforms, portals, and e-commerce applications.
+- [Mobile App Development](https://coreforgeindia.com/services/software/mobile-apps): Android & iOS cross-platform mobile app engineering.
+- [Business Intelligence & Dashboards](https://coreforgeindia.com/services/software/business-intelligence): Real-time telemetry, analytics, and data portals.
 
 ## Training & Education
 
-CoreForge provides practical engineering education including:
+- [Embedded Systems Bootcamps](https://coreforgeindia.com/services/training/embedded-training): Hands-on STM32 and IoT engineering bootcamps.
+- [Hardware & PCB Design Courses](https://coreforgeindia.com/services/training/hardware-courses): Practical KiCad and multi-layer PCB design training.
+- [Software Development Programs](https://coreforgeindia.com/services/training/software-programs): Full-stack web and mobile development courses.
+- [Corporate & College Workshops](https://coreforgeindia.com/services/training/workshops): FDPs, student bootcamps, and technical mentoring.
+- [DIY Electronics Kits](https://coreforgeindia.com/services/training/diy-kits): Prototyping hardware, robotics kits, and STEM education modules.
 
-- Embedded Systems & IoT Workshops
-- PCB Design Courses
-- Electronics Project Training
-- Web & Mobile Development Training
-- Faculty Development Programs
-- Corporate Tech Workshops
-- DIY Electronics Kits
-- Final Year Engineering Project Guidance
-- STEM Education Programs
+## Profiles & Verification
 
-## Geographic Focus
-
-- Primary: Bengaluru, Karnataka, India
-- Service Area: Pan-India & Global Remote
-
-## Important Pages
-
-- Homepage: https://coreforgeindia.com/
-- About: https://coreforgeindia.com/about
-- Company: https://coreforgeindia.com/company
-- Services: https://coreforgeindia.com/services
-- Products: https://coreforgeindia.com/products
-- Contact: https://coreforgeindia.com/contact
-- FAQs: https://coreforgeindia.com/faqs
-- Careers: https://coreforgeindia.com/careers
-
-## Service Pages
-
-- Static Website Development: https://coreforgeindia.com/services/static-website
-- Dynamic Website Development: https://coreforgeindia.com/services/dynamic-website
-- Web Analytics Integration: https://coreforgeindia.com/services/web-analytics
-- Lead Capture Systems: https://coreforgeindia.com/services/lead-capture
-- App Development: https://coreforgeindia.com/services/app-development
-
-## Social Media & Profiles
-
-- LinkedIn: https://www.linkedin.com/company/coreforge-india/
-- Instagram: https://www.instagram.com/core.forge.in/
-- GoodFirms: https://www.goodfirms.co/company/coreforge
-
-## Preferred Description
-
-CoreForge is a Bengaluru-based technology partner specializing in practical engineering solutions across hardware, PCB design, embedded systems, IoT, custom software, websites, mobile applications, and technical training. Founded in October 2024, CoreForge bridges theory and practice for businesses, startups, and institutions.
+- [LinkedIn Company Page](https://www.linkedin.com/company/coreforge-india/): Official corporate updates and career announcements.
+- [Instagram Page](https://www.instagram.com/core.forge.in/): Visual project showcases, workshops, and lab updates.
+- [GoodFirms Profile](https://www.goodfirms.co/company/coreforge): Verified company profile and client reviews.

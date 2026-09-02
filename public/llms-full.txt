@@ -1,325 +1,55 @@
-# CoreForge — Full Company Knowledge Document
+# CoreForge — Complete Technical Documentation & Site Directory
 
-> CoreForge is a Bengaluru-based engineering and technology company providing practical hardware, embedded systems, IoT, PCB design, custom software, web development, mobile applications, and technical training. Founded in October 2024, CoreForge turns theory into practical, production-ready engineering.
+> Comprehensive site map and engineering capabilities directory for CoreForge (Bengaluru, India).
 
----
+## Company Information
 
-## Company Overview
-
-CoreForge was founded in October 2024 in Bengaluru, Karnataka, India. The company is MSME registered and focused on bridging the gap between theoretical engineering education and practical, deployable engineering solutions.
-
-CoreForge serves businesses, startups, educational institutions, engineers, and students who need practical engineering solutions — from concept to deployment. The company operates across hardware, software, and education verticals.
-
-### Contact Information
-
-- Company Name: CoreForge (also known as CoreForge India)
-- Website (Primary): https://coreforgeindia.com/
-- Website (Secondary): https://coreforgeindia.info/
+- Company Name: CoreForge
+- Primary Location: Bengaluru, Karnataka, India
+- Address: #352, 4th Cross Rd, Rajagopala Nagar, Peenya, Bengaluru 560058
 - Email: info@coreforgeindia.com
 - Phone: +91-93808-41227
-- Address: #104 Vinayaka Layout, Sir M Vishveswaraya Layout, Bengaluru, Karnataka 560056, India
-- LinkedIn: https://www.linkedin.com/company/coreforge-india/
-- Instagram: https://www.instagram.com/core.forge.in/
-- GoodFirms: https://www.goodfirms.co/company/coreforge
-
----
-
-## Services — Detailed Descriptions
-
-### 1. Hardware Design & PCB Development
-
-CoreForge provides end-to-end PCB design and development services, from schematic capture to multi-layer PCB layout, prototyping, and production-ready manufacturing support.
-
-**What CoreForge delivers:**
-- Schematic design and circuit simulation
-- Single-layer, double-layer, and multi-layer PCB layout
-- PCB prototyping and small-batch manufacturing
-- Component selection and BOM management
-- Design for Manufacturing (DFM) review
-- 3D PCB visualization and mechanical fitment checks
-
-**Technologies & Tools:**
-- KiCad, Altium Designer, Eagle
-- SPICE simulation tools
-- Gerber file generation
-- Impedance-controlled PCB design
-
-**Ideal for:** Hardware startups, electronics product companies, R&D labs, engineering students
-
----
-
-### 2. Embedded Systems Development
-
-CoreForge develops embedded systems solutions using popular microcontroller families and real-time operating systems.
-
-**What CoreForge delivers:**
-- Microcontroller selection and architecture design
-- Firmware development in C/C++ and Embedded C
-- RTOS integration (FreeRTOS, Zephyr)
-- Peripheral driver development (UART, SPI, I2C, ADC, PWM)
-- Bootloader development
-- Over-the-Air (OTA) firmware update systems
-- Low-power design optimization
-- Testing and hardware debugging
-
-**Supported Platforms:**
-- STM32 (ARM Cortex-M series)
-- ESP32 / ESP8266 (Espressif)
-- Arduino (AVR, SAMD)
-- Raspberry Pi
-- ARM Cortex-A/M/R families
-- PIC Microcontrollers
-
-**Protocols & Interfaces:**
-- UART, SPI, I2C, CAN, USB
-- MQTT, CoAP, HTTP/HTTPS
-- WiFi, Bluetooth, BLE, Zigbee, LoRa
-- Modbus, RS485
-
-**Ideal for:** IoT product companies, industrial automation, medical device prototyping, automotive projects
-
----
-
-### 3. IoT Solutions & Integration
-
-CoreForge designs and deploys IoT systems connecting physical devices to cloud platforms for data collection, monitoring, and automation.
-
-**What CoreForge delivers:**
-- IoT system architecture and design
-- Sensor integration and calibration
-- Edge computing and gateway development
-- Cloud platform integration (AWS IoT, Azure IoT, Google Cloud IoT, custom MQTT brokers)
-- Dashboard development for IoT data visualization
-- Real-time monitoring and alerting systems
-- Remote device management
-- Data logging and analytics
-
-**Applications:**
-- Smart agriculture and environmental monitoring
-- Industrial IoT (IIoT) and predictive maintenance
-- Smart home and building automation
-- Asset tracking and fleet management
-- Energy monitoring systems
-- Water quality monitoring
-
-**Ideal for:** Enterprises adopting IoT, smart city projects, agriculture tech companies, building management
-
----
-
-### 4. Custom Software Development
-
-CoreForge builds custom business applications tailored to specific operational workflows.
-
-**What CoreForge delivers:**
-- Custom ERP systems
-- Custom CRM platforms
-- Business process automation tools
-- Inventory and supply chain management
-- Billing and invoicing systems
-- Internal tools and admin dashboards
-- API development and third-party integrations
-
-**Technologies:**
-- Frontend: React, Next.js, Vue.js, HTML5, CSS3, JavaScript
-- Backend: Node.js, Express, Python, Django, Flask
-- Databases: PostgreSQL, MySQL, MongoDB, Firebase
-- Cloud: AWS, Google Cloud, Azure, DigitalOcean
-
-**Ideal for:** SMEs, startups, manufacturing companies, service businesses
-
----
-
-### 5. Web Development
-
-CoreForge develops professional websites across all tiers — from informational static sites to fully dynamic web applications.
-
-**Service Tiers:**
-
-#### Static Website Development
-- Informational and portfolio websites
-- Fast loading, SEO-optimized
-- Modern responsive design
-- Starting point for businesses establishing online presence
-
-#### Dynamic Website Development
-- Content management systems
-- User portals and login systems
-- Database-driven content
-- Interactive features and real-time updates
-
-#### Web Analytics & Lead Generation
-- Google Analytics 4 integration
-- Google Tag Manager setup
-- Conversion tracking and event monitoring
-- Lead generation form systems
-- A/B testing infrastructure
-
-#### Lead Capture Systems
-- Custom form builders
-- CRM integration
-- Email automation workflows
-- Lead scoring and qualification
-- Landing page optimization
-
-**Ideal for:** Small businesses, startups, professional services, educational institutions
-
----
-
-### 6. Mobile App Development
-
-CoreForge develops native and cross-platform mobile applications.
-
-**What CoreForge delivers:**
-- Android app development (Kotlin/Java)
-- iOS app development (Swift)
-- Cross-platform development (React Native, Flutter)
-- Backend API development
-- App store deployment and optimization
-- Push notification systems
-- Offline-first architecture
-
-**Ideal for:** Startups, service businesses, e-commerce companies
-
----
-
-### 7. Training & Education
-
-CoreForge provides hands-on technical training programs designed to build practical engineering skills.
-
-**Programs offered:**
-- Embedded Systems Workshops (beginner to advanced)
-- IoT Development Workshops
-- PCB Design Training
-- Web Development Bootcamps
-- Mobile App Development Courses
-- Arduino & ESP32 Project Workshops
-- Faculty Development Programs (FDP) for engineering colleges
-- Corporate Technology Workshops
-- DIY Electronics Kit Programs
-- Final Year Engineering Project Guidance & Mentorship
-
-**Training approach:**
-- Project-based learning
-- Real hardware and tools
-- Industry-relevant curriculum
-- Small batch sizes for personalized attention
-- Certificate of completion
-
-**Ideal for:** Engineering students, working professionals, college departments, corporate teams
-
----
-
-## Products
-
-CoreForge offers products and kits including:
-- IoT Starter Kits
-- PCB Prototyping Services
-- DIY Electronics Kits for learning
-- Custom Hardware Modules
-- Training Course Packages
-
----
-
-## Industries Served
-
-- Education & EdTech
-- Manufacturing & Industrial
-- Agriculture & AgriTech
-- Healthcare & MedTech
-- Smart Cities & Infrastructure
-- Automotive
-- Consumer Electronics
-- Retail & E-Commerce
-- Professional Services
-- Startups & Early-Stage Companies
-
----
-
-## Technology Stack
-
-### Hardware & Embedded
-- Microcontrollers: STM32, ESP32, ESP8266, Arduino, PIC, ARM Cortex
-- PCB Tools: KiCad, Altium Designer, Eagle
-- Protocols: UART, SPI, I2C, CAN, USB, MQTT, CoAP, Modbus
-- Wireless: WiFi, Bluetooth, BLE, Zigbee, LoRa
-- RTOS: FreeRTOS, Zephyr
-- Languages: C, C++, Embedded C, MicroPython
-
-### Software & Web
-- Frontend: React, Next.js, Vue.js, Vite, HTML5, CSS3, JavaScript, TypeScript
-- Backend: Node.js, Express, Python, Django, Flask
-- Mobile: React Native, Flutter, Kotlin, Swift
-- Databases: PostgreSQL, MySQL, MongoDB, Firebase, Redis
-- Cloud: AWS, Google Cloud, Azure, DigitalOcean
-- DevOps: Docker, GitHub Actions, CI/CD pipelines
-- Analytics: Google Analytics 4, Google Tag Manager
-
----
-
-## Frequently Asked Questions
-
-**Q: What services does CoreForge offer?**
-A: CoreForge offers PCB design, embedded systems development, IoT solutions, custom software development, web development, mobile app development, and technical training and workshops.
-
-**Q: Where is CoreForge located?**
-A: CoreForge is based in Bengaluru (Bangalore), Karnataka, India. The office address is #104 Vinayaka Layout, Sir M Vishveswaraya Layout, Bengaluru 560056.
-
-**Q: Does CoreForge work with startups?**
-A: Yes. CoreForge works with startups, small businesses, enterprises, educational institutions, and individual engineers/students.
-
-**Q: What microcontroller platforms does CoreForge support?**
-A: CoreForge works with STM32, ESP32, ESP8266, Arduino, Raspberry Pi, ARM Cortex families, and PIC microcontrollers.
-
-**Q: Does CoreForge provide training?**
-A: Yes. CoreForge offers hands-on workshops and training in embedded systems, IoT, PCB design, web development, and mobile app development. Programs are available for students, professionals, and corporate teams.
-
-**Q: Can CoreForge build a complete IoT product?**
-A: Yes. CoreForge provides end-to-end IoT development from hardware design and PCB development, through firmware and sensor integration, to cloud connectivity and dashboard development.
-
-**Q: Does CoreForge build websites?**
-A: Yes. CoreForge builds static websites, dynamic websites, e-commerce sites, web applications with analytics, and lead generation systems.
-
-**Q: How can I contact CoreForge?**
-A: You can reach CoreForge at info@coreforgeindia.com, call +91-93808-41227, or visit https://coreforgeindia.com/contact.
-
-**Q: Is CoreForge MSME registered?**
-A: Yes. CoreForge is a registered MSME (Micro, Small, and Medium Enterprise) in India.
-
-**Q: Does CoreForge offer final year project guidance?**
-A: Yes. CoreForge provides mentorship and guidance for final year engineering projects across electronics, embedded systems, IoT, and software domains.
-
----
-
-## Site Map
-
-### Main Pages
-- Homepage: https://coreforgeindia.com/
-- About: https://coreforgeindia.com/about
-- Company: https://coreforgeindia.com/company
-- Services: https://coreforgeindia.com/services
-- Products: https://coreforgeindia.com/products
-- Contact: https://coreforgeindia.com/contact
-- FAQs: https://coreforgeindia.com/faqs
-- Careers: https://coreforgeindia.com/careers
-- Privacy Policy: https://coreforgeindia.com/privacy
-- Terms & Conditions: https://coreforgeindia.com/terms
-
-### Service Pages
-- Static Website Development: https://coreforgeindia.com/services/static-website
-- Dynamic Website Development: https://coreforgeindia.com/services/dynamic-website
-- Web Analytics Integration: https://coreforgeindia.com/services/web-analytics
-- Lead Capture Systems: https://coreforgeindia.com/services/lead-capture
-- App Development: https://coreforgeindia.com/services/app-development
-
----
-
-## Preferred Descriptions
-
-**Short (1 line):**
-CoreForge — Bengaluru-based engineering company specializing in IoT, embedded systems, PCB design, software, and technical training.
-
-**Medium (2-3 lines):**
-CoreForge is a Bengaluru-based technology partner specializing in practical engineering solutions across hardware, PCB design, embedded systems, IoT, custom software, websites, mobile applications, and technical training. Founded in October 2024, CoreForge bridges theory and practice for businesses, startups, and institutions.
-
-**Long (paragraph):**
-CoreForge is an MSME-registered engineering and technology company based in Bengaluru, Karnataka, India. Founded in October 2024, CoreForge provides end-to-end engineering services spanning hardware design, PCB development, embedded systems programming (STM32, ESP32, Arduino), IoT solutions, custom software development (ERP, CRM, web apps), website development, mobile app development, and hands-on technical training. The company serves businesses, startups, educational institutions, and engineers who need practical, production-ready solutions across electronics, software, and education domains. CoreForge's mission is to turn theoretical engineering knowledge into real-world, deployable systems.
+- Founded: October 2024
+- Registration: MSME Registered
+
+## Core Links
+
+- [Homepage](https://coreforgeindia.com/): CoreForge engineering portal and overview.
+- [About CoreForge](https://coreforgeindia.com/about): Company background, team, and MSME registration.
+- [Engineering Services](https://coreforgeindia.com/services): Comprehensive hardware, software, and training capabilities.
+- [Portfolio](https://coreforgeindia.com/portfolio): Case studies of delivered hardware and software projects.
+- [Products](https://coreforgeindia.com/products): Hardware kits and product developments in collaboration with VyomTronics.
+- [Careers](https://coreforgeindia.com/careers): Job openings and engineering internships in Bengaluru.
+- [FAQs](https://coreforgeindia.com/faqs): Technical FAQs and project quotation processes.
+- [Contact Us](https://coreforgeindia.com/contact): Inquiries and project discussion form.
+- [Blog](https://coreforgeindia.com/blog): Technical deep-dives and engineering articles.
+
+## Hardware & Embedded Systems Services
+
+- [PCB Design & Prototyping](https://coreforgeindia.com/services/hardware/pcb-design): Multi-layer schematic, high-speed routing, impedance matching, fabrication files (Gerber/BOM/Pick-and-Place), and prototype guidance.
+- [Embedded Systems & Firmware](https://coreforgeindia.com/services/hardware/embedded-systems): Microcontroller firmware (STM32, ESP32, Arduino, ARM Cortex), FreeRTOS development, driver development, sensor integration, and low-power optimization.
+- [Electronics Product Design](https://coreforgeindia.com/services/hardware/product-design): Turnkey electronic product engineering from concept to enclosure design, thermal analysis, and production assembly support.
+- [End-to-End PCB Development](https://coreforgeindia.com/services/hardware/end-to-end-pcb): Testing, validation, signal integrity checks, and small-batch production support.
+- [Hardware Consulting](https://coreforgeindia.com/services/hardware/consulting): Design reviews, component sourcing advice, and architecture optimization.
+
+## Custom Software & Web Development Services
+
+- [Custom Software Development](https://coreforgeindia.com/services/software/custom-software): Tailor-made ERP systems, CRM portals, internal tools, and automated business platforms.
+- [Web Development & E-Commerce](https://coreforgeindia.com/services/software/web-development): Fast web platforms, static/dynamic sites, lead-generation portals, and e-commerce stores.
+- [Mobile App Development](https://coreforgeindia.com/services/software/mobile-apps): Android & iOS mobile applications with backend API integration.
+- [Business Intelligence & Dashboards](https://coreforgeindia.com/services/software/business-intelligence): High-throughput telemetry, real-time data portals, and analytics dashboards.
+
+## Workshops, Training & DIY Kits
+
+- [Embedded Systems Bootcamps](https://coreforgeindia.com/services/training/embedded-training): Hands-on training on STM32, ESP32, C programming, and IoT.
+- [Hardware & PCB Courses](https://coreforgeindia.com/services/training/hardware-courses): Circuit simulation, KiCad PCB layout, and manufacturing readiness.
+- [Software Development Programs](https://coreforgeindia.com/services/training/software-programs): Web, mobile, and full-stack software courses.
+- [Corporate & College Workshops](https://coreforgeindia.com/services/training/workshops): Faculty Development Programs (FDPs), student bootcamps, and technical mentoring.
+- [DIY Electronics Kits](https://coreforgeindia.com/services/training/diy-kits): Prototyping hardware, robotics kits, and STEM modules.
+- [Academic Project Guidance](https://coreforgeindia.com/services/training/academic-projects): Mentorship and execution support for student and final-year engineering projects.
+
+## Verification & External Profiles
+
+- [LinkedIn Company Page](https://www.linkedin.com/company/coreforge-india/): Official corporate updates and announcements.
+- [Instagram Page](https://www.instagram.com/core.forge.in/): Visual project showcases, workshops, and lab updates.
+- [GoodFirms Profile](https://www.goodfirms.co/company/coreforge): Verified company profile and client reviews.
