@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import SEO from '../components/SEO'
 import { fadeUp, stagger } from '../utils/motion'
 import { allServicesData } from '../utils/servicesData'
 import {
@@ -23,6 +24,28 @@ export default function ServiceDetail() {
 
   return (
     <>
+      <SEO
+        title={`${service.title} Services | CoreForge Bengaluru`}
+        description={service.description.length > 160 ? `${service.description.substring(0, 157)}...` : service.description}
+        keywords={`${service.title}, CoreForge engineering, ${service.tagline}, Bengaluru hardware software`}
+        canonicalUrl={`https://coreforgeindia.com/services/${slug}`}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: service.title,
+          serviceType: service.tagline || service.title,
+          description: service.description,
+          provider: {
+            '@type': 'Organization',
+            name: 'CoreForge',
+            url: 'https://coreforgeindia.com',
+          },
+          areaServed: {
+            '@type': 'AdministrativeArea',
+            name: 'Bengaluru, Karnataka, India',
+          },
+        }}
+      />
       {/* ── Hero Banner ── */}
       <section className={`${service.heroBg} px-4 py-16 sm:px-6 sm:py-24`}>
         <div className="section-shell">
@@ -68,7 +91,7 @@ export default function ServiceDetail() {
                   to={`/services/${service.parentSlug}`}
                   className="btn-secondary !bg-transparent !text-white !border-white/20 hover:!bg-white/10"
                 >
-                  View Vertical Overview
+                  Explore Category
                 </Link>
               ) : (
                 <Link
@@ -95,7 +118,7 @@ export default function ServiceDetail() {
               className="max-w-3xl mb-12"
             >
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#0d9488]">
-                DEDICATED SPECIALIZATIONS
+                SPECIALIZED CAPABILITIES
               </span>
               <h2 className="mt-2 font-heading text-3xl font-bold tracking-[-0.03em] text-neutral-950 sm:text-4xl">
                 Explore Individual Service Capabilities
@@ -123,9 +146,6 @@ export default function ServiceDetail() {
                         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black text-white">
                           <HiOutlineCube className="h-5 w-5" />
                         </div>
-                        <span className="text-xs font-bold text-[#0d9488] uppercase tracking-wider">
-                          Dedicated Page
-                        </span>
                       </div>
                       <h3 className="font-heading text-xl font-bold text-neutral-950 mt-5 group-hover:text-black">
                         {sub.title}

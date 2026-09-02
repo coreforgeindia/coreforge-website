@@ -1,6 +1,4 @@
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import PageHero from '../components/PageHero'
+import SEO from '../components/SEO'
 import WorkflowSection from '../sections/WorkflowSection'
 import WebPackagesSection from '../sections/WebPackagesSection'
 import { fadeUp, stagger } from '../utils/motion'
@@ -66,6 +64,25 @@ const mainServices = [
 export default function Services() {
   return (
     <>
+      <SEO
+        title="Engineering Services | PCB Design, Embedded Systems & Software Bengaluru"
+        description="Explore CoreForge's engineering services: multi-layer PCB layout & prototyping, STM32 & ESP32 embedded firmware, custom ERP/CRM software, web & mobile apps, and workshops."
+        keywords="PCB design services India, embedded systems development, IoT solutions Bangalore, custom software development, firmware development, hardware consulting"
+        canonicalUrl="https://coreforgeindia.com/services"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'ItemList',
+          name: 'CoreForge Engineering Services',
+          url: 'https://coreforgeindia.com/services',
+          itemListElement: mainServices.map((service, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: service.title,
+            description: service.description,
+            url: `https://coreforgeindia.com/services/${service.slug}`,
+          })),
+        }}
+      />
       <PageHero
         eyebrow="ENGINEERING CAPABILITIES"
         title="Everything we build: engineered for clarity, speed, and real results."
@@ -108,9 +125,9 @@ export default function Services() {
                       </div>
                       <Link
                         to={`/services/${service.slug}`}
-                        className="btn-primary !bg-white !text-black hover:!bg-neutral-200 self-start sm:self-auto !text-xs !py-2.5 !px-5"
+                        className="btn-secondary self-start sm:self-auto !text-xs !py-2.5 !px-5"
                       >
-                        Explore Vertical Overview
+                        Explore Vertical
                         <HiArrowRight className="h-4 w-4" />
                       </Link>
                     </div>
@@ -121,21 +138,18 @@ export default function Services() {
 
                   {/* Sub-Services List */}
                   <div className="p-6 sm:p-8">
-                    <p className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-4">
-                      Dedicated Specializations Under This Category
-                    </p>
                     <div className="grid gap-3 sm:grid-cols-2">
                       {service.subLinks.map((sub) => (
                         <Link
                           key={sub.path}
                           to={sub.path}
-                          className="group flex items-center justify-between rounded-xl border border-black/5 bg-[#fafafa] p-4 transition-all duration-200 hover:bg-black hover:text-white"
+                          className="group flex items-center justify-between rounded-xl border border-black/10 bg-white p-4 shadow-xs transition-all duration-200 hover:bg-black hover:text-white hover:border-black"
                         >
                           <div className="flex items-center gap-3">
-                            <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-black text-white group-hover:bg-white group-hover:text-black">
+                            <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-black text-white group-hover:bg-white group-hover:text-black transition-colors">
                               <HiCheck className="h-3 w-3" />
                             </span>
-                            <span className="text-xs sm:text-sm font-bold">{sub.name}</span>
+                            <span className="text-xs sm:text-sm font-bold text-neutral-900 group-hover:text-white transition-colors">{sub.name}</span>
                           </div>
                           <HiArrowRight className="h-4 w-4 text-neutral-400 group-hover:text-white transition-transform group-hover:translate-x-1" />
                         </Link>

@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { HiChevronDown } from 'react-icons/hi'
+import SEO from '../components/SEO'
 import { fadeUp } from '../utils/motion'
 
 const faqItems = [
@@ -30,7 +31,26 @@ export default function FAQ() {
   }, [query])
 
   return (
-    <section className="px-4 py-14 sm:px-6 sm:py-18 lg:py-24">
+    <>
+      <SEO
+        title="Engineering FAQs | PCB Design, Embedded Systems & Software Pricing"
+        description="Find answers to common questions about CoreForge's hardware development, multi-layer PCB design services, STM32 firmware timelines, custom software pricing, and technical workshops."
+        keywords="CoreForge FAQs, PCB design cost India, embedded systems questions, IoT development timeline, custom software pricing"
+        canonicalUrl="https://coreforgeindia.com/faqs"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqItems.map(([question, answer]) => ({
+            '@type': 'Question',
+            name: question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: answer,
+            },
+          })),
+        }}
+      />
+      <section className="px-4 py-14 sm:px-6 sm:py-18 lg:py-24">
       <div className="section-shell">
         <motion.div initial="hidden" animate="visible" variants={fadeUp}>
           <p className="text-xs font-semibold uppercase tracking-[0.34em] text-neutral-400">FAQ</p>
@@ -87,5 +107,6 @@ export default function FAQ() {
         </div>
       </div>
     </section>
+    </>
   )
 }

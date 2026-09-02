@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import SEO from '../components/SEO'
 import { fadeUp } from '../utils/motion'
 import { HiOutlineBriefcase } from 'react-icons/hi'
 
@@ -183,7 +184,14 @@ export default function Careers() {
   const [activeTab, setActiveTab] = useState('internships')
 
   return (
-    <section className="px-4 py-14 sm:px-6 sm:py-20">
+    <>
+      <SEO
+        title="Careers & Engineering Internships | CoreForge Bengaluru"
+        description="Explore career opportunities and paid engineering internships at CoreForge in Bengaluru. Open positions in embedded systems, PCB design, Java full-stack, and technical training."
+        keywords="CoreForge careers, embedded engineering jobs Bangalore, PCB designer hiring Bengaluru, Java full stack internship India"
+        canonicalUrl="https://coreforgeindia.com/careers"
+      />
+      <section className="px-4 py-14 sm:px-6 sm:py-20">
       <div className="section-shell">
         <motion.div initial="hidden" animate="visible" variants={fadeUp} className="mb-10">
           <p className="text-xs font-semibold uppercase tracking-[0.34em] text-neutral-400">Careers at CoreForge</p>
@@ -273,5 +281,6 @@ export default function Careers() {
         </motion.div>
       </div>
     </section>
+    </>
   )
 }
