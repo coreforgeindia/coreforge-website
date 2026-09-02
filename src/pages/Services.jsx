@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion'
 import SEO from '../components/SEO'
+import PageHero from '../components/PageHero'
 import WorkflowSection from '../sections/WorkflowSection'
 import WebPackagesSection from '../sections/WebPackagesSection'
 import { fadeUp, stagger } from '../utils/motion'
