@@ -35,11 +35,20 @@ function GoodFirmsIcon() {
   )
 }
 
+function ClutchIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3.5c3.59 0 6.5 2.91 6.5 6.5s-2.91 6.5-6.5 6.5S5.5 15.59 5.5 12 8.41 5.5 12 5.5zm0 2.5c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 2.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
+    </svg>
+  )
+}
+
 const socialLinks = [
   { label: 'Instagram', href: 'https://www.instagram.com/core.forge.in/', icon: InstagramIcon },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/company/coreforge-india/', icon: LinkedInIcon },
   { label: 'WhatsApp', href: 'https://wa.me/919380841227', icon: WhatsAppIcon },
   { label: 'GoodFirms', href: 'https://www.goodfirms.co/company/coreforge', icon: GoodFirmsIcon },
+  { label: 'Clutch', href: 'https://clutch.co/profile/coreforge', icon: ClutchIcon },
 ]
 
 export default function Footer() {
