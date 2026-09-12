@@ -6,7 +6,7 @@ export default function PrivacyPolicy() {
       <PageHero
         eyebrow="Privacy Policy"
         title="Privacy and cookie usage."
-        description="This is the dedicated page for explaining what data is collected, how contact forms work, and how cookie preferences are handled."
+        description="Learn how CoreForge collects, protects, and manages personal data, contact submissions, and website analytics."
       />
       <section className="px-4 py-14 sm:px-6 lg:py-20">
         <div className="section-shell rounded-[30px] border border-black/8 bg-white/80 p-8 text-sm leading-8 text-neutral-600">

@@ -1,12 +1,35 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import { fadeUp } from '../utils/motion'
 import heroLogo from '../assets/hero1.webp'
 import vtLogo from '../assets/logos/VyomTronic.webp'
 
 export default function Products() {
   return (
-    <div className="flex h-[calc(100vh-80px)] items-center justify-center px-4 sm:px-6">
+    <>
+      <SEO
+        title="Engineering Products & Hardware Kits | CoreForge × VyomTronics"
+        description="Discover CoreForge engineering products, hardware development kits, DIY electronics kits, and custom prototyping hardware solutions in Bengaluru."
+        keywords="IoT starter kits, PCB services, DIY electronics kits India, hardware products Bengaluru, VyomTronics"
+        canonicalUrl="https://coreforgeindia.com/products"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Product',
+          name: 'CoreForge Hardware & IoT Kits',
+          description: 'Custom hardware development kits, PCB prototypes, and DIY electronics learning kits by CoreForge.',
+          brand: {
+            '@type': 'Brand',
+            name: 'CoreForge',
+          },
+          offers: {
+            '@type': 'AggregateOffer',
+            priceCurrency: 'INR',
+            offerCount: '10+',
+          },
+        }}
+      />
+      <div className="flex h-[calc(100vh-80px)] items-center justify-center px-4 sm:px-6">
       <div className="section-shell w-full">
         <motion.div
           initial="hidden"
@@ -41,5 +64,6 @@ export default function Products() {
         </motion.div>
       </div>
     </div>
+    </>
   )
 }

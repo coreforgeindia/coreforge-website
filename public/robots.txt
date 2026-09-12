@@ -1,3 +1,7 @@
+# CoreForge - Robots.txt
+# Primary domain: coreforgeindia.com
+# Secondary domain: coreforgeindia.info
+
 User-agent: *
 Allow: /
 
@@ -17,4 +21,7 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://coreforgeindia.info/sitemap.xml
+# Sitemaps
+Sitemap: https://www.coreforgeindia.com/sitemap.xml
+Sitemap: https://www.coreforgeindia.com/image-sitemap.xml
+Sitemap: https://coreforgeindia.com/sitemap.xml

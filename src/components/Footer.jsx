@@ -27,10 +27,19 @@ function WhatsAppIcon() {
   )
 }
 
+function GoodFirmsIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 6.18l1.45 2.94 3.25.47-2.35 2.3.55 3.24L12 14.6l-2.9 1.53.55-3.24-2.35-2.3 3.25-.47L12 7.18z"/>
+    </svg>
+  )
+}
+
 const socialLinks = [
   { label: 'Instagram', href: 'https://www.instagram.com/core.forge.in/', icon: InstagramIcon },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/company/coreforge-india/', icon: LinkedInIcon },
   { label: 'WhatsApp', href: 'https://wa.me/919380841227', icon: WhatsAppIcon },
+  { label: 'GoodFirms', href: 'https://www.goodfirms.co/company/coreforge', icon: GoodFirmsIcon },
 ]
 
 export default function Footer() {
@@ -83,14 +92,17 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 3: Services */}
+          {/* Column 3: Services & Solutions */}
           <div>
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-neutral-500">Our Services</p>
-            <div className="grid gap-2.5 text-xs text-neutral-400">
-              <Link to="/services#hardware" className="hover:text-white transition">Hardware Design & Consulting</Link>
-              <Link to="/services#software" className="hover:text-white transition">Software & Tech Solutions</Link>
-              <Link to="/services#training" className="hover:text-white transition">Workshops, Training & DIY Kits</Link>
-              <Link to="/contact" className="hover:text-white transition">Technical Consultation</Link>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-neutral-500">Engineering Solutions</p>
+            <div className="grid gap-2 text-xs text-neutral-400">
+              <Link to="/services/hardware/pcb-design" className="hover:text-white transition">PCB Design & Prototyping</Link>
+              <Link to="/services/hardware/embedded-systems" className="hover:text-white transition">Embedded Firmware (STM32/ESP32)</Link>
+              <Link to="/services/software/custom-software" className="hover:text-white transition">Custom Software & ERP Development</Link>
+              <Link to="/services/software/web-development" className="hover:text-white transition">Web Platforms & E-Commerce</Link>
+              <Link to="/services/software/mobile-apps" className="hover:text-white transition">Mobile App Development</Link>
+              <Link to="/services/training/workshops" className="hover:text-white transition">Tech Workshops & DIY Kits</Link>
+              <Link to="/contact" className="hover:text-white transition">Hardware & Software Consultation</Link>
             </div>
           </div>
 

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import SEO from '../components/SEO'
 import { fadeUp } from '../utils/motion'
 import { trackLeadEvent } from '../utils/tracking'
 
@@ -81,6 +82,32 @@ export default function Contact() {
 
   return (
     <>
+      <SEO
+        title="Contact CoreForge | Engineering Consultation & Support Bengaluru"
+        description="Get in touch with CoreForge for custom hardware engineering, PCB design quotes, software development inquiries, or technical consultation in Peenya, Bengaluru."
+        keywords="Contact CoreForge, PCB design quote Bangalore, hardware consultation Bengaluru, embedded systems company contact"
+        canonicalUrl="https://coreforgeindia.com/contact"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'ContactPage',
+          name: 'Contact CoreForge',
+          url: 'https://coreforgeindia.com/contact',
+          mainEntity: {
+            '@type': 'Organization',
+            name: 'CoreForge',
+            telephone: '+91-93808-41227',
+            email: 'info@coreforgeindia.com',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: '#352, 4th Cross Rd, Rajagopala Nagar, Peenya',
+              addressLocality: 'Bengaluru',
+              addressRegion: 'Karnataka',
+              postalCode: '560058',
+              addressCountry: 'IN',
+            },
+          },
+        }}
+      />
       <section className="flex min-h-[calc(100vh-80px)] items-center px-4 py-14 sm:px-6">
         <div className="section-shell w-full">
           <motion.div initial="hidden" animate="visible" variants={fadeUp} className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">

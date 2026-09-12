@@ -1,0 +1,43 @@
+# CoreForge
+
+> CoreForge is a Bengaluru-based engineering and technology company providing practical hardware, embedded systems, IoT, PCB design, custom software, web development, mobile applications, and technical training.
+
+## Core Pages
+
+- [Homepage](https://coreforgeindia.com/): Primary engineering portal and company overview.
+- [About CoreForge](https://coreforgeindia.com/about): Company background, mission, and MSME engineering team.
+- [Engineering Services](https://coreforgeindia.com/services): Hardware design, embedded firmware, custom software, and workshops.
+- [Portfolio & Case Studies](https://coreforgeindia.com/portfolio): Delivered engineering projects, PCB prototypes, and software platforms.
+- [Products & Hardware Kits](https://coreforgeindia.com/products): Hardware development kits, DIY electronics, and prototyping equipment.
+- [Engineering FAQs](https://coreforgeindia.com/faqs): Technical FAQs, service processes, and project timelines.
+- [Careers & Internships](https://coreforgeindia.com/careers): Job openings and paid engineering internships in Bengaluru.
+- [Contact CoreForge](https://coreforgeindia.com/contact): Inquiries, technical consultation, and custom project quotes.
+- [Engineering Blog](https://coreforgeindia.com/blog): Technical articles, IoT architecture tutorials, and PCB design guides.
+
+## Hardware & Embedded Solutions
+
+- [PCB Design Services](https://coreforgeindia.com/services/hardware/pcb-design): Multi-layer PCB schematic design, high-speed routing, and prototyping.
+- [Embedded Systems & Firmware](https://coreforgeindia.com/services/hardware/embedded-systems): STM32, ESP32, FreeRTOS programming, and sensor integration.
+- [Electronics Product Design](https://coreforgeindia.com/services/hardware/product-design): End-to-end electronic product engineering from concept to assembly.
+- [Hardware Consulting](https://coreforgeindia.com/services/hardware/consulting): Design reviews, thermal analysis, and component selection.
+
+## Software & Digital Solutions
+
+- [Custom Software Development](https://coreforgeindia.com/services/software/custom-software): Enterprise ERP, CRM, and automated business platforms.
+- [Web Development & E-Commerce](https://coreforgeindia.com/services/software/web-development): Fast web platforms, portals, and e-commerce applications.
+- [Mobile App Development](https://coreforgeindia.com/services/software/mobile-apps): Android & iOS cross-platform mobile app engineering.
+- [Business Intelligence & Dashboards](https://coreforgeindia.com/services/software/business-intelligence): Real-time telemetry, analytics, and data portals.
+
+## Training & Education
+
+- [Embedded Systems Bootcamps](https://coreforgeindia.com/services/training/embedded-training): Hands-on STM32 and IoT engineering bootcamps.
+- [Hardware & PCB Design Courses](https://coreforgeindia.com/services/training/hardware-courses): Practical KiCad and multi-layer PCB design training.
+- [Software Development Programs](https://coreforgeindia.com/services/training/software-programs): Full-stack web and mobile development courses.
+- [Corporate & College Workshops](https://coreforgeindia.com/services/training/workshops): FDPs, student bootcamps, and technical mentoring.
+- [DIY Electronics Kits](https://coreforgeindia.com/services/training/diy-kits): Prototyping hardware, robotics kits, and STEM education modules.
+
+## Profiles & Verification
+
+- [LinkedIn Company Page](https://www.linkedin.com/company/coreforge-india/): Official corporate updates and career announcements.
+- [Instagram Page](https://www.instagram.com/core.forge.in/): Visual project showcases, workshops, and lab updates.
+- [GoodFirms Profile](https://www.goodfirms.co/company/coreforge): Verified company profile and client reviews.

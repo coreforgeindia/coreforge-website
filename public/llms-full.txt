@@ -1,0 +1,55 @@
+# CoreForge — Complete Technical Documentation & Site Directory
+
+> Comprehensive site map and engineering capabilities directory for CoreForge (Bengaluru, India).
+
+## Company Information
+
+- Company Name: CoreForge
+- Primary Location: Bengaluru, Karnataka, India
+- Address: #352, 4th Cross Rd, Rajagopala Nagar, Peenya, Bengaluru 560058
+- Email: info@coreforgeindia.com
+- Phone: +91-93808-41227
+- Founded: October 2024
+- Registration: MSME Registered
+
+## Core Links
+
+- [Homepage](https://coreforgeindia.com/): CoreForge engineering portal and overview.
+- [About CoreForge](https://coreforgeindia.com/about): Company background, team, and MSME registration.
+- [Engineering Services](https://coreforgeindia.com/services): Comprehensive hardware, software, and training capabilities.
+- [Portfolio](https://coreforgeindia.com/portfolio): Case studies of delivered hardware and software projects.
+- [Products](https://coreforgeindia.com/products): Hardware kits and product developments in collaboration with VyomTronics.
+- [Careers](https://coreforgeindia.com/careers): Job openings and engineering internships in Bengaluru.
+- [FAQs](https://coreforgeindia.com/faqs): Technical FAQs and project quotation processes.
+- [Contact Us](https://coreforgeindia.com/contact): Inquiries and project discussion form.
+- [Blog](https://coreforgeindia.com/blog): Technical deep-dives and engineering articles.
+
+## Hardware & Embedded Systems Services
+
+- [PCB Design & Prototyping](https://coreforgeindia.com/services/hardware/pcb-design): Multi-layer schematic, high-speed routing, impedance matching, fabrication files (Gerber/BOM/Pick-and-Place), and prototype guidance.
+- [Embedded Systems & Firmware](https://coreforgeindia.com/services/hardware/embedded-systems): Microcontroller firmware (STM32, ESP32, Arduino, ARM Cortex), FreeRTOS development, driver development, sensor integration, and low-power optimization.
+- [Electronics Product Design](https://coreforgeindia.com/services/hardware/product-design): Turnkey electronic product engineering from concept to enclosure design, thermal analysis, and production assembly support.
+- [End-to-End PCB Development](https://coreforgeindia.com/services/hardware/end-to-end-pcb): Testing, validation, signal integrity checks, and small-batch production support.
+- [Hardware Consulting](https://coreforgeindia.com/services/hardware/consulting): Design reviews, component sourcing advice, and architecture optimization.
+
+## Custom Software & Web Development Services
+
+- [Custom Software Development](https://coreforgeindia.com/services/software/custom-software): Tailor-made ERP systems, CRM portals, internal tools, and automated business platforms.
+- [Web Development & E-Commerce](https://coreforgeindia.com/services/software/web-development): Fast web platforms, static/dynamic sites, lead-generation portals, and e-commerce stores.
+- [Mobile App Development](https://coreforgeindia.com/services/software/mobile-apps): Android & iOS mobile applications with backend API integration.
+- [Business Intelligence & Dashboards](https://coreforgeindia.com/services/software/business-intelligence): High-throughput telemetry, real-time data portals, and analytics dashboards.
+
+## Workshops, Training & DIY Kits
+
+- [Embedded Systems Bootcamps](https://coreforgeindia.com/services/training/embedded-training): Hands-on training on STM32, ESP32, C programming, and IoT.
+- [Hardware & PCB Courses](https://coreforgeindia.com/services/training/hardware-courses): Circuit simulation, KiCad PCB layout, and manufacturing readiness.
+- [Software Development Programs](https://coreforgeindia.com/services/training/software-programs): Web, mobile, and full-stack software courses.
+- [Corporate & College Workshops](https://coreforgeindia.com/services/training/workshops): Faculty Development Programs (FDPs), student bootcamps, and technical mentoring.
+- [DIY Electronics Kits](https://coreforgeindia.com/services/training/diy-kits): Prototyping hardware, robotics kits, and STEM modules.
+- [Academic Project Guidance](https://coreforgeindia.com/services/training/academic-projects): Mentorship and execution support for student and final-year engineering projects.
+
+## Verification & External Profiles
+
+- [LinkedIn Company Page](https://www.linkedin.com/company/coreforge-india/): Official corporate updates and announcements.
+- [Instagram Page](https://www.instagram.com/core.forge.in/): Visual project showcases, workshops, and lab updates.
+- [GoodFirms Profile](https://www.goodfirms.co/company/coreforge): Verified company profile and client reviews.

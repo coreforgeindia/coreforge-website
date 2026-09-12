@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import SEO from '../components/SEO'
 import { fadeUp } from '../utils/motion'
 import { blogPosts } from '../utils/blogData'
 import { HiArrowLeft, HiOutlineClock } from 'react-icons/hi'
@@ -86,6 +87,33 @@ export default function BlogPost() {
 
   return (
     <>
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        keywords={`${post.category}, CoreForge engineering, ${post.title}`}
+        canonicalUrl={`https://coreforgeindia.com/blog/${post.slug}`}
+        ogType="article"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: post.title,
+          description: post.excerpt,
+          datePublished: post.date,
+          author: {
+            '@type': 'Organization',
+            name: post.author || 'CoreForge Engineering Team',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'CoreForge',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://coreforgeindia.com/favicon.png',
+            },
+          },
+          mainEntityOfPage: `https://coreforgeindia.com/blog/${post.slug}`,
+        }}
+      />
       <article className="px-4 py-14 sm:px-6 sm:py-20">
         <div className="section-shell max-w-3xl">
           <motion.div initial="hidden" animate="visible" variants={fadeUp}>
@@ -175,32 +203,6 @@ export default function BlogPost() {
           </motion.div>
         </div>
       </article>
-
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BlogPosting',
-            headline: post.title,
-            description: post.excerpt,
-            author: { '@type': 'Organization', name: 'CoreForge' },
-            publisher: {
-              '@type': 'Organization',
-              name: 'CoreForge',
-              url: 'https://coreforgeindia.info',
-              logo: { '@type': 'ImageObject', url: 'https://coreforgeindia.info/favicon.png' },
-            },
-            datePublished: post.date,
-            dateModified: post.date,
-            mainEntityOfPage: {
-              '@type': 'WebPage',
-              '@id': `https://coreforgeindia.info/blog/${post.slug}`,
-            },
-          }),
-        }}
-      />
     </>
   )
 }

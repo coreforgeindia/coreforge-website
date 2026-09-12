@@ -1,12 +1,26 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { HiArrowRight, HiOutlineClock } from 'react-icons/hi'
+import SEO from '../components/SEO'
 import { fadeUp, stagger } from '../utils/motion'
 import { blogPosts } from '../utils/blogData'
 
 export default function Blog() {
   return (
     <>
+      <SEO
+        title="Engineering Insights & Tech Blog | CoreForge Bengaluru"
+        description="Technical articles, practical engineering guides, IoT architecture tutorials, and PCB design insights from the CoreForge engineering team."
+        keywords="CoreForge blog, IoT development guide, PCB design process, embedded systems tutorial, custom software vs off-the-shelf ERP"
+        canonicalUrl="https://coreforgeindia.com/blog"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Blog',
+          name: 'CoreForge Engineering Blog',
+          url: 'https://coreforgeindia.com/blog',
+          description: 'Technical articles, practical engineering guides, IoT architecture tutorials, and PCB design insights.',
+        }}
+      />
       <section className="px-4 py-14 sm:px-6 sm:py-20">
         <div className="section-shell">
           <motion.div initial="hidden" animate="visible" variants={fadeUp}>

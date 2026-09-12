@@ -92,6 +92,11 @@ select {
   transform: translateY(-1px);
 }
 
+.btn-primary:hover *,
+.btn-secondary:hover * {
+  color: inherit !important;
+}
+
 .btn-secondary {
   display: inline-flex;
   align-items: center;
@@ -117,6 +122,13 @@ select {
   border-color: #000000;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   transform: translateY(-1px);
+}
+
+/* Universal hover text contrast for interactive cards and buttons */
+a:hover.hover\:text-white,
+button:hover.hover\:text-white,
+.group:hover .group-hover\:text-white {
+  color: #ffffff !important;
 }
 
 /* ── Utility Classes ── */
