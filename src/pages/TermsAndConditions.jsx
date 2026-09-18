@@ -1,8 +1,14 @@
+import SEO from '../components/SEO'
 import PageHero from '../components/PageHero'
 
 export default function TermsAndConditions() {
   return (
     <>
+      <SEO
+        title="Terms & Conditions | CoreForge"
+        description="Project scope, delivery timing, service obligations, and support conditions for CoreForge engineering services."
+        canonicalUrl="https://www.coreforgeindia.com/terms"
+      />
       <PageHero
         eyebrow="Terms & Conditions"
         title="Clear terms for services and communication."

@@ -8,7 +8,6 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/services', label: 'Services' },
-  { href: '/products', label: 'Products' },
   { href: '/blog', label: 'Blog' },
   { href: '/faqs', label: 'FAQ' },
   { href: '/careers', label: 'Careers' },
@@ -18,7 +17,6 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
-  const isHomePage = location.pathname === '/'
 
   useEffect(() => {
     let ticking = false
@@ -41,17 +39,15 @@ export default function Navbar() {
     setOpen(false)
   }, [location.pathname])
 
-  const isDarkHero = isHomePage && !scrolled
-
   return (
     <header
-      className={`sticky top-0 z-50 px-3 pt-3 pb-1 sm:px-5 transition-colors duration-300 ${
-        isDarkHero ? 'bg-[#050508]' : 'bg-transparent'
-      }`}
+      className="sticky top-0 z-50 px-3 pt-3 pb-1 sm:px-5 bg-transparent transition-colors duration-300"
     >
       <div
         className={`mx-auto transition-all duration-300 ease-out ${
-          scrolled
+          open
+            ? 'max-w-4xl rounded-[24px] border border-black/10 bg-white shadow-[0_16px_36px_rgba(0,0,0,0.12)] py-3 px-4 sm:px-6'
+            : scrolled
             ? 'max-w-4xl rounded-full border border-black/10 bg-white/90 shadow-[0_12px_32px_rgba(0,0,0,0.08)] backdrop-blur-xl py-1.5 px-3 sm:px-4'
             : 'max-w-[88rem] rounded-[24px] border border-black/10 bg-white shadow-[0_8px_24px_rgba(0,0,0,0.04)] py-2.5 px-4 sm:px-6'
         }`}

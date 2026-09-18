@@ -55,12 +55,12 @@ export default function Portfolio() {
         title="Engineering Portfolio & Case Studies | CoreForge Bengaluru"
         description="Explore real-world engineering projects delivered by CoreForge across IoT edge gateways, multi-layer PCBs, custom ERP portals, embedded firmware, and technical workshops."
         keywords="CoreForge portfolio, embedded projects India, PCB design case studies, custom ERP projects Bengaluru, IoT case studies"
-        canonicalUrl="https://coreforgeindia.com/portfolio"
+        canonicalUrl="https://www.coreforgeindia.com/portfolio"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'CollectionPage',
           name: 'CoreForge Portfolio & Case Studies',
-          url: 'https://coreforgeindia.com/portfolio',
+          url: 'https://www.coreforgeindia.com/portfolio',
           description: 'Snapshots of hardware, embedded firmware, PCB, and software engineering projects delivered by CoreForge.',
         }}
       />

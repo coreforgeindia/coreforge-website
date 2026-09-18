@@ -61,8 +61,6 @@ export default function NotFound() {
             <span className="text-neutral-200">|</span>
             <Link to="/about" className="hover:text-neutral-900 transition">About</Link>
             <span className="text-neutral-200">|</span>
-            <Link to="/products" className="hover:text-neutral-900 transition">Products</Link>
-            <span className="text-neutral-200">|</span>
             <Link to="/faqs" className="hover:text-neutral-900 transition">FAQ</Link>
           </motion.div>
         </motion.div>

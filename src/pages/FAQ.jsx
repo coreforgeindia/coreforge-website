@@ -36,7 +36,7 @@ export default function FAQ() {
         title="Engineering FAQs | PCB Design, Embedded Systems & Software Pricing"
         description="Find answers to common questions about CoreForge's hardware development, multi-layer PCB design services, STM32 firmware timelines, custom software pricing, and technical workshops."
         keywords="CoreForge FAQs, PCB design cost India, embedded systems questions, IoT development timeline, custom software pricing"
-        canonicalUrl="https://coreforgeindia.com/faqs"
+        canonicalUrl="https://www.coreforgeindia.com/faqs"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'FAQPage',

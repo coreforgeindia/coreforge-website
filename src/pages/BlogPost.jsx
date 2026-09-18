@@ -91,7 +91,7 @@ export default function BlogPost() {
         title={post.title}
         description={post.excerpt}
         keywords={`${post.category}, CoreForge engineering, ${post.title}`}
-        canonicalUrl={`https://coreforgeindia.com/blog/${post.slug}`}
+        canonicalUrl={`https://www.coreforgeindia.com/blog/${post.slug}`}
         ogType="article"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -108,10 +108,10 @@ export default function BlogPost() {
             name: 'CoreForge',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://coreforgeindia.com/favicon.png',
+              url: 'https://www.coreforgeindia.com/favicon.png',
             },
           },
-          mainEntityOfPage: `https://coreforgeindia.com/blog/${post.slug}`,
+          mainEntityOfPage: `https://www.coreforgeindia.com/blog/${post.slug}`,
         }}
       />
       <article className="px-4 py-14 sm:px-6 sm:py-20">

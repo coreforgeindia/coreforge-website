@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react'
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -9,9 +9,9 @@ import ScrollToTop from './components/ScrollToTop'
 // Route-based Code Splitting for lightning-fast performance
 const Home = lazy(() => import('./pages/Home'))
 const Portfolio = lazy(() => import('./pages/Portfolio'))
+const About = lazy(() => import('./pages/About'))
 const Services = lazy(() => import('./pages/Services'))
 const ServiceDetail = lazy(() => import('./pages/ServiceDetail'))
-const Products = lazy(() => import('./pages/Products'))
 const Contact = lazy(() => import('./pages/Contact'))
 const FAQ = lazy(() => import('./pages/FAQ'))
 const Careers = lazy(() => import('./pages/Careers'))
@@ -52,11 +52,11 @@ function AnimatedRoutes() {
           <Routes location={location}>
             <Route path="/" element={<Home />} />
             <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/about" element={<Portfolio />} />
+            <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/services/:category" element={<ServiceDetail />} />
             <Route path="/services/:category/:subSlug" element={<ServiceDetail />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/products" element={<Navigate to="/services" replace />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faqs" element={<FAQ />} />
             <Route path="/careers" element={<Careers />} />

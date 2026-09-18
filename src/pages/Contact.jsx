@@ -86,12 +86,12 @@ export default function Contact() {
         title="Contact CoreForge | Engineering Consultation & Support Bengaluru"
         description="Get in touch with CoreForge for custom hardware engineering, PCB design quotes, software development inquiries, or technical consultation in Peenya, Bengaluru."
         keywords="Contact CoreForge, PCB design quote Bangalore, hardware consultation Bengaluru, embedded systems company contact"
-        canonicalUrl="https://coreforgeindia.com/contact"
+        canonicalUrl="https://www.coreforgeindia.com/contact"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'ContactPage',
           name: 'Contact CoreForge',
-          url: 'https://coreforgeindia.com/contact',
+          url: 'https://www.coreforgeindia.com/contact',
           mainEntity: {
             '@type': 'Organization',
             name: 'CoreForge',

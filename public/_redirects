@@ -1,0 +1,10 @@
+# CoreForge Cloudflare Pages Redirect Rules
+# Non-www to www redirect (single-hop 301)
+https://coreforgeindia.com/* https://www.coreforgeindia.com/:splat 301
+http://coreforgeindia.com/* https://www.coreforgeindia.com/:splat 301
+
+# Company → About consolidation (301 permanent redirect)
+/company /about 301
+
+# Products → Services redirect (301 permanent redirect)
+/products /services 301

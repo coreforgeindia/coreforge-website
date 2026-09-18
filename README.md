@@ -1,4 +1,4 @@
-# CoreForge India — Engineering Lab Website
+# CoreForge India Engineering Lab Website
 
 CoreForge is a Bengaluru-based technology & practical engineering company offering Hardware Design (PCB, Embedded Systems), Custom Software Development (ERP, CRM, Web & Mobile Apps), and Technical Workshops, Training & DIY Kits.
 

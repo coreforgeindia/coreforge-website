@@ -12,12 +12,12 @@ export default function Blog() {
         title="Engineering Insights & Tech Blog | CoreForge Bengaluru"
         description="Technical articles, practical engineering guides, IoT architecture tutorials, and PCB design insights from the CoreForge engineering team."
         keywords="CoreForge blog, IoT development guide, PCB design process, embedded systems tutorial, custom software vs off-the-shelf ERP"
-        canonicalUrl="https://coreforgeindia.com/blog"
+        canonicalUrl="https://www.coreforgeindia.com/blog"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'Blog',
           name: 'CoreForge Engineering Blog',
-          url: 'https://coreforgeindia.com/blog',
+          url: 'https://www.coreforgeindia.com/blog',
           description: 'Technical articles, practical engineering guides, IoT architecture tutorials, and PCB design insights.',
         }}
       />
@@ -101,13 +101,13 @@ export default function Blog() {
             '@context': 'https://schema.org',
             '@type': 'Blog',
             name: 'CoreForge Blog',
-            url: 'https://coreforgeindia.info/blog',
+            url: 'https://www.coreforgeindia.com/blog',
             description:
               'Technical insights, project breakdowns, and engineering perspectives from the CoreForge team.',
             publisher: {
               '@type': 'Organization',
               name: 'CoreForge',
-              url: 'https://coreforgeindia.info',
+              url: 'https://www.coreforgeindia.com',
             },
             blogPost: blogPosts.map((post) => ({
               '@type': 'BlogPosting',
@@ -115,7 +115,7 @@ export default function Blog() {
               description: post.excerpt,
               author: { '@type': 'Organization', name: 'CoreForge' },
               datePublished: post.date,
-              url: `https://coreforgeindia.info/blog/${post.slug}`,
+              url: `https://www.coreforgeindia.com/blog/${post.slug}`,
             })),
           }),
         }}

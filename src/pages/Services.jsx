@@ -71,18 +71,18 @@ export default function Services() {
         title="Engineering Services | PCB Design, Embedded Systems & Software Bengaluru"
         description="Explore CoreForge's engineering services: multi-layer PCB layout & prototyping, STM32 & ESP32 embedded firmware, custom ERP/CRM software, web & mobile apps, and workshops."
         keywords="PCB design services India, embedded systems development, IoT solutions Bangalore, custom software development, firmware development, hardware consulting"
-        canonicalUrl="https://coreforgeindia.com/services"
+        canonicalUrl="https://www.coreforgeindia.com/services"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'ItemList',
           name: 'CoreForge Engineering Services',
-          url: 'https://coreforgeindia.com/services',
+          url: 'https://www.coreforgeindia.com/services',
           itemListElement: mainServices.map((service, index) => ({
             '@type': 'ListItem',
             position: index + 1,
             name: service.title,
             description: service.description,
-            url: `https://coreforgeindia.com/services/${service.slug}`,
+            url: `https://www.coreforgeindia.com/services/${service.slug}`,
           })),
         }}
       />
@@ -181,6 +181,64 @@ export default function Services() {
 
       {/* Web Development Packages & Checklists */}
       <WebPackagesSection />
+
+      {/* Additional Digital Services */}
+      <section className="px-4 py-16 sm:px-6 bg-white border-t border-black/5">
+        <div className="section-shell">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            variants={fadeUp}
+            className="max-w-3xl mb-10"
+          >
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#0d9488]">
+              ADDITIONAL SERVICES
+            </span>
+            <h2 className="mt-2 font-heading text-2xl sm:text-3xl font-bold tracking-[-0.03em] text-neutral-950">
+              Digital & Web Services
+            </h2>
+            <p className="mt-2 text-sm text-neutral-600">
+              Beyond our core engineering verticals, CoreForge also delivers focused digital services for businesses looking to establish or expand their online presence.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {[
+              { path: '/services/app-development', name: 'Mobile App Development', desc: 'Native and cross-platform Android & iOS applications for businesses and startups.' },
+              { path: '/services/static-website', name: 'Static Website Design', desc: 'Fast, lightweight brochure and portfolio websites built for speed and simplicity.' },
+              { path: '/services/dynamic-website', name: 'Dynamic Website Development', desc: 'Full-featured web applications with CMS, user accounts, and database integration.' },
+              { path: '/services/web-analytics', name: 'Web Analytics Setup', desc: 'Google Analytics, heatmaps, and conversion tracking to measure real business impact.' },
+              { path: '/services/lead-capture', name: 'Lead Capture Systems', desc: 'Landing pages, contact forms, and CRM integrations to capture and nurture leads.' },
+            ].map((service) => (
+              <Link
+                key={service.path}
+                to={service.path}
+                className="group flex flex-col justify-between rounded-2xl border border-black/10 bg-[#fafafa] p-6 shadow-xs transition-all duration-200 hover:bg-black hover:text-white hover:border-black"
+              >
+                <div>
+                  <h3 className="text-sm font-bold text-neutral-900 group-hover:text-white transition-colors">
+                    {service.name}
+                  </h3>
+                  <p className="mt-2 text-xs text-neutral-600 group-hover:text-neutral-300 transition-colors leading-5">
+                    {service.desc}
+                  </p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-black/5 group-hover:border-white/10 flex items-center gap-1.5 text-xs font-bold text-neutral-800 group-hover:text-white transition-colors">
+                  <span>Learn More</span>
+                  <HiArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                </div>
+              </Link>
+            ))}
+          </motion.div>
+        </div>
+      </section>
     </>
   )
 }

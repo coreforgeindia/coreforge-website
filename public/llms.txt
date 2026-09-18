@@ -8,7 +8,6 @@
 - [About CoreForge](https://coreforgeindia.com/about): Company background, mission, and MSME engineering team.
 - [Engineering Services](https://coreforgeindia.com/services): Hardware design, embedded firmware, custom software, and workshops.
 - [Portfolio & Case Studies](https://coreforgeindia.com/portfolio): Delivered engineering projects, PCB prototypes, and software platforms.
-- [Products & Hardware Kits](https://coreforgeindia.com/products): Hardware development kits, DIY electronics, and prototyping equipment.
 - [Engineering FAQs](https://coreforgeindia.com/faqs): Technical FAQs, service processes, and project timelines.
 - [Careers & Internships](https://coreforgeindia.com/careers): Job openings and paid engineering internships in Bengaluru.
 - [Contact CoreForge](https://coreforgeindia.com/contact): Inquiries, technical consultation, and custom project quotes.

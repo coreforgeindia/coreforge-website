@@ -1,8 +1,14 @@
+import SEO from '../components/SEO'
 import PageHero from '../components/PageHero'
 
 export default function PrivacyPolicy() {
   return (
     <>
+      <SEO
+        title="Privacy Policy | CoreForge"
+        description="Learn how CoreForge collects, protects, and manages personal data, contact submissions, and website analytics."
+        canonicalUrl="https://www.coreforgeindia.com/privacy"
+      />
       <PageHero
         eyebrow="Privacy Policy"
         title="Privacy and cookie usage."

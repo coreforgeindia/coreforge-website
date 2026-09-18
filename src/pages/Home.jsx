@@ -4,10 +4,10 @@ import NumbersSection from '../sections/NumbersSection'
 import AboutSection from '../sections/AboutSection'
 import ServicesSection from '../sections/ServicesSection'
 import ClientLogosSection from '../sections/ClientLogosSection'
-import ProductsSection from '../sections/ProductsSection'
 import HomeBlogSection from '../sections/HomeBlogSection'
 import TestimonialsSection from '../sections/TestimonialsSection'
 import ContactSection from '../sections/ContactSection'
+import HomeSEOContent from '../sections/HomeSEOContent'
 
 export default function Home() {
   return (
@@ -16,14 +16,14 @@ export default function Home() {
         title="CoreForge | IoT, Embedded Systems, PCB Design & Custom Software Bengaluru"
         description="CoreForge is a Bengaluru engineering firm providing PCB design, embedded systems firmware, custom software development, IoT integration, and technical workshops."
         keywords="CoreForge, IoT solutions India, PCB design Bengaluru, embedded systems firmware, custom software development Bangalore, microcontroller programming"
-        canonicalUrl="https://coreforgeindia.com/"
+        canonicalUrl="https://www.coreforgeindia.com/"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'Organization',
           name: 'CoreForge',
           legalName: 'CoreForge',
-          url: 'https://coreforgeindia.com',
-          logo: 'https://coreforgeindia.com/favicon.png',
+          url: 'https://www.coreforgeindia.com',
+          logo: 'https://www.coreforgeindia.com/favicon.png',
           description: 'CoreForge provides IoT and embedded solutions, PCB design and development, custom software platforms, web and mobile apps, workshops, and technical support.',
           foundingDate: '2024-10',
           sameAs: [
@@ -50,9 +50,9 @@ export default function Home() {
       <HeroSection />
       <NumbersSection />
       <AboutSection />
+      <HomeSEOContent />
       <ServicesSection />
       <ClientLogosSection />
-      <ProductsSection />
       <HomeBlogSection />
       <TestimonialsSection />
       <ContactSection />

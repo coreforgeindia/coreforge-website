@@ -20,6 +20,10 @@ export const allServicesData = {
       { slug: 'business-intelligence', title: 'Business Intelligence & Dashboards', desc: 'Interactive KPI dashboards, automated reporting, analytics.' },
     ],
     industries: ['Manufacturing', 'Healthcare', 'Education', 'Retail', 'Logistics', 'Startups', 'SMEs', 'Enterprises'],
+    relatedLinks: [
+      { label: 'Custom Software vs Off-The-Shelf ERP', href: '/blog/custom-software-vs-off-the-shelf-erp' },
+      { label: 'How CoreForge Builds IoT Solutions', href: '/blog/how-coreforge-builds-iot-solutions' },
+    ],
   },
 
   'software/custom-software': {
@@ -43,6 +47,9 @@ export const allServicesData = {
       'Complete intellectual property and source code handover',
     ],
     industries: ['Manufacturing', 'Retail & Distribution', 'Healthcare', 'Logistics & Supply Chain', 'Education'],
+    relatedLinks: [
+      { label: 'Custom Software vs Off-The-Shelf ERP', href: '/blog/custom-software-vs-off-the-shelf-erp' },
+    ],
   },
 
   'software/web-development': {
@@ -137,6 +144,10 @@ export const allServicesData = {
       { slug: 'consulting', title: 'Hardware Consulting Services', desc: 'Design review, signal integrity, and PCB cost optimization.' },
     ],
     industries: ['IoT & Smart Devices', 'Industrial Automation', 'Consumer Electronics', 'Healthcare Devices', 'Automotive'],
+    relatedLinks: [
+      { label: 'How CoreForge Builds IoT Solutions', href: '/blog/how-coreforge-builds-iot-solutions' },
+      { label: 'Embedded Systems Training', href: '/services/training/embedded-training' },
+    ],
   },
 
   'hardware/product-design': {
@@ -184,6 +195,9 @@ export const allServicesData = {
       'Fabrication and assembly technical drawings',
     ],
     industries: ['Wireless IoT', 'Robotics & Motor Control', 'Power Electronics', 'Telematics'],
+    relatedLinks: [
+      { label: 'End-to-End PCB Development', href: '/services/hardware/end-to-end-pcb' },
+    ],
   },
 
   'hardware/embedded-systems': {
@@ -208,6 +222,10 @@ export const allServicesData = {
       'Hardware-in-the-loop (HIL) test suites and validation logs',
     ],
     industries: ['Connected Hardware', 'Industrial Telemetry', 'Smart Energy', 'Automation'],
+    relatedLinks: [
+      { label: 'Embedded Systems Training', href: '/services/training/embedded-training' },
+      { label: 'How CoreForge Builds IoT Solutions', href: '/blog/how-coreforge-builds-iot-solutions' },
+    ],
   },
 
   'hardware/end-to-end-pcb': {
@@ -280,6 +298,11 @@ export const allServicesData = {
       { slug: 'academic-projects', title: 'Academic & Competition Projects', desc: 'Mentorship for final year projects and research prototypes.' },
     ],
     industries: ['Engineering Colleges', 'Universities', 'Corporate Engineering Teams', 'Student Makers', 'Polytechnics'],
+    relatedLinks: [
+      { label: 'Why Practical Embedded Training Matters', href: '/blog/why-practical-embedded-training-matters' },
+      { label: 'Embedded Systems & Firmware', href: '/services/hardware/embedded-systems' },
+      { label: 'DIY Electronics & Robotics Kits', href: '/services/training/diy-kits' },
+    ],
   },
 
   'training/embedded-training': {
@@ -303,6 +326,10 @@ export const allServicesData = {
       'CoreForge Professional Certificate of Completion',
     ],
     industries: ['Engineering Students', 'Junior Hardware Engineers', 'Robotics Enthusiasts'],
+    relatedLinks: [
+      { label: 'Why Practical Embedded Training Matters', href: '/blog/why-practical-embedded-training-matters' },
+      { label: 'Embedded Systems & Firmware Services', href: '/services/hardware/embedded-systems' },
+    ],
   },
 
   'training/hardware-courses': {
@@ -325,6 +352,9 @@ export const allServicesData = {
       'Design verification and debugging sessions',
     ],
     industries: ['ECE / EEE Students', 'Embedded Engineers', 'Hardware Startups'],
+    relatedLinks: [
+      { label: 'PCB Design Services', href: '/services/hardware/pcb-design' },
+    ],
   },
 
   'training/software-programs': {
@@ -391,6 +421,9 @@ export const allServicesData = {
       'Open-source code repositories with modular examples',
     ],
     industries: ['Students', 'STEM Schools', 'Makerspaces', 'Self-Learners'],
+    relatedLinks: [
+      { label: 'Hardware Design Courses', href: '/services/training/hardware-courses' },
+    ],
   },
 
   'training/academic-projects': {

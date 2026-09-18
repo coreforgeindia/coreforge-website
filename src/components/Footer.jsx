@@ -93,9 +93,9 @@ export default function Footer() {
               <Link to="/" className="hover:text-white transition">Home</Link>
               <Link to="/portfolio" className="hover:text-white transition">Portfolio</Link>
               <Link to="/services" className="hover:text-white transition">Services</Link>
-              <Link to="/products" className="hover:text-white transition">Products</Link>
               <Link to="/blog" className="hover:text-white transition">Blog</Link>
               <Link to="/faqs" className="hover:text-white transition">FAQ</Link>
+              <Link to="/about" className="hover:text-white transition">About</Link>
               <Link to="/careers" className="hover:text-white transition">Careers</Link>
               <Link to="/contact" className="hover:text-white transition">Contact Us</Link>
             </div>

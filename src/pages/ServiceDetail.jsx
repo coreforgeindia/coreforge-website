@@ -28,7 +28,7 @@ export default function ServiceDetail() {
         title={`${service.title} Services | CoreForge Bengaluru`}
         description={service.description.length > 160 ? `${service.description.substring(0, 157)}...` : service.description}
         keywords={`${service.title}, CoreForge engineering, ${service.tagline}, Bengaluru hardware software`}
-        canonicalUrl={`https://coreforgeindia.com/services/${slug}`}
+        canonicalUrl={`https://www.coreforgeindia.com/services/${slug}`}
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'Service',
@@ -38,7 +38,7 @@ export default function ServiceDetail() {
           provider: {
             '@type': 'Organization',
             name: 'CoreForge',
-            url: 'https://coreforgeindia.com',
+            url: 'https://www.coreforgeindia.com',
           },
           areaServed: {
             '@type': 'AdministrativeArea',
@@ -258,6 +258,29 @@ export default function ServiceDetail() {
                 <span key={ind} className="rounded-full bg-black/5 border border-black/5 px-4 py-2 text-xs font-bold text-neutral-800">
                   {ind}
                 </span>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── Related Resources ── */}
+      {service.relatedLinks && service.relatedLinks.length > 0 && (
+        <section className="px-4 py-12 sm:px-6 bg-[#fafafa] border-t border-black/5">
+          <div className="section-shell">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-neutral-400 mb-4">
+              Related Resources & Pages
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {service.relatedLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="inline-flex items-center gap-2 rounded-xl border border-black/10 bg-white px-4 py-2.5 text-xs font-bold text-neutral-800 shadow-xs transition-all hover:bg-black hover:text-white hover:border-black"
+                >
+                  {link.label}
+                  <HiArrowRight className="h-3 w-3" />
+                </Link>
               ))}
             </div>
           </div>

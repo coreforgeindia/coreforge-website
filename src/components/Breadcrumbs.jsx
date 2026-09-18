@@ -13,13 +13,13 @@ export default function Breadcrumbs({ items }) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://coreforgeindia.com/',
+        item: 'https://www.coreforgeindia.com/',
       },
       ...items.map((item, index) => ({
         '@type': 'ListItem',
         position: index + 2,
         name: item.label,
-        item: item.href ? `https://coreforgeindia.com${item.href}` : undefined,
+        item: item.href ? `https://www.coreforgeindia.com${item.href}` : undefined,
       })),
     ],
   }
