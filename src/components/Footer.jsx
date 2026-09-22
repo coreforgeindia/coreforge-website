@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import logoImg from '../assets/logos/FInal Logo (9).png'
+import hero1Logo from '../assets/hero1.webp'
 
 function InstagramIcon() {
   return (
@@ -38,7 +38,7 @@ function GoodFirmsIcon() {
 function ClutchIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3.5c3.59 0 6.5 2.91 6.5 6.5s-2.91 6.5-6.5 6.5S5.5 15.59 5.5 12 8.41 5.5 12 5.5zm0 2.5c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 2.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
+      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10c0-1.226-.221-2.4-.625-3.483l-3.35 1.934C18.293 11.08 18.5 11.528 18.5 12c0 3.59-2.91 6.5-6.5 6.5S5.5 15.59 5.5 12 8.41 5.5 12 5.5c1.472 0 2.827.49 3.916 1.316l2.766-2.766C16.924 2.767 14.582 2 12 2z" />
     </svg>
   )
 }
@@ -56,15 +56,13 @@ export default function Footer() {
     <footer className="bg-black px-4 py-14 text-white sm:px-6">
       <div className="section-shell">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_1fr_1fr]">
-          {/* Column 1: Brand & Logo Link */}
+          {/* Column 1: Brand & Logo Link — Frameless & Borderless */}
           <div>
             <Link to="/" className="group inline-flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 transition-colors group-hover:bg-white/10">
-              <img src={logoImg} alt="CoreForge logo" className="h-7 w-7 object-contain" />
-              </div>
+              <img src={hero1Logo} alt="CoreForge logo" className="h-9 w-9 object-contain brightness-0 invert transition-transform duration-200 group-hover:scale-105" />
               <div>
                 <p className="text-xl font-bold tracking-[-0.04em] text-white">CoreForge</p>
-                <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">Build With Precision</p>
+                <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-neutral-400">INNOVATE · ENGINEER · DELIVER</p>
               </div>
             </Link>
             <p className="mt-4 max-w-sm text-xs leading-6 text-neutral-400">
@@ -78,7 +76,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={label}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-neutral-300 transition hover:bg-white hover:text-black"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-neutral-300 transition-all duration-200 hover:border-white hover:bg-white hover:text-black"
                 >
                   <Icon />
                 </a>

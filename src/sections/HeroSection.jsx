@@ -20,9 +20,6 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="hero-light px-4 sm:px-8 lg:px-12 py-14 lg:py-24">
-      {/* Blueprint Grid Overlay */}
-      <div className="hero-light-grid" />
-
       <div className="section-shell relative z-10 w-full">
         <div className="max-w-4xl mx-auto text-center">
           
@@ -32,18 +29,7 @@ export default function HeroSection() {
             animate="visible"
             className="flex flex-col items-center"
           >
-            {/* Availability Pill */}
-            <motion.div
-              variants={fadeUp}
-              className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-1.5 shadow-xs mb-6"
-            >
-              <span className="h-2 w-2 rounded-full bg-[#16a34a] animate-pulse" />
-              <span className="text-xs font-bold text-neutral-800 tracking-wide">
-                Available for Q3 / Q4 Projects
-              </span>
-            </motion.div>
-
-            {/* Headline with Black Typography & Underline Accent */}
+            {/* Headline with Gradient Typography & Underline Accent */}
             <motion.h1
               variants={fadeUp}
               className="font-heading text-3xl sm:text-5xl lg:text-[4.2rem] font-black leading-[1.08] tracking-[-0.03em] text-neutral-950"
@@ -53,7 +39,7 @@ export default function HeroSection() {
                 <span className="relative z-10 text-neutral-950">From Code</span>
                 <span className="absolute bottom-1 left-0 w-full h-3.5 bg-[#eab308]/40 -rotate-1 rounded-sm -z-0" />
               </span>{' '}
-              &amp; Circuits.
+              <span className="bg-gradient-to-r from-neutral-950 via-neutral-700 to-neutral-500 bg-clip-text text-transparent">&amp; Circuits.</span>
             </motion.h1>
 
             {/* Subtitle */}

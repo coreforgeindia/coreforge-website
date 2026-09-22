@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, useScroll, useMotionValueEvent } from 'framer-motion'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { HiOutlineMenuAlt3, HiOutlineX } from 'react-icons/hi'
 import logoImg from '../assets/logos/FInal Logo (9).png'
@@ -16,23 +16,13 @@ const navLinks = [
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [hoveredIdx, setHoveredIdx] = useState(null)
   const location = useLocation()
+  const { scrollY } = useScroll()
 
-  useEffect(() => {
-    let ticking = false
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          setScrolled(window.scrollY > 30)
-          ticking = false
-        })
-        ticking = true
-      }
-    }
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    setScrolled(latest > 40)
+  })
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -40,51 +30,76 @@ export default function Navbar() {
   }, [location.pathname])
 
   return (
-    <header
-      className="sticky top-0 z-50 px-3 pt-3 pb-1 sm:px-5 bg-transparent transition-colors duration-300"
-    >
-      <div
-        className={`mx-auto transition-all duration-300 ease-out ${
-          open
-            ? 'max-w-4xl rounded-[24px] border border-black/10 bg-white shadow-[0_16px_36px_rgba(0,0,0,0.12)] py-3 px-4 sm:px-6'
+    <header className="sticky top-0 z-50 px-3 pt-3 pb-1 sm:px-5 bg-transparent">
+      <motion.div
+        animate={{
+          maxWidth: open ? '56rem' : scrolled ? '56rem' : '88rem',
+          borderRadius: open ? '24px' : scrolled ? '9999px' : '24px',
+          backgroundColor: open
+            ? 'rgba(255, 255, 255, 0.95)'
             : scrolled
-            ? 'max-w-4xl rounded-full border border-black/10 bg-white/90 shadow-[0_12px_32px_rgba(0,0,0,0.08)] backdrop-blur-xl py-1.5 px-3 sm:px-4'
-            : 'max-w-[88rem] rounded-[24px] border border-black/10 bg-white shadow-[0_8px_24px_rgba(0,0,0,0.04)] py-2.5 px-4 sm:px-6'
-        }`}
+            ? 'rgba(255, 255, 255, 0.85)'
+            : 'rgba(255, 255, 255, 0)',
+          backdropFilter: open || scrolled ? 'blur(20px)' : 'blur(0px)',
+          boxShadow: open || scrolled
+            ? '0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset'
+            : 'none',
+          borderColor: open || scrolled ? 'rgba(0, 0, 0, 0.08)' : 'rgba(0, 0, 0, 0)',
+          paddingTop: scrolled ? '6px' : '10px',
+          paddingBottom: scrolled ? '6px' : '10px',
+          paddingLeft: scrolled ? '12px' : '16px',
+          paddingRight: scrolled ? '12px' : '16px',
+          y: scrolled ? 4 : 0,
+        }}
+        transition={{
+          type: 'spring',
+          stiffness: 200,
+          damping: 40,
+        }}
+        className="mx-auto border transition-colors duration-200"
       >
         <div className="flex items-center justify-between gap-3">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 flex-shrink-0">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-black/8 bg-white shadow-xs">
-              <img src={logoImg} alt="CoreForge logo" className="h-6 w-6 object-contain" />
-            </div>
+          {/* Logo — no border or frame */}
+          <Link to="/" className="flex items-center gap-2.5 flex-shrink-0 relative z-20">
+            <img src={logoImg} alt="CoreForge logo" className="h-7 w-7 object-contain" />
             <div>
               <p className="text-sm font-extrabold tracking-[-0.03em] text-neutral-950 leading-tight">CoreForge</p>
-              <p className="text-[8px] font-bold uppercase tracking-[0.25em] text-neutral-400 leading-tight">Engineering Lab</p>
+              <p className="text-[8px] font-bold uppercase tracking-[0.22em] text-neutral-400 leading-tight">INNOVATE · ENGINEER · DELIVER</p>
             </div>
           </Link>
 
-          {/* Desktop Nav Links */}
-          <nav className="hidden items-center gap-1 md:flex">
-            {navLinks.map((item) => (
+          {/* Desktop Nav Links — with hover highlight pill */}
+          <nav
+            className="hidden items-center gap-0.5 md:flex absolute left-1/2 -translate-x-1/2"
+            onMouseLeave={() => setHoveredIdx(null)}
+          >
+            {navLinks.map((item, idx) => (
               <NavLink
                 key={item.href}
                 to={item.href}
+                onMouseEnter={() => setHoveredIdx(idx)}
                 className={({ isActive }) =>
-                  `px-3 py-1.5 text-[13px] font-semibold rounded-full transition-all duration-200 ${
+                  `relative px-3.5 py-1.5 text-[13px] font-semibold transition-colors duration-200 ${
                     isActive
-                      ? 'text-black bg-black/5 font-bold'
-                      : 'text-neutral-600 hover:text-black hover:bg-black/[0.04]'
+                      ? 'text-black font-bold'
+                      : 'text-neutral-600 hover:text-black'
                   }`
                 }
               >
-                {item.label}
+                {hoveredIdx === idx && (
+                  <motion.div
+                    layoutId="navbar-hover"
+                    className="absolute inset-0 rounded-full bg-black/[0.05]"
+                    transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                  />
+                )}
+                <span className="relative z-10">{item.label}</span>
               </NavLink>
             ))}
           </nav>
 
           {/* Desktop CTA Button */}
-          <div className="hidden md:flex items-center flex-shrink-0">
+          <div className="hidden md:flex items-center flex-shrink-0 relative z-20">
             <Link
               to="/contact"
               className="btn-primary !py-2 !px-5 !text-xs !shadow-none hover:!scale-105"
@@ -96,7 +111,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-black/8 bg-neutral-50 text-black md:hidden transition-all duration-200 hover:bg-black hover:text-white"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-black/8 bg-neutral-50 text-black md:hidden transition-all duration-200 hover:bg-black hover:text-white relative z-20"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle navigation"
           >
@@ -142,7 +157,7 @@ export default function Navbar() {
             </motion.nav>
           )}
         </AnimatePresence>
-      </div>
+      </motion.div>
     </header>
   )
 }

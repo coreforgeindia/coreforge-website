@@ -46,8 +46,8 @@ export default function AboutSection() {
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-neutral-400">
               About CoreForge
             </p>
-            <h2 className="mt-4 text-3xl font-extrabold tracking-[-0.03em] text-neutral-950 sm:text-4xl lg:text-[2.8rem] lg:leading-[1.15]">
-              Building Intelligent Hardware & Strategic Software for <span className="bg-gradient-to-r from-neutral-950 via-neutral-700 to-neutral-500 bg-clip-text text-transparent">Modern Teams.</span>
+            <h2 className="mt-4 text-3xl font-extrabold tracking-[-0.03em] bg-gradient-to-r from-neutral-950 via-neutral-700 to-neutral-500 bg-clip-text text-transparent sm:text-4xl lg:text-[2.8rem] lg:leading-[1.15]">
+              Building Intelligent Hardware & Strategic Software for Modern Teams.
             </h2>
             <p className="mt-5 text-sm sm:text-base leading-7 text-neutral-600 max-w-xl">
               CoreForge is a Bengaluru-based technology partner combining hardware design, embedded systems, custom software, and practical engineering education. We help businesses, startups, and students turn theory into scalable, production-ready systems.

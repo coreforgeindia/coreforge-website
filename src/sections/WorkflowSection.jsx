@@ -84,7 +84,7 @@ export default function WorkflowSection() {
           <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#0d9488]">
             ENGINEERING DISCIPLINE
           </span>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-[-0.03em] text-neutral-950 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 font-heading text-3xl font-bold tracking-[-0.03em] bg-gradient-to-r from-neutral-950 via-neutral-700 to-neutral-500 bg-clip-text text-transparent sm:text-4xl lg:text-5xl">
             Our 8-Step Execution Pipeline
           </h2>
           <p className="mt-3 text-sm sm:text-base leading-7 text-neutral-600">

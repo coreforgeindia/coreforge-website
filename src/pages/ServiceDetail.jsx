@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import SEO from '../components/SEO'
+import HeroGeometric from '../components/ui/hero-geometric'
 import { fadeUp, stagger } from '../utils/motion'
 import { allServicesData } from '../utils/servicesData'
 import {
@@ -46,65 +47,58 @@ export default function ServiceDetail() {
           },
         }}
       />
-      {/* ── Hero Banner ── */}
-      <section className={`${service.heroBg} px-4 py-16 sm:px-6 sm:py-24`}>
-        <div className="section-shell">
-          <motion.div initial="hidden" animate="visible" variants={fadeUp}>
-            
-            {/* Breadcrumb Navigation */}
-            <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-neutral-400 mb-6 flex-wrap">
-              <Link to="/services" className="hover:text-white transition-colors">
-                All Services
-              </Link>
-              {service.parentSlug && (
-                <>
-                  <span>/</span>
-                  <Link to={`/services/${service.parentSlug}`} className="hover:text-white transition-colors">
-                    {service.parentTitle}
-                  </Link>
-                </>
-              )}
+      {/* ── HeroGeometric Animated Shader Hero Banner ── */}
+      <HeroGeometric
+        title1={service.title1 || service.title}
+        title2={service.title2 || ''}
+        description={service.description}
+        color1={service.color1 || '#3B82F6'}
+        color2={service.color2 || '#F0F9FF'}
+        speed={service.speed || 1}
+      >
+        {/* Breadcrumb Navigation */}
+        <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold text-neutral-500 mb-6 flex-wrap">
+          <Link to="/services" className="hover:text-black transition-colors">
+            All Services
+          </Link>
+          {service.parentSlug && (
+            <>
               <span>/</span>
-              <span className="text-white font-bold">{service.title}</span>
-            </div>
-
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#0d9488] mb-3">
-              {service.tagline}
-            </p>
-            <h1 className="font-heading text-[2.4rem] font-bold leading-[1.08] tracking-[-0.03em] text-white sm:text-5xl lg:text-[3.6rem]">
-              {service.title}
-            </h1>
-            <p className="mt-5 max-w-3xl text-sm sm:text-base leading-7 text-neutral-300">
-              {service.description}
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                to={`/contact?service=${encodeURIComponent(service.title)}`}
-                className="btn-primary !bg-white !text-black hover:!bg-neutral-200 shadow-lg"
-              >
-                Request Consultation
-                <HiArrowRight className="h-4 w-4" />
+              <Link to={`/services/${service.parentSlug}`} className="hover:text-black transition-colors">
+                {service.parentTitle}
               </Link>
-              {service.parentSlug ? (
-                <Link
-                  to={`/services/${service.parentSlug}`}
-                  className="btn-secondary !bg-transparent !text-white !border-white/20 hover:!bg-white/10"
-                >
-                  Explore Category
-                </Link>
-              ) : (
-                <Link
-                  to="/portfolio"
-                  className="btn-secondary !bg-transparent !text-white !border-white/20 hover:!bg-white/10"
-                >
-                  View Delivered Projects
-                </Link>
-              )}
-            </div>
-          </motion.div>
+            </>
+          )}
+          <span>/</span>
+          <span className="text-black font-bold">{service.title}</span>
         </div>
-      </section>
+
+        {/* Action Buttons */}
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <Link
+            to={`/contact?service=${encodeURIComponent(service.title)}`}
+            className="btn-primary shadow-lg"
+          >
+            Request Consultation
+            <HiArrowRight className="h-4 w-4" />
+          </Link>
+          {service.parentSlug ? (
+            <Link
+              to={`/services/${service.parentSlug}`}
+              className="btn-secondary"
+            >
+              Explore Category
+            </Link>
+          ) : (
+            <Link
+              to="/portfolio"
+              className="btn-secondary"
+            >
+              View Delivered Projects
+            </Link>
+          )}
+        </div>
+      </HeroGeometric>
 
       {/* ── Sub-Services Grid (If Viewing Main Category) ── */}
       {service.subServices && (

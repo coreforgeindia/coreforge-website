@@ -132,13 +132,6 @@ button:hover.hover\:text-white,
 }
 
 /* ── Utility Classes ── */
-.grid-lines {
-  background-image:
-    linear-gradient(rgba(17, 17, 17, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(17, 17, 17, 0.06) 1px, transparent 1px);
-  background-size: 56px 56px;
-}
-
 .glass-panel {
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(16px);

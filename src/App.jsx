@@ -3,7 +3,6 @@ import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-route
 import { AnimatePresence, motion } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import ScrollProgress from './components/ScrollProgress'
 import ScrollToTop from './components/ScrollToTop'
 
 // Route-based Code Splitting for lightning-fast performance
@@ -77,7 +76,6 @@ export default function App() {
     <BrowserRouter>
       <div className="bg-[#f3f3f1] text-[#111111] selection:bg-black selection:text-white min-h-screen flex flex-col justify-between">
         <ScrollToTop />
-        <ScrollProgress />
         <Navbar />
         <main className="flex-1 overflow-hidden">
           <AnimatedRoutes />

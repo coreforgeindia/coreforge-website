@@ -2,6 +2,11 @@ export const allServicesData = {
   // ── Main Category 1: Software ──
   'software': {
     title: 'Software & Tech Solutions',
+    title1: 'Software &',
+    title2: 'Tech Solutions',
+    color1: '#2563EB',
+    color2: '#EFF6FF',
+    speed: 0.8,
     tagline: 'Digital Solutions Designed Around Your Business',
     category: 'Software',
     parentSlug: null,
@@ -28,6 +33,11 @@ export const allServicesData = {
 
   'software/custom-software': {
     title: 'Custom Software Development',
+    title1: 'Custom Software',
+    title2: 'Development',
+    color1: '#4338CA',
+    color2: '#EEF2FF',
+    speed: 0.9,
     tagline: 'Tailor-Made Software Built for Operational Excellence',
     category: 'Software',
     parentSlug: 'software',
@@ -54,6 +64,11 @@ export const allServicesData = {
 
   'software/web-development': {
     title: 'Web Development & Platforms',
+    title1: 'Web Development',
+    title2: '& Platforms',
+    color1: '#0891B2',
+    color2: '#ECFEFF',
+    speed: 0.8,
     tagline: 'High-Performance, SEO-Optimized Web Architecture',
     category: 'Software',
     parentSlug: 'software',
@@ -77,6 +92,11 @@ export const allServicesData = {
 
   'software/mobile-apps': {
     title: 'Mobile App Development',
+    title1: 'Mobile App',
+    title2: 'Development',
+    color1: '#7C3AED',
+    color2: '#F5F3FF',
+    speed: 0.85,
     tagline: 'Native & Cross-Platform Mobile Experiences',
     category: 'Software',
     parentSlug: 'software',
@@ -100,6 +120,11 @@ export const allServicesData = {
 
   'software/business-intelligence': {
     title: 'Business Intelligence & Dashboards',
+    title1: 'Business Intelligence',
+    title2: '& Dashboards',
+    color1: '#334155',
+    color2: '#F8FAFC',
+    speed: 0.7,
     tagline: 'Transform Raw Data into Decisive Operational Action',
     category: 'Software',
     parentSlug: 'software',
@@ -124,6 +149,11 @@ export const allServicesData = {
   // ── Main Category 2: Hardware ──
   'hardware': {
     title: 'Hardware Design & Embedded Systems',
+    title1: 'Hardware Design &',
+    title2: 'Embedded Systems',
+    color1: '#059669',
+    color2: '#ECFDF5',
+    speed: 0.8,
     tagline: 'Turning Electronic Ideas into Real Products',
     category: 'Hardware',
     parentSlug: null,
@@ -152,6 +182,11 @@ export const allServicesData = {
 
   'hardware/product-design': {
     title: 'Electronics Product Design',
+    title1: 'Electronics Product',
+    title2: 'Design',
+    color1: '#0D9488',
+    color2: '#F0FDFA',
+    speed: 0.85,
     tagline: 'Architecting Hardware for Scalable Manufacturing',
     category: 'Hardware',
     parentSlug: 'hardware',
@@ -175,6 +210,11 @@ export const allServicesData = {
 
   'hardware/pcb-design': {
     title: 'PCB Design Services',
+    title1: 'PCB Design',
+    title2: 'Services',
+    color1: '#15803D',
+    color2: '#F7FEE7',
+    speed: 0.9,
     tagline: 'Precision Multi-Layer & High-Speed PCB Layout',
     category: 'Hardware',
     parentSlug: 'hardware',
@@ -202,6 +242,11 @@ export const allServicesData = {
 
   'hardware/embedded-systems': {
     title: 'Embedded Systems & Firmware',
+    title1: 'Embedded Systems',
+    title2: '& Firmware',
+    color1: '#16A34A',
+    color2: '#F0FDF4',
+    speed: 0.8,
     tagline: 'Deterministic, Real-Time Microcontroller Code',
     category: 'Hardware',
     parentSlug: 'hardware',
@@ -230,6 +275,11 @@ export const allServicesData = {
 
   'hardware/end-to-end-pcb': {
     title: 'End-to-End PCB Development',
+    title1: 'End-to-End PCB',
+    title2: 'Development',
+    color1: '#0E7490',
+    color2: '#ECFEFF',
+    speed: 0.85,
     tagline: 'From Concept to Assembled & Tested Boards',
     category: 'Hardware',
     parentSlug: 'hardware',
@@ -254,6 +304,11 @@ export const allServicesData = {
 
   'hardware/consulting': {
     title: 'Hardware Consulting Services',
+    title1: 'Hardware Consulting',
+    title2: 'Services',
+    color1: '#3F3F46',
+    color2: '#FAFAFA',
+    speed: 0.75,
     tagline: 'Expert Design Review & Engineering Optimization',
     category: 'Hardware',
     parentSlug: 'hardware',
@@ -277,6 +332,11 @@ export const allServicesData = {
   // ── Main Category 3: Training ──
   'training': {
     title: 'Workshops, Training & DIY Kits',
+    title1: 'Workshops, Training',
+    title2: '& DIY Kits',
+    color1: '#D97706',
+    color2: '#FFFBEB',
+    speed: 0.8,
     tagline: 'Learn by Building',
     category: 'Training',
     parentSlug: null,
@@ -307,6 +367,11 @@ export const allServicesData = {
 
   'training/embedded-training': {
     title: 'Embedded Systems Training',
+    title1: 'Embedded Systems',
+    title2: 'Training',
+    color1: '#EA580C',
+    color2: '#FFF7ED',
+    speed: 0.85,
     tagline: 'Master Real-Time Embedded C & Microcontrollers',
     category: 'Training',
     parentSlug: 'training',
@@ -334,6 +399,11 @@ export const allServicesData = {
 
   'training/hardware-courses': {
     title: 'Hardware & PCB Design Courses',
+    title1: 'Hardware & PCB',
+    title2: 'Design Courses',
+    color1: '#CA8A04',
+    color2: '#FEFCE8',
+    speed: 0.8,
     tagline: 'Learn Circuit Design & Multi-Layer PCB Layout',
     category: 'Training',
     parentSlug: 'training',
@@ -359,6 +429,11 @@ export const allServicesData = {
 
   'training/software-programs': {
     title: 'Software Development Programs',
+    title1: 'Software Development',
+    title2: 'Programs',
+    color1: '#2563EB',
+    color2: '#F0F9FF',
+    speed: 0.85,
     tagline: 'Full-Stack Web & Mobile Application Engineering',
     category: 'Training',
     parentSlug: 'training',
@@ -381,6 +456,11 @@ export const allServicesData = {
 
   'training/workshops': {
     title: 'Corporate & College Workshops',
+    title1: 'Corporate & College',
+    title2: 'Workshops',
+    color1: '#9333EA',
+    color2: '#FAF5FF',
+    speed: 0.8,
     tagline: 'Bridging Industry Standards with Hands-On Education',
     category: 'Training',
     parentSlug: 'training',
@@ -403,6 +483,11 @@ export const allServicesData = {
 
   'training/diy-kits': {
     title: 'DIY Electronics & Robotics Kits',
+    title1: 'DIY Electronics',
+    title2: '& Robotics Kits',
+    color1: '#E11D48',
+    color2: '#FFF1F2',
+    speed: 0.85,
     tagline: 'Learn by Building with Pre-Packaged Hardware Packs',
     category: 'Training',
     parentSlug: 'training',
@@ -428,6 +513,11 @@ export const allServicesData = {
 
   'training/academic-projects': {
     title: 'Academic & Competition Projects',
+    title1: 'Academic & Competition',
+    title2: 'Projects',
+    color1: '#475569',
+    color2: '#F8FAFC',
+    speed: 0.75,
     tagline: 'Mentorship for Capstone, Final-Year & Research Prototypes',
     category: 'Training',
     parentSlug: 'training',

@@ -19,7 +19,7 @@ export default function HomeBlogSection() {
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#0d9488]">
               FROM THE BLOG
             </span>
-            <h2 className="mt-2 font-heading text-3xl font-bold tracking-[-0.03em] text-neutral-950 sm:text-4xl lg:text-5xl">
+            <h2 className="mt-2 font-heading text-3xl font-bold tracking-[-0.03em] bg-gradient-to-r from-neutral-950 via-neutral-700 to-neutral-500 bg-clip-text text-transparent sm:text-4xl lg:text-5xl">
               Latest Insights & Guides
             </h2>
           </motion.div>

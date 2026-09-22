@@ -14,17 +14,6 @@
   font-family: var(--font-body);
 }
 
-/* Subtle background architectural blueprint grid */
-.hero-light-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-  background-size: 48px 48px;
-  pointer-events: none;
-}
-
 /* Isometric line-art device illustration container */
 .wireframe-container {
   position: relative;
