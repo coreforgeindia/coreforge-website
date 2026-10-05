@@ -44,7 +44,7 @@ function ClutchIcon() {
 }
 
 const socialLinks = [
-  { label: 'Instagram', href: 'https://www.instagram.com/core.forge.in/', icon: InstagramIcon },
+  { label: 'Instagram', href: 'https://www.instagram.com/coreforgeindiaofficial/', icon: InstagramIcon },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/company/coreforge-india/', icon: LinkedInIcon },
   { label: 'WhatsApp', href: 'https://wa.me/919380841227', icon: WhatsAppIcon },
   { label: 'GoodFirms', href: 'https://www.goodfirms.co/company/coreforge', icon: GoodFirmsIcon },

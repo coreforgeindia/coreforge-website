@@ -28,7 +28,7 @@ export default function Home() {
           foundingDate: '2024-10',
           sameAs: [
             'https://www.linkedin.com/company/coreforge-india/',
-            'https://www.instagram.com/core.forge.in/',
+            'https://www.instagram.com/coreforgeindiaofficial/',
             'https://www.goodfirms.co/company/coreforge',
           ],
           address: {
