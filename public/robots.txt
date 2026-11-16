@@ -1,9 +1,8 @@
 # CoreForge Robots.txt
-# Strict Search Engine Crawling Directives
 User-agent: *
 Allow: /
 
-# Prevent crawler cycle on build artifacts
+# Disallow build paths
 Disallow: /node_modules/
 
 # Canonical Sitemaps
