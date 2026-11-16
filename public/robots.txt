@@ -1,6 +1,10 @@
 # CoreForge Robots.txt
+# Strict Search Engine Crawling Directives
 User-agent: *
 Allow: /
 
-# Sitemaps
+# Prevent crawler cycle on build artifacts
+Disallow: /node_modules/
+
+# Canonical Sitemaps
 Sitemap: https://www.coreforgeindia.com/sitemap.xml

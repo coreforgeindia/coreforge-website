@@ -2,6 +2,7 @@
 <xsl:stylesheet version="2.0" 
   xmlns:html="http://www.w3.org/TR/REC-html40"
   xmlns:sitemap="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes"/>
   <xsl:template match="/">
@@ -177,6 +178,9 @@
                     <a href="{$itemURL}">
                       <xsl:value-of select="sitemap:loc"/>
                     </a>
+                    <xsl:if test="image:image">
+                      <span style="display: inline-block; margin-left: 8px; font-size: 10px; font-weight: 700; background: #000; color: #fff; padding: 1px 6px;">IMG</span>
+                    </xsl:if>
                   </td>
                   <td>
                     <span class="badge">
