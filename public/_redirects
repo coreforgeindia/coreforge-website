@@ -1,10 +1,53 @@
-# CoreForge Cloudflare Pages Redirect Rules
-# Non-www to www redirect (single-hop 301)
+# CoreForge Cloudflare Pages & Netlify 301 Redirect Rules
+# Domain Canonicalization
 https://coreforgeindia.com/* https://www.coreforgeindia.com/:splat 301
 http://coreforgeindia.com/* https://www.coreforgeindia.com/:splat 301
 
-# Company → About consolidation (301 permanent redirect)
+# Legacy Core & Company Pages
 /company /about 301
+/portfolio /services 301
+/careers /about 301
+/digital-marketing-branding /services/digital-marketing-branding 301
+/software-app-development /services/software-tech-solutions 301
+/antenna-rf-products /products 301
 
-# Products → Services redirect (301 permanent redirect)
-/products /services 301
+# Legacy Service Pages: Software
+/services/software /services/software-tech-solutions 301
+/services/software/custom-software /services/custom-software 301
+/services/software/web-development /services/web-development 301
+/services/software/mobile-apps /services/mobile-app-development 301
+/services/software/business-intelligence /services/custom-software 301
+
+# Legacy Service Pages: Hardware & Embedded
+/services/hardware /products 301
+/services/hardware/product-design /products 301
+/services/hardware/pcb-design /products 301
+/services/hardware/embedded-systems /products 301
+/services/hardware/end-to-end-pcb /products 301
+/services/hardware/consulting /products 301
+/services/hardware/* /products 301
+
+# Legacy Service Pages: Training & Workshops
+/services/training /about 301
+/services/training/embedded-training /about 301
+/services/training/hardware-courses /about 301
+/services/training/software-programs /about 301
+/services/training/workshops /about 301
+/services/training/diy-kits /about 301
+/services/training/academic-projects /about 301
+/services/training/* /about 301
+
+# Legacy Web Package Pages
+/services/static-website /services/web-development 301
+/services/dynamic-website /services/web-development 301
+/services/web-analytics /services/performance-marketing 301
+/services/lead-capture /services/performance-marketing 301
+/services/app-development /services/mobile-app-development 301
+
+# Legacy Blog Articles (Mapped to modern SEO articles)
+/blog/how-coreforge-builds-iot-solutions /blog/industrial-iot-antenna-selection-gsm-gnss-integration 301
+/blog/custom-software-vs-off-the-shelf-erp /blog/custom-web-applications-vs-off-the-shelf-saas 301
+/blog/why-practical-embedded-training-matters /blog 301
+
+# SPA Fallback
+/* /index.html 200

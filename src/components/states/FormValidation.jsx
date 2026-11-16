@@ -1,11 +1,11 @@
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion as Motion, AnimatePresence } from 'framer-motion'
 import { HiOutlineExclamationCircle, HiOutlineCheckCircle } from 'react-icons/hi'
 
 export default function FormValidation({ errors = [], success = '' }) {
   return (
     <AnimatePresence>
       {errors.length > 0 && (
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -8 }}
@@ -22,11 +22,11 @@ export default function FormValidation({ errors = [], success = '' }) {
               </ul>
             </div>
           </div>
-        </motion.div>
+        </Motion.div>
       )}
 
       {success && (
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -8 }}
@@ -36,7 +36,7 @@ export default function FormValidation({ errors = [], success = '' }) {
             <HiOutlineCheckCircle className="h-5 w-5 flex-shrink-0 text-emerald-500" />
             <p className="text-sm font-medium text-emerald-800">{success}</p>
           </div>
-        </motion.div>
+        </Motion.div>
       )}
     </AnimatePresence>
   )

@@ -1,41 +1,37 @@
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import CoreForgeLoader from '../CoreForgeLoader'
 
 export default function NoInternetState() {
   return (
-    <div className="fixed inset-0 z-[9999] flex h-screen w-screen flex-col items-center justify-center bg-black">
-      {/* CoreForge Loader animation in the background */}
-      <div className="absolute inset-0 opacity-30">
-        <CoreForgeLoader duration={3} />
-      </div>
-
-      {/* Content overlay */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        className="relative z-10 text-center px-6"
-      >
-        {/* Offline icon */}
-        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl border border-white/10 bg-white/5">
-          <svg className="h-10 w-10 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0" />
-            <line x1="3" y1="3" x2="21" y2="21" strokeLinecap="round" />
-          </svg>
-        </div>
-
-        <h2 className="mt-6 text-2xl font-bold tracking-[-0.04em] text-white">No Internet Connection</h2>
-        <p className="mt-3 max-w-md text-sm leading-7 text-neutral-400">
-          Please check your network connection and try again. CoreForge requires an active internet connection.
+    <div className="min-h-[80vh] flex flex-col items-center justify-center p-6 text-center">
+      <div className="max-w-md w-full mb-8">
+        <CoreForgeLoader text="CONNECTION OFFLINE · CHECKING TELEMETRY" />
+        <h2 className="mt-4 font-heading text-2xl font-bold text-neutral-950 dark:text-white">
+          Network Connection Interrupted
+        </h2>
+        <p className="mt-2 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
+          Showing cached preview while your connection recovers.
         </p>
 
         <button
           onClick={() => window.location.reload()}
-          className="mt-8 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-neutral-200"
+          className="btn-primary mt-6 text-xs"
         >
           Retry Connection
         </button>
-      </motion.div>
+      </div>
+
+      {/* Skeleton preview of items so user gets a glimpse of content */}
+      <div className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 opacity-75">
+        {[1, 2, 3].map((n) => (
+          <div key={n} className="border-4 border-black dark:border-white p-5 bg-white dark:bg-neutral-900 shadow-[6px_6px_0_#000] dark:shadow-[6px_6px_0_#fff]">
+            <div className="skeleton-box h-36 w-full mb-4 border border-black/10 dark:border-white/10" />
+            <div className="skeleton-box h-5 w-3/4 mb-2" />
+            <div className="skeleton-box h-3 w-full mb-1" />
+            <div className="skeleton-box h-3 w-5/6" />
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

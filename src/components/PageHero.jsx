@@ -1,24 +1,43 @@
-import { motion } from 'framer-motion'
-import { fadeUp } from '../utils/motion'
+import Breadcrumbs from './Breadcrumbs'
 
-export default function PageHero({ eyebrow, title, description }) {
+export default function PageHero({
+  breadcrumbItems = [],
+  title,
+  subtitle,
+  description,
+  children,
+}) {
   return (
-    <section className="px-4 pt-4 sm:px-6 lg:pt-8">
-      <div className="section-shell">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
-          className="overflow-hidden rounded-[36px] border border-black/8 bg-[linear-gradient(135deg,rgba(255,255,255,0.96),rgba(232,232,228,0.88))] px-5 py-8 shadow-[0_24px_80px_rgba(17,17,17,0.08)] sm:px-10 sm:py-12"
-        >
-          <p className="text-xs font-semibold uppercase tracking-[0.34em] text-neutral-500">{eyebrow}</p>
-          <h1 className="mt-4 max-w-5xl font-heading text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.15] sm:leading-[1.12] pb-1 tracking-[-0.04em] bg-gradient-to-r from-neutral-950 via-neutral-700 to-neutral-500 bg-clip-text text-transparent">
+    <section className="relative overflow-hidden py-20 sm:py-28 pattern-conic text-white border-b-4 border-black dark:border-white">
+      <div className="section-shell relative z-10">
+        {breadcrumbItems.length > 0 && (
+          <div className="mb-6">
+            <Breadcrumbs items={breadcrumbItems} />
+          </div>
+        )}
+
+        <div className="max-w-4xl">
+          <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white leading-[1.12] mb-6">
             {title}
+            {subtitle && (
+              <span className="block text-xl sm:text-2xl lg:text-3xl font-medium text-neutral-300 mt-2">
+                {subtitle}
+              </span>
+            )}
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-8 text-neutral-600 sm:text-lg">
-            {description}
-          </p>
-        </motion.div>
+
+          {description && (
+            <p className="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl mb-8">
+              {description}
+            </p>
+          )}
+
+          {children && (
+            <div className="flex flex-wrap items-center gap-4">
+              {children}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   )

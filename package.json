@@ -5,22 +5,20 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "generate:seo": "node scripts/generate-seo-files.mjs",
+    "build": "node scripts/generate-seo-files.mjs && vite build",
     "lint": "eslint .",
     "preview": "npm run build && wrangler dev",
     "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
-    "@react-three/fiber": "^9.7.0",
+    "@ybouane/liquidglass": "^1.0.3",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
-    "gsap": "^3.14.2",
-    "ogl": "^1.0.11",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-icons": "^5.6.0",
-    "react-router-dom": "^7.14.0",
-    "three": "^0.186.0"
+    "react-router-dom": "^7.14.0"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.39.0",

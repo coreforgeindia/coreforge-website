@@ -1,54 +1,396 @@
-# CoreForge Complete Technical Documentation & Site Directory
+# CoreForge - Complete Technical & Engineering Reference
+> 360° Digital Marketing, Brand Strategy & Custom Software Engineering | Precision Technology Solutions
 
-> Comprehensive site map and engineering capabilities directory for CoreForge (Bengaluru, India).
-
-## Company Information
-
-- Company Name: CoreForge
-- Primary Location: Bengaluru, Karnataka, India
-- Address: #352, 4th Cross Rd, Rajagopala Nagar, Peenya, Bengaluru 560058
-- Email: info@coreforgeindia.com
-- Phone: +91-93808-41227
+## Company Factsheet
+- Legal Entity: CoreForge
 - Founded: October 2024
-- Registration: MSME Registered
+- Location: Peenya, Bengaluru, Karnataka, India
+- Positioning: 360° Digital Marketing, Brand Strategy & Custom Software Engineering | Precision Technology Solutions
+- Contact Email: info@coreforgeindia.com
+- Contact Phone: +91 93808 41227
 
-## Core Links
+## Complete Services Breakdown (/services)
 
-- [Homepage](https://coreforgeindia.com/): CoreForge engineering portal and overview.
-- [About CoreForge](https://coreforgeindia.com/about): Company background, team, and MSME registration.
-- [Engineering Services](https://coreforgeindia.com/services): Comprehensive hardware, software, and training capabilities.
-- [Portfolio](https://coreforgeindia.com/portfolio): Case studies of delivered hardware and software projects.
-- [Careers](https://coreforgeindia.com/careers): Job openings and engineering internships in Bengaluru.
-- [FAQs](https://coreforgeindia.com/faqs): Technical FAQs and project quotation processes.
-- [Contact Us](https://coreforgeindia.com/contact): Inquiries and project discussion form.
-- [Blog](https://coreforgeindia.com/blog): Technical deep-dives and engineering articles.
+## Service Category: 360° Digital Marketing & Branding
+URL: https://www.coreforgeindia.com/services/digital-marketing-branding
+Summary: Data-driven digital marketing, brand positioning frameworks, technical SEO, and multi-channel customer acquisition architectures managed from Bengaluru.
 
-## Hardware & Embedded Systems Services
+### Brand Strategy & Identity
+URL: https://www.coreforgeindia.com/services/brand-strategy-identity
+Description: Comprehensive brand positioning frameworks, typographic scale design, logo guidelines, and unified visual identity systems.
+Key Deliverables:
+  - Brand positioning architecture and messaging matrices
+  - Primary, secondary, and mark vector assets in SVG, EPS, and PNG
+  - Complete brand guidelines book: typography, grid, and layout rules
+  - Digital social media templates and physical collateral specifications
 
-- [PCB Design & Prototyping](https://coreforgeindia.com/services/hardware/pcb-design): Multi-layer schematic, high-speed routing, impedance matching, fabrication files (Gerber/BOM/Pick-and-Place), and prototype guidance.
-- [Embedded Systems & Firmware](https://coreforgeindia.com/services/hardware/embedded-systems): Microcontroller firmware (STM32, ESP32, Arduino, ARM Cortex), FreeRTOS development, driver development, sensor integration, and low-power optimization.
-- [Electronics Product Design](https://coreforgeindia.com/services/hardware/product-design): Turnkey electronic product engineering from concept to enclosure design, thermal analysis, and production assembly support.
-- [End-to-End PCB Development](https://coreforgeindia.com/services/hardware/end-to-end-pcb): Testing, validation, signal integrity checks, and small-batch production support.
-- [Hardware Consulting](https://coreforgeindia.com/services/hardware/consulting): Design reviews, component sourcing advice, and architecture optimization.
+### Website Design & Development
+URL: https://www.coreforgeindia.com/services/website-design-development
+Description: Headless, high-performance websites engineered with React, Vite, and modern CSS for sub-second load times and high conversion rates.
+Key Deliverables:
+  - Custom UX/UI architecture in Figma adhering to modern design tokens
+  - Clean, semantic React/Next.js codebase with 100% responsive layouts
+  - Lighthouse 95+ performance optimization across mobile and desktop
+  - Server-side form capture, CRM integration, and analytics tracking
 
-## Custom Software & Web Development Services
+### Digital Marketing & Advertising
+URL: https://www.coreforgeindia.com/services/digital-marketing-advertising
+Description: Data-driven paid media campaigns across Google Search, Meta Ads, LinkedIn, and programmatic display targeting verified ROI metrics.
+Key Deliverables:
+  - Full-funnel audience segmentation and search intent mapping
+  - High-converting landing page variants and A/B test setups
+  - Server-side tracking, Conversions API, and clean UTM attribution
+  - Weekly ROAS, CAC, and lead volume performance reporting
 
-- [Custom Software Development](https://coreforgeindia.com/services/software/custom-software): Tailor-made ERP systems, CRM portals, internal tools, and automated business platforms.
-- [Web Development & E-Commerce](https://coreforgeindia.com/services/software/web-development): Fast web platforms, static/dynamic sites, lead-generation portals, and e-commerce stores.
-- [Mobile App Development](https://coreforgeindia.com/services/software/mobile-apps): Android & iOS mobile applications with backend API integration.
-- [Business Intelligence & Dashboards](https://coreforgeindia.com/services/software/business-intelligence): High-throughput telemetry, real-time data portals, and analytics dashboards.
+### Social Media Management
+URL: https://www.coreforgeindia.com/services/social-media-management
+Description: B2B and B2C brand growth across LinkedIn, Instagram, X, and YouTube with consistent technical storytelling and community moderation.
+Key Deliverables:
+  - Monthly editorial content calendars aligned with product milestones
+  - Original high-resolution graphics, carousels, and technical write-ups
+  - Active community engagement, inbox management, and comment response
+  - Monthly reach, engagement rate, and inbound profile visit analytics
 
-## Workshops, Training & DIY Kits
+### Creative Design & Graphic Designing
+URL: https://www.coreforgeindia.com/services/creative-design-graphic-designing
+Description: Precision digital and print graphic design: pitch decks, product datasheets, packaging, corporate reports, and marketing collateral.
+Key Deliverables:
+  - Investor pitch decks and technical sales presentation decks
+  - Print-ready product brochures, technical datasheets, and user manuals
+  - Exhibition booth graphics, backdrop banners, and physical signage
+  - Vector iconography sets and digital illustration assets
 
-- [Embedded Systems Bootcamps](https://coreforgeindia.com/services/training/embedded-training): Hands-on training on STM32, ESP32, C programming, and IoT.
-- [Hardware & PCB Courses](https://coreforgeindia.com/services/training/hardware-courses): Circuit simulation, KiCad PCB layout, and manufacturing readiness.
-- [Software Development Programs](https://coreforgeindia.com/services/training/software-programs): Web, mobile, and full-stack software courses.
-- [Corporate & College Workshops](https://coreforgeindia.com/services/training/workshops): Faculty Development Programs (FDPs), student bootcamps, and technical mentoring.
-- [DIY Electronics Kits](https://coreforgeindia.com/services/training/diy-kits): Prototyping hardware, robotics kits, and STEM modules.
-- [Academic Project Guidance](https://coreforgeindia.com/services/training/academic-projects): Mentorship and execution support for student and final-year engineering projects.
+### Video Production & Content Creation
+URL: https://www.coreforgeindia.com/services/video-production-content-creation
+Description: Script-to-screen video production including hardware product demos, software walkthroughs, corporate profiles, and 3D motion graphics.
+Key Deliverables:
+  - Technical storyboard development, scripting, and concept design
+  - 4K studio and on-site hardware footage capture with professional lighting
+  - Motion graphics, title animation, sound mastering, and color grading
+  - Multi-ratio exports optimized for web, YouTube, and mobile feeds
 
-## Verification & External Profiles
+### Search Engine Optimisation (SEO)
+URL: https://www.coreforgeindia.com/services/search-engine-optimisation
+Description: Technical on-page, architecture, and backlink strategies designed to capture high-intent commercial keywords organically.
+Key Deliverables:
+  - Comprehensive technical site audit: crawl depth, speed, and indexing
+  - Keyword gap analysis against top competitors in your vertical
+  - On-page schema markup (JSON-LD), meta tags, and internal link trees
+  - High-authority outreach and programmatic content cluster creation
 
-- [LinkedIn Company Page](https://www.linkedin.com/company/coreforge-india/): Official corporate updates and announcements.
-- [Instagram Page](https://www.instagram.com/coreforgeindiaofficial/): Visual project showcases, workshops, and lab updates.
-- [GoodFirms Profile](https://www.goodfirms.co/company/coreforge): Verified company profile and client reviews.
+### Influencer & PR Marketing
+URL: https://www.coreforgeindia.com/services/influencer-pr-marketing
+Description: Strategic technical influencer partnerships, media releases, and digital PR amplification to establish industry authority.
+Key Deliverables:
+  - Vetted tech influencer discovery, contract negotiation, and briefing
+  - Press release authoring and digital publication distribution
+  - Media kit preparation and executive thought-leadership articles
+  - Campaign impression, sentiment analysis, and earned media measurement
+
+### Marketing Automation
+URL: https://www.coreforgeindia.com/services/marketing-automation
+Description: Automated nurture workflows, email drip sequences, lead scoring, and CRM pipeline triggers using HubSpot, ActiveCampaign, and custom webhooks.
+Key Deliverables:
+  - Multi-stage lead nurturing email sequences and trigger logic
+  - CRM pipeline integration with automatic deal stage progression
+  - Abandoned inquiry re-engagement workflows and SMS/WhatsApp webhooks
+  - Comprehensive open rate, click-through, and conversion telemetry
+
+### Business Growth & Consulting
+URL: https://www.coreforgeindia.com/services/business-growth-consulting
+Description: Go-to-market roadmaps, pricing models, CAC optimization, and unit economics validation for tech startups and emerging enterprises.
+Key Deliverables:
+  - Total addressable market (TAM) sizing and competitor benchmarking
+  - Pricing structure, packaging tiers, and gross margin optimization
+  - Direct B2B outreach playbook and sales enablement collateral
+  - Quarterly growth milestone tracking and strategic KPI reviews
+
+## Service Category: Software & App Development
+URL: https://www.coreforgeindia.com/services/software-app-development
+Summary: Full-lifecycle software engineering from architecture design and database modeling to cloud deployment, mobile apps, and SLA-backed maintenance.
+
+### Website Development
+URL: https://www.coreforgeindia.com/services/website-development
+Description: High-speed corporate portals and conversion websites built with React, Vite, and Next.js, optimized for zero layout shift and sub-second TTFB.
+Key Deliverables:
+  - Modern Component-Driven React/TypeScript Architecture
+  - Headless CMS or Dynamic Database-Backed Content Layer
+  - Complete SEO Meta, Automated Sitemap, and OpenGraph Setup
+  - Deployment to Cloudflare Pages, AWS CloudFront, or Vercel
+
+### Web Application Development
+URL: https://www.coreforgeindia.com/services/web-application-development
+Description: Complex web applications featuring real-time state, role-based access control, interactive dashboards, and scalable database backends.
+Key Deliverables:
+  - Multi-tenant authorization, authentication, and session control (JWT/OAuth)
+  - High-throughput state management with React, Zustand, and TailwindCSS
+  - Interactive analytics, data grids, and live WebSocket telemetry
+  - Containerized Docker image builds with CI/CD deployment pipelines
+
+### Android & iOS App Development
+URL: https://www.coreforgeindia.com/services/android-ios-app-development
+Description: Cross-platform and native mobile applications with offline storage, background push notifications, hardware Bluetooth/GPS integration, and app store compliance.
+Key Deliverables:
+  - High-performance React Native / Flutter cross-platform architecture
+  - Native hardware integration: BLE, GPS, camera, and biometric sensors
+  - Offline SQLite/Realm synchronization with cloud backends
+  - Google Play Store and Apple App Store submission management
+
+### Custom Software Development
+URL: https://www.coreforgeindia.com/services/custom-software-development
+Description: Bespoke software engines tailored to proprietary business logic, eliminating generic SaaS limitations and recurring licensing costs.
+Key Deliverables:
+  - Custom workflow automation engines and business rule processors
+  - Microservices backends built with Python (FastAPI), Node.js, or Go
+  - Strict unit and integration test coverage with automated pipelines
+  - 100% intellectual property and complete source code repository handover
+
+### ERP & CRM Solutions
+URL: https://www.coreforgeindia.com/services/erp-crm-solutions
+Description: Enterprise resource planning, inventory control, purchase order tracking, and CRM sales pipelines engineered for manufacturing and logistics.
+Key Deliverables:
+  - Multi-warehouse stock tracking with barcode scanning integration
+  - Automated invoice generation, tax compliance, and payment tracking
+  - Role-based permissions for managers, operators, and accounting teams
+  - Real-time executive KPI dashboards with exportable financial reports
+
+### SaaS Product Development
+URL: https://www.coreforgeindia.com/services/saas-product-development
+Description: End-to-end multi-tenant SaaS architecture with automated subscription billing, user tenant isolation, analytics, and self-service onboarding.
+Key Deliverables:
+  - Multi-tenant schema design with strict row-level security isolation
+  - Stripe, Razorpay, or PayPal subscription and metered usage billing
+  - Customer onboarding wizard, team invites, and audit log generation
+  - Infrastructure autoscaling rules with automated database read replicas
+
+### API Development & Integration
+URL: https://www.coreforgeindia.com/services/api-development-integration
+Description: High-throughput REST and GraphQL APIs, third-party payment gateway links, webhook consumers, and legacy enterprise system connectors.
+Key Deliverables:
+  - OpenAPI 3.0 / Swagger documented endpoints with rate limiting
+  - Third-party connector integration: payment gateways, SMS, ERP, logistics
+  - Idempotent webhook ingestion engines with dead-letter queue recovery
+  - Sub-50ms query response times under high concurrent request loads
+
+### AI & Business Automation
+URL: https://www.coreforgeindia.com/services/ai-business-automation
+Description: Intelligent document extraction, automated customer support assistants, OCR processing, and predictive analytics integrated into existing workflows.
+Key Deliverables:
+  - Retrieval-Augmented Generation (RAG) knowledge base search systems
+  - Automated PDF, invoice, and bill of lading text and tabular parsing
+  - Predictive sales and inventory reordering forecast models
+  - Private local LLM or cloud API deployment with data privacy compliance
+
+### Database Management Solutions
+URL: https://www.coreforgeindia.com/services/database-management-solutions
+Description: Relational and NoSQL database modeling, query index optimization, zero-downtime migrations, and automated high-availability clustering.
+Key Deliverables:
+  - Schema normalization and indexing strategies for PostgreSQL & MySQL
+  - Time-series telemetry database setup using TimescaleDB & ClickHouse
+  - Automated daily backup replication with point-in-time recovery verification
+  - Database query optimization reducing CPU load and query execution times
+
+### Cloud, Server & Hosting Solutions
+URL: https://www.coreforgeindia.com/services/cloud-server-hosting-solutions
+Description: Cloud architecture sizing, Kubernetes orchestration, automated Docker pipelines, and cost-optimized infrastructure on AWS, GCP, and Cloudflare.
+Key Deliverables:
+  - Infrastructure as Code (Terraform / CloudFormation) provisioning
+  - Kubernetes / ECS cluster setup with zero-downtime rolling deploys
+  - SSL/TLS certificate automation, DDoS shielding, and WAF setup
+  - Cloud infrastructure cost audits reducing unnecessary monthly spend
+
+### Cybersecurity & IT Solutions
+URL: https://www.coreforgeindia.com/services/cybersecurity-it-solutions
+Description: Application security testing, penetration test reports, vulnerability remediation, SSL hardening, and OWASP Top 10 compliance audits.
+Key Deliverables:
+  - Full-stack static and dynamic application vulnerability assessment
+  - API authentication and authorization privilege escalation audits
+  - Server configuration hardening and firewall port restriction
+  - Actionable vulnerability remediation report with engineering fixes
+
+### Software Maintenance & Technical Support
+URL: https://www.coreforgeindia.com/services/software-maintenance-technical-support
+Description: SLA-guaranteed uptime monitoring, patch deployment, dependency upgrades, bug fixes, and continuous technical enhancements.
+Key Deliverables:
+  - 24/7 automated uptime and latency monitoring with incident alerting
+  - Monthly security patching and third-party library version upgrades
+  - Guaranteed bug resolution response times backed by structured SLAs
+  - Dedicated engineering hours for ongoing feature additions and tweaks
+
+## Complete RF Hardware Breakdown (/products)
+
+## Product Category: Antenna Systems
+URL: https://www.coreforgeindia.com/products/antennas
+Summary: High-reliability antenna systems engineered for harsh environments, base station communications, vehicle tracking, marine telemetry, and IoT wireless networks.
+
+### VHF / UHF Base Station & Mobile Antennas
+URL: https://www.coreforgeindia.com/products/vhf-uhf-antennas
+Description: Heavy-duty collinear omnidirectional and directional Yagi antennas covering VHF (136-174 MHz) and UHF (380-470 MHz) commercial and public safety bands.
+Technical Specifications (Anand Technologies RF Standard):
+  - Frequency Range: 136 - 174 MHz (VHF) / 380 - 470 MHz (UHF)
+  - Nominal Gain: 3.5 dBi / 5.5 dBi / 8.5 dBi options
+  - VSWR: < 1.5:1 across designated operating band
+  - Impedance: 50 Ohms matched
+  - Polarization: Vertical linear
+  - Connector Type: N-Type Female / UHF (SO-239)
+  - Power Handling: 150W continuous (up to 300W peak)
+  - Material & Finish: Anodized high-grade aluminum, fiberglass radome
+  - Mounting Hardware: Heavy-duty galvanized stainless steel mast clamps
+  - Wind Survival: Up to 200 km/h with 0.5 inch radial ice
+
+### GSM / LTE / 4G / 5G Cellular Antennas
+URL: https://www.coreforgeindia.com/products/gsm-lte-antennas
+Description: Broadband cellular antennas in magnetic mount, rubber duck, and low-profile puck configurations supporting GSM 900/1800, 3G, 4G LTE, and sub-6 GHz 5G.
+Technical Specifications (Anand Technologies RF Standard):
+  - Frequency Range: 698 - 960 MHz & 1710 - 2700 MHz (Broadband)
+  - Nominal Gain: 3.0 dBi (magnetic) / up to 12.0 dBi (directional panel)
+  - VSWR: < 1.5:1 (typical)
+  - Impedance: 50 Ohms
+  - Polarization: Vertical linear
+  - Connector Type: SMA-Male / N-Male / FME options
+  - Cable Length: Standard 2m or 3m RG-58 / LMR-200 low-loss cable
+  - Base Type: Heavy-duty rare earth magnetic base or screw-through panel
+  - Operating Temp: -40°C to +85°C
+
+### Wi-Fi / WLAN Dual-Band Antennas
+URL: https://www.coreforgeindia.com/products/wifi-wlan-antennas
+Description: High-gain dual-band 2.4 GHz and 5.8 GHz Wi-Fi antennas in omnidirectional rubber duck, ceiling dome, directional panel, and cone configurations.
+Technical Specifications (Anand Technologies RF Standard):
+  - Frequency Range: 2400 - 2500 MHz & 5150 - 5850 MHz
+  - Nominal Gain: 2.0 dBi, 5.0 dBi, 7.0 dBi, 10.0 dBi options
+  - VSWR: < 1.5:1
+  - Impedance: 50 Ohms
+  - Polarization: Vertical / Dual polarization available
+  - Connector Type: RP-SMA Male / N-Male / SMA
+  - Housing Material: UV-resistant ABS radome (matte black / white)
+  - Application: Industrial IoT routers, base stations, outdoor bridges
+
+### GPS / GNSS Active & Passive Antennas
+URL: https://www.coreforgeindia.com/products/gps-gnss-antennas
+Description: Precision active GPS L1, GLONASS, and Galileo reception antennas with integrated low-noise amplifier (LNA) for vehicle tracking and marine navigation.
+Technical Specifications (Anand Technologies RF Standard):
+  - Center Frequency: 1575.42 MHz ± 1.023 MHz (GPS L1) / 1602 MHz (GLONASS)
+  - LNA Gain: 28 dB ± 2 dB integrated active amplification
+  - Noise Figure: < 1.5 dB
+  - Operating Voltage: 2.7V to 5.0V DC phantom power via coax
+  - VSWR: < 1.5:1
+  - Connector Type: SMA Male / MCX / MMCX / Fakra
+  - Ingress Protection: IP67 waterproof sealed aerodynamic puck
+  - Mounting: Internal magnet or permanent screw-bolt mount
+
+### Log-Periodic & Wideband Antennas
+URL: https://www.coreforgeindia.com/products/lpa-wideband-antennas
+Description: Broadband directional log-periodic dipole arrays (LPA) covering wide spectrums for EMC testing, surveillance, and multi-band telemetry.
+Technical Specifications (Anand Technologies RF Standard):
+  - Frequency Range: 400 MHz to 6.0 GHz (Continuous broadband)
+  - Nominal Gain: 8.0 dBi to 11.0 dBi directional gain
+  - Front-to-Back Ratio: > 20 dB
+  - VSWR: < 1.8:1 typical across entire band
+  - Impedance: 50 Ohms
+  - Connector Type: N-Type Female precision coax
+  - Power Rating: 100W continuous CW
+  - Construction: Laser-cut corrosion-resistant aluminum alloy boom
+
+### UHF RFID Reader Antennas
+URL: https://www.coreforgeindia.com/products/rfid-antennas
+Description: Circularly polarized UHF RFID reader panel antennas for automated warehouse inventory, asset tracking portals, and logistics gates.
+Technical Specifications (Anand Technologies RF Standard):
+  - Frequency Range: 865 - 868 MHz (India/EU) / 902 - 928 MHz (US FCC)
+  - Nominal Gain: 6.0 to 9.0 dBic (Circular polarization)
+  - Axial Ratio: < 2.0 dB at boresight
+  - Beamwidth (3dB): 68° Horizontal x 68° Vertical
+  - Connector Type: TNC Female / SMA Female
+  - Radome Material: Heavy-duty impact-resistant polycarbonate
+  - Mounting: Standard VESA 75/100 and pole clamp brackets
+
+## Product Category: RF Passive Components
+URL: https://www.coreforgeindia.com/products/rf-passive-components
+Summary: Precision machined RF passive hardware delivering ultra-low insertion loss, high power handling, and sharp out-of-band rejection.
+
+### High-Q RF Cavity Duplexers
+URL: https://www.coreforgeindia.com/products/rf-cavity-duplexers
+Description: Precision CNC-machined cavity duplexers for VHF and UHF repeater base stations providing superior TX/RX frequency isolation.
+Technical Specifications (Anand Technologies RF Standard):
+  - Frequency Range: 136 - 174 MHz (VHF) / 380 - 470 MHz (UHF)
+  - Channel Spacing: Min 4.5 MHz (VHF) / Min 5.0 MHz (UHF)
+  - Isolation (TX/RX): > 80 dB minimum (up to 90 dB)
+  - Insertion Loss: < 0.8 dB typical
+  - Power Handling: 50W / 100W / 250W continuous options
+  - Impedance: 50 Ohms with VSWR < 1.3:1
+  - Connectors: N-Type Female with silver-plated contact pins
+  - Tuning Method: Precision brass adjustment rods with locknuts
+
+### Directional Couplers & Power Taps
+URL: https://www.coreforgeindia.com/products/rf-directional-couplers
+Description: Low PIM broad-band directional couplers for signal monitoring, transmitter power reflection measurement, and distributed antenna systems.
+Technical Specifications (Anand Technologies RF Standard):
+  - Frequency Range: 698 - 2700 MHz (Broadband)
+  - Coupling Values: 6 dB, 10 dB, 15 dB, 20 dB, 30 dB
+  - Directivity: > 20 dB
+  - Insertion Loss: < 0.25 dB (for 20dB coupler)
+  - Power Rating: 200W average, 1 kW peak
+  - Connector Type: N-Type Female / 4.3-10 DIN options
+  - Enclosure: Tri-metal plated brass / aluminum alloy
+
+### Power Splitters & Combiners
+URL: https://www.coreforgeindia.com/products/rf-power-splitters
+Description: 2-Way, 3-Way, and 4-Way reactive power dividers for multi-antenna transmitter feeds and cellular coverage distribution.
+Technical Specifications (Anand Technologies RF Standard):
+  - Frequency Range: 698 - 3800 MHz (Covers 4G & 5G bands)
+  - Split Configuration: 2-Way / 3-Way / 4-Way symmetrical
+  - Insertion Loss: < 0.15 dB above theoretical split
+  - Port Impedance: 50 Ohms nominal
+  - Power Rating: 300W continuous average power
+  - VSWR: < 1.25:1 all ports
+  - Connectors: N-Type Female / 4.3-10 Female
+
+### RF Coaxial Fixed Attenuators
+URL: https://www.coreforgeindia.com/products/rf-coaxial-attenuators
+Description: Precision continuous power RF attenuators engineered for test equipment protection, power leveling, and impedance matching.
+Technical Specifications (Anand Technologies RF Standard):
+  - Frequency Range: DC to 3.0 GHz / DC to 6.0 GHz
+  - Attenuation Values: 3 dB, 6 dB, 10 dB, 20 dB, 30 dB, 40 dB
+  - Accuracy: ± 0.3 dB to ± 0.6 dB
+  - Power Handling: 5W, 10W, 25W, 50W, 100W CW options
+  - Impedance: 50 Ohms with VSWR < 1.2:1
+  - Heat Sink: Black anodized aluminum radial cooling fins
+  - Connectors: SMA Male to Female / N-Type Male to Female
+
+### Cavity Band Pass Filters
+URL: https://www.coreforgeindia.com/products/rf-bandpass-filters
+Description: Narrowband and wideband cavity filters providing steep skirt selectivity and deep rejection of out-of-band interference.
+Technical Specifications (Anand Technologies RF Standard):
+  - Center Frequencies: VHF, UHF, 868 MHz, 915 MHz, 2.4 GHz tuned
+  - Rejection Level: > 60 dB at ± 10% from center frequency
+  - Passband Loss: < 1.0 dB across designated 3dB bandwidth
+  - Input Power: Up to 100W CW
+  - VSWR: < 1.3:1 in passband
+  - Connectors: N-Type Female precision coax
+
+## Product Category: RF Cables & Connectivity
+URL: https://www.coreforgeindia.com/products/rf-cables-connectivity
+Summary: Mil-spec and industrial grade low-loss RF coaxial cable assemblies, phase-stable jumper cables, and adapters tested 100% on Vector Network Analyzers.
+
+### Low-Loss RF Coaxial Cable Assemblies
+URL: https://www.coreforgeindia.com/products/rf-coaxial-cable-assemblies
+Description: Custom length coaxial cables (LMR-400, LMR-200, RG-58, RG-174, RG-213) terminated with precision gold and silver plated connectors.
+Technical Specifications (Anand Technologies RF Standard):
+  - Cable Types: LMR-400 (ultra-low loss), LMR-200, RG-58 C/U, RG-174, RG-213
+  - Attenuation (LMR-400): < 0.22 dB/meter at 2.4 GHz; < 0.13 dB/meter at 900 MHz
+  - Connector Standards: SMA (Male/Female/RP), N-Type (Male/Female), BNC, TNC, MCX
+  - Testing: 100% VNA return loss and insertion loss certified
+  - Jacket Material: UV-resistant weatherproof non-halogenated PE jacket
+  - Customization: Fabricated to exact millimetre lengths with adhesive heat-shrink
+
+### RF Lightning & Surge Protectors
+URL: https://www.coreforgeindia.com/products/rf-lightning-surge-arrestors
+Description: Gas discharge tube coaxial lightning protectors shielding base stations and transceivers against electrical surges and direct lightning strikes.
+Technical Specifications (Anand Technologies RF Standard):
+  - Frequency Range: DC to 3.0 GHz / DC to 6.0 GHz
+  - Surge Discharge Current: 20 kA (8/20 µs waveform)
+  - Sparkover Voltage: 230V ± 20% DC
+  - Insertion Loss: < 0.15 dB
+  - VSWR: < 1.2:1
+  - Connectors: N-Female to N-Female / N-Male to N-Female bulkheads
+  - Weatherproofing: IP67 waterproof silicone O-ring sealing
+

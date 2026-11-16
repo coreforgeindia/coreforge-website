@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-const SITE_BASE = 'https://www.coreforgeindia.com'
+const SITE_BASE = import.meta.env.VITE_SITE_URL || 'https://www.coreforgeindia.com'
 
 export default function SEO({
   title,
@@ -9,18 +9,22 @@ export default function SEO({
   canonicalUrl,
   ogType = 'website',
   ogImage = 'https://www.coreforgeindia.com/og-image.jpg',
+  noindex = false,
   jsonLd,
 }) {
   useEffect(() => {
     const fullTitle = title
-      ? title.includes('CoreForge') ? title : `${title} | CoreForge`
-      : 'CoreForge | IoT, Embedded Systems, PCB Design & Custom Software'
+      ? title.includes('CoreForge')
+        ? title
+        : `${title} | CoreForge`
+      : 'CoreForge | Digital Growth, Software Development & RF Products'
 
     document.title = fullTitle
 
     // Auto-generate self-referencing canonical from current path if not explicitly provided
     const pathname = window.location.pathname.replace(/\/+$/, '') || '/'
-    const selfCanonical = canonicalUrl || `${SITE_BASE}${pathname === '/' ? '/' : pathname}`
+    const selfCanonical =
+      canonicalUrl || `${SITE_BASE}${pathname === '/' ? '/' : pathname}`
 
     const updateMeta = (selector, attribute, value) => {
       if (!value) return
@@ -52,20 +56,29 @@ export default function SEO({
     if (description) updateMeta('meta[name="description"]', 'content', description)
     if (keywords) updateMeta('meta[name="keywords"]', 'content', keywords)
 
+    // Robots / Indexing
+    if (noindex) {
+      updateMeta('meta[name="robots"]', 'content', 'noindex, nofollow')
+    } else {
+      updateMeta('meta[name="robots"]', 'content', 'index, follow')
+    }
+
     // OpenGraph
+    updateMeta('meta[property="og:site_name"]', 'content', 'CoreForge')
     updateMeta('meta[property="og:title"]', 'content', fullTitle)
     if (description) updateMeta('meta[property="og:description"]', 'content', description)
     updateMeta('meta[property="og:url"]', 'content', selfCanonical)
     updateMeta('meta[property="og:type"]', 'content', ogType)
     if (ogImage) updateMeta('meta[property="og:image"]', 'content', ogImage)
 
-    // Twitter
+    // Twitter / X
+    updateMeta('meta[name="twitter:card"]', 'content', 'summary_large_image')
     updateMeta('meta[property="twitter:title"]', 'content', fullTitle)
     if (description) updateMeta('meta[property="twitter:description"]', 'content', description)
     updateMeta('meta[property="twitter:url"]', 'content', selfCanonical)
     if (ogImage) updateMeta('meta[property="twitter:image"]', 'content', ogImage)
 
-    // Canonical Link always set to self-referencing URL
+    // Canonical Link
     updateLink('canonical', selfCanonical)
 
     // Dynamic JSON-LD Structured Data
@@ -81,7 +94,7 @@ export default function SEO({
     } else if (scriptTag) {
       scriptTag.remove()
     }
-  }, [title, description, keywords, canonicalUrl, ogType, ogImage, jsonLd])
+  }, [title, description, keywords, canonicalUrl, ogType, ogImage, noindex, jsonLd])
 
   return null
 }

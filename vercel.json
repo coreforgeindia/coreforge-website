@@ -1,0 +1,32 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/company", "destination": "/about", "permanent": true },
+    { "source": "/portfolio", "destination": "/services", "permanent": true },
+    { "source": "/careers", "destination": "/about", "permanent": true },
+    { "source": "/digital-marketing-branding", "destination": "/services/digital-marketing-branding", "permanent": true },
+    { "source": "/software-app-development", "destination": "/services/software-tech-solutions", "permanent": true },
+    { "source": "/antenna-rf-products", "destination": "/products", "permanent": true },
+    { "source": "/services/software", "destination": "/services/software-tech-solutions", "permanent": true },
+    { "source": "/services/software/custom-software", "destination": "/services/custom-software", "permanent": true },
+    { "source": "/services/software/web-development", "destination": "/services/web-development", "permanent": true },
+    { "source": "/services/software/mobile-apps", "destination": "/services/mobile-app-development", "permanent": true },
+    { "source": "/services/software/business-intelligence", "destination": "/services/custom-software", "permanent": true },
+    { "source": "/services/hardware", "destination": "/products", "permanent": true },
+    { "source": "/services/hardware/:path*", "destination": "/products", "permanent": true },
+    { "source": "/services/training", "destination": "/about", "permanent": true },
+    { "source": "/services/training/:path*", "destination": "/about", "permanent": true },
+    { "source": "/services/static-website", "destination": "/services/web-development", "permanent": true },
+    { "source": "/services/dynamic-website", "destination": "/services/web-development", "permanent": true },
+    { "source": "/services/web-analytics", "destination": "/services/performance-marketing", "permanent": true },
+    { "source": "/services/lead-capture", "destination": "/services/performance-marketing", "permanent": true },
+    { "source": "/services/app-development", "destination": "/services/mobile-app-development", "permanent": true },
+    { "source": "/blog/how-coreforge-builds-iot-solutions", "destination": "/blog/industrial-iot-antenna-selection-gsm-gnss-integration", "permanent": true },
+    { "source": "/blog/custom-software-vs-off-the-shelf-erp", "destination": "/blog/custom-web-applications-vs-off-the-shelf-saas", "permanent": true },
+    { "source": "/blog/why-practical-embedded-training-matters", "destination": "/blog", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

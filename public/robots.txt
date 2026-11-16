@@ -1,52 +1,6 @@
-# CoreForge - Robots.txt
-# Primary domain: www.coreforgeindia.com
-
+# CoreForge Robots.txt
 User-agent: *
-Allow: /
-
-# Explicitly allow major AI search engines and research crawlers for AEO / GEO
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: GoogleOther
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: Bytespider
-Allow: /
-
-User-agent: Amazonbot
-Allow: /
-
-User-agent: Meta-ExternalAgent
-Allow: /
-
-User-agent: FacebookBot
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-User-agent: cohere-ai
 Allow: /
 
 # Sitemaps
 Sitemap: https://www.coreforgeindia.com/sitemap.xml
-Sitemap: https://www.coreforgeindia.com/image-sitemap.xml

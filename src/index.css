@@ -1,18 +1,132 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  /* Typography */
-  --font-heading: "Playfair Display", Georgia, serif;
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  /* ── Light Mode Palette ── */
+  --color-bg: #fbfbfa;
+  --color-bg-card: #ffffff;
+  --color-bg-subtle: #f3f3f1;
+  --color-bg-dark: #000000;
+  --color-text: #000000;
+  --color-text-secondary: #222222;
+  --color-text-muted: #555555;
+  --color-text-subtle: #777777;
+  --color-border: #e2e2df;
+  --color-border-dark: #000000;
+  --color-border-subtle: rgba(0, 0, 0, 0.1);
+
+  /* Unified Neutral Accent */
+  --color-accent: #000000;
+  --color-accent-contrast: #ffffff;
+  --color-accent-bg: rgba(0, 0, 0, 0.04);
+
+  /* ── Spacing Scale ── */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+
+  /* ── Typography: Space Grotesk Unified Across All Elements ── */
+  --font-heading: "Space Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Space Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* ── Geometric Non-Pill Radius Scale ── */
+  --radius-none: 0px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  /* ── Z-Index ── */
+  --z-base: 1;
+  --z-nav: 50;
+  --z-dropdown: 60;
+  --z-overlay: 70;
+  --z-modal: 80;
+  --z-toast: 90;
 
   font-family: var(--font-body);
-  color: #111111;
-  background: #f3f3f1;
+  color: var(--color-text);
+  background: var(--color-bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
+}
+
+/* ── Dark Mode Overrides ── */
+html.dark {
+  color-scheme: dark;
+  --color-bg: #0c0c0d;
+  --color-bg-card: #151516;
+  --color-bg-subtle: #1c1c1e;
+  --color-bg-dark: #ffffff;
+  --color-text: #f5f5f5;
+  --color-text-secondary: #e2e2e2;
+  --color-text-muted: #aaaaaa;
+  --color-text-subtle: #888888;
+  --color-border: #2a2a2c;
+  --color-border-dark: #ffffff;
+  --color-border-subtle: rgba(255, 255, 255, 0.12);
+  --color-accent: #ffffff;
+  --color-accent-contrast: #000000;
+  --color-accent-bg: rgba(255, 255, 255, 0.06);
+}
+
+html.dark body {
+  background-color: #0c0c0d !important;
+  color: #ffffff !important;
+}
+
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6 {
+  color: #ffffff;
+}
+
+html.dark .text-black,
+html.dark .text-neutral-950,
+html.dark .text-neutral-900 {
+  color: #ffffff !important;
+}
+
+html.dark .text-neutral-700,
+html.dark .text-neutral-600 {
+  color: #d4d4d8 !important;
+}
+
+html.dark .text-neutral-500 {
+  color: #a1a1aa !important;
+}
+
+html.dark .bg-white {
+  background-color: #151516 !important;
+}
+
+html.dark .bg-\[\#fbfbfa\],
+html.dark .bg-\[\#fafafa\],
+html.dark .bg-\[\#f3f3f1\] {
+  background-color: #0c0c0d !important;
+}
+
+html.dark .border-black,
+html.dark .border-neutral-200,
+html.dark .border-neutral-300 {
+  border-color: #ffffff !important;
 }
 
 html {
@@ -22,10 +136,10 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 28%),
-    linear-gradient(180deg, #fbfbfa 0%, #efefec 100%);
+  background-color: var(--color-bg);
+  color: var(--color-text);
   overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 * {
@@ -41,7 +155,7 @@ button,
 input,
 textarea,
 select {
-  font: inherit;
+  font-family: inherit;
 }
 
 #root {
@@ -51,151 +165,481 @@ select {
 /* ── Typography Helpers ── */
 .font-heading {
   font-family: var(--font-heading);
+  letter-spacing: -0.025em;
 }
 
 .font-body {
   font-family: var(--font-body);
 }
 
-/* ── Layout ── */
+/* ── Layout Shell ── */
 .section-shell {
   position: relative;
   margin: 0 auto;
-  width: min(100% - 1.5rem, 88rem);
+  width: min(100% - 2rem, 84rem);
 }
 
-/* ── Global Unified Button Styles ── */
-.btn-primary {
+/* ── Brand Architectural Backgrounds ── */
+.pattern-grid {
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+html.dark .pattern-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+}
+
+.pattern-dots {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+html.dark .pattern-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+}
+
+/* ── Conic Pattern for Service & Product Hero Sections (Uiverse.io by csemszepp) ── */
+.pattern-conic {
+  --s: 140px;
+  --c1: #161616;
+  --c2: #2e2f31;
+  --c3: #222222;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+}
+
+/* ── Brutalist Button (Uiverse.io by levxyca) ── */
+.btn-primary,
+.btn-uiverse {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #000000 !important;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 2px solid #000000;
+  background: #000000;
   color: #ffffff !important;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
-  border: 1px solid #000000;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 4px 4px 0 #000000;
   cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
-.btn-primary:hover {
-  background-color: #ffffff !important;
+html.dark .btn-primary,
+html.dark .btn-uiverse {
+  border: 2px solid #ffffff;
+  background: #ffffff;
   color: #000000 !important;
-  border-color: #000000;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  transform: translateY(-1px);
+  box-shadow: 4px 4px 0 #ffffff;
 }
 
-.btn-primary:hover *,
-.btn-secondary:hover * {
-  color: inherit !important;
+.btn-primary:active,
+.btn-uiverse:active {
+  box-shadow: none !important;
+  transform: translate(4px, 4px) !important;
 }
 
-.btn-secondary {
+.btn-primary:hover,
+.btn-uiverse:hover {
+  background: #252525;
+}
+
+html.dark .btn-primary:hover,
+html.dark .btn-uiverse:hover {
+  background: #e5e5e5;
+}
+
+.btn-secondary,
+.btn-uiverse-light {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #ffffff !important;
-  color: #111111 !important;
-  font-weight: 700;
+  font-family: var(--font-heading);
   font-size: 0.875rem;
-  line-height: 1.25rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 2px solid #000000;
+  background: #ffffff;
+  color: #000000 !important;
+  box-shadow: 4px 4px 0 #000000;
   cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+html.dark .btn-secondary,
+html.dark .btn-uiverse-light {
+  border: 2px solid #ffffff;
+  background: #151516;
+  color: #ffffff !important;
+  box-shadow: 4px 4px 0 #ffffff;
+}
+
+.btn-secondary:active,
+.btn-uiverse-light:active {
+  box-shadow: none !important;
+  transform: translate(4px, 4px) !important;
 }
 
 .btn-secondary:hover {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-  border-color: #000000;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  transform: translateY(-1px);
+  background: #f5f5f5;
 }
 
-/* Universal hover text contrast for interactive cards and buttons */
-a:hover.hover\:text-white,
-button:hover.hover\:text-white,
-.group:hover .group-hover\:text-white {
-  color: #ffffff !important;
+html.dark .btn-secondary:hover {
+  background: #222224;
 }
 
-/* ── Utility Classes ── */
-.glass-panel {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-
-.soft-border {
-  border: 1px solid rgba(17, 17, 17, 0.08);
-}
-
-/* ── High-Performance Smooth Marquee ── */
-@keyframes marquee-left {
-  0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-50%, 0, 0); }
-}
-
-@keyframes marquee-right {
-  0% { transform: translate3d(-50%, 0, 0); }
-  100% { transform: translate3d(0, 0, 0); }
-}
-
-.marquee-track {
+/* ── Brutalist Cards (Uiverse.io by 0xnihilism) ── */
+.brutalist-card,
+.card-neo {
+  padding: 24px;
+  background: #ffffff;
+  border: 4px solid #000000;
+  box-shadow: 8px 8px 0 #000000;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
-  width: max-content;
-  will-change: transform;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.marquee-left {
-  animation: marquee-left 28s linear infinite;
+html.dark .brutalist-card,
+html.dark .card-neo {
+  background: #151516;
+  border-color: #ffffff;
+  box-shadow: 8px 8px 0 #ffffff;
 }
 
-.marquee-right {
-  animation: marquee-right 28s linear infinite;
+.brutalist-card:hover,
+.card-neo:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0 #000000;
 }
 
-.marquee-track:hover {
-  animation-play-state: paused;
+html.dark .brutalist-card:hover,
+html.dark .card-neo:hover {
+  box-shadow: 12px 12px 0 #ffffff;
 }
 
-/* ── Crisp Clean Client Logos (No boxes, no cards, natural colors) ── */
-.client-logo-item {
+.brutalist-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: -0.02em;
+}
+
+html.dark .brutalist-card__title {
+  color: #ffffff;
+}
+
+.brutalist-card__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 3px;
+  background-color: #000000;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+
+html.dark .brutalist-card__title::after {
+  background-color: #ffffff;
+}
+
+.brutalist-card:hover .brutalist-card__title::after {
+  transform: translateX(0);
+}
+
+/* ── Light and Dark Mode Toggle (Uiverse.io by njesenberger) ── */
+.toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 0.5em;
+  padding: 0.125em;
+  background-image: linear-gradient(to bottom, #d5d5d5, #e8e8e8);
+  box-shadow: 0 1px 1px rgb(255 255 255 / 0.6);
+  font-size: 1.1em;
+  user-select: none;
+}
+
+html.dark .toggle-wrapper {
+  background-image: linear-gradient(to bottom, #252525, #353535);
+  box-shadow: 0 1px 1px rgb(0 0 0 / 0.6);
+}
+
+.toggle-checkbox {
+  appearance: none;
+  position: absolute;
+  z-index: 10;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  font: inherit;
+  opacity: 0;
+  cursor: pointer;
+  margin: 0;
+}
+
+.toggle-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0 2rem;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-  opacity: 0.85;
+  position: relative;
+  border-radius: 0.375em;
+  width: 3em;
+  height: 1.5em;
+  background-color: #e8e8e8;
+  box-shadow: inset 0 0 0.0625em 0.125em rgb(255 255 255 / 0.2), inset 0 0.0625em 0.125em rgb(0 0 0 / 0.4);
+  transition: background-color 0.4s linear;
 }
 
-.client-logo-item:hover {
-  transform: scale(1.08);
+.toggle-checkbox:checked + .toggle-container {
+  background-color: #f3b519;
+}
+
+.toggle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0.0625em;
+  border-radius: 0.3125em;
+  width: 1.375em;
+  height: 1.375em;
+  background-color: #e8e8e8;
+  box-shadow: inset 0 -0.0625em 0.0625em 0.125em rgb(0 0 0 / 0.1), inset 0 -0.125em 0.0625em rgb(0 0 0 / 0.2), inset 0 0.1875em 0.0625em rgb(255 255 255 / 0.3), 0 0.125em 0.125em rgb(0 0 0 / 0.5);
+  transition: left 0.4s;
+}
+
+.toggle-checkbox:checked + .toggle-container > .toggle-button {
+  left: 1.5625em;
+}
+
+.toggle-button-circles-container {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  gap: 0.125em;
+  position: absolute;
+  margin: 0 auto;
+}
+
+.toggle-button-circle {
+  border-radius: 50%;
+  width: 0.125em;
+  height: 0.125em;
+  background-image: radial-gradient(circle at 50% 0, #f5f5f5, #c4c4c4);
+}
+
+/* ── Animated Loader (Uiverse.io by AbanoubMagdy1) ── */
+.uiverse-loader,
+.loader {
+  --dim: 2.75rem;
+  width: var(--dim);
+  height: var(--dim);
+  position: relative;
+  animation: spin988 2s linear infinite;
+  display: inline-block;
+}
+
+.uiverse-loader .circle,
+.loader .circle {
+  --color: #000000;
+  --dim: 0.95rem;
+  width: var(--dim);
+  height: var(--dim);
+  background-color: var(--color);
+  border-radius: 50%;
+  position: absolute;
+}
+
+html.dark .uiverse-loader .circle,
+html.dark .loader .circle {
+  --color: #ffffff;
+}
+
+.uiverse-loader .circle:nth-child(1),
+.loader .circle:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.uiverse-loader .circle:nth-child(2),
+.loader .circle:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+
+.uiverse-loader .circle:nth-child(3),
+.loader .circle:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+
+.uiverse-loader .circle:nth-child(4),
+.loader .circle:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes spin988 {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  20%, 25% {
+    transform: scale(1.3) rotate(90deg);
+  }
+  45%, 50% {
+    transform: scale(1) rotate(180deg);
+  }
+  70%, 75% {
+    transform: scale(1.3) rotate(270deg);
+  }
+  95%, 100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+/* ── Animated SVG Checkbox (Uiverse.io by PriyanshuGupta28) ── */
+.checkbox-wrapper input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.checkbox-wrapper *,
+.checkbox-wrapper ::after,
+.checkbox-wrapper ::before {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.checkbox-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.checkbox-wrapper .label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-wrapper .check {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox-wrapper .label svg {
+  vertical-align: middle;
+}
+
+.checkbox-wrapper .path1 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  transition: 0.5s stroke-dashoffset;
+  opacity: 0;
+}
+
+.checkbox-wrapper .check:checked + label svg g path {
+  stroke-dashoffset: 0;
   opacity: 1;
 }
 
-.client-logo-img {
-  height: 3.5rem;
-  max-width: 13rem;
-  object-fit: contain;
-  filter: none !important;
+/* ── Skeleton Loading Animation ── */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
-@media (min-width: 640px) {
-  .client-logo-img {
-    height: 4.25rem;
-    max-width: 15rem;
+.skeleton-box {
+  background: linear-gradient(90deg, #f0f0ed 25%, #e4e4df 50%, #f0f0ed 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.6s infinite ease-in-out;
+}
+
+html.dark .skeleton-box {
+  background: linear-gradient(90deg, #1c1c1e 25%, #2a2a2c 50%, #1c1c1e 75%);
+  background-size: 200% 100%;
+}
+
+/* ── Glass Surface Fallback ── */
+.glass-surface {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+html.dark .glass-surface {
+  background: rgba(12, 12, 13, 0.94);
+  border-bottom: 1px solid #2a2a2c;
+}
+
+/* ── Accessibility: Skip Link ── */
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: 1rem;
+  z-index: var(--z-modal);
+  background: #000000;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-xs);
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: top 150ms ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

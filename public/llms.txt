@@ -1,42 +1,86 @@
 # CoreForge
+> 360° Digital Marketing, Brand Strategy & Custom Software Engineering | Precision Technology Solutions
 
-> CoreForge is a Bengaluru-based engineering and technology company providing practical hardware, embedded systems, IoT, PCB design, custom software, web development, mobile applications, and technical training.
+## Overview
+CoreForge is a digital marketing and custom software engineering firm headquartered in Bengaluru, Karnataka, India. Founded in October 2024, CoreForge specializes in 360° Digital Marketing & Brand Strategy, and Custom Web & Mobile Software Engineering, alongside supplying an industrial catalogue of antenna and RF communication hardware.
 
-## Core Pages
+## Core Practice: 360° Digital Marketing & Software Engineering (/services)
 
-- [Homepage](https://coreforgeindia.com/): Primary engineering portal and company overview.
-- [About CoreForge](https://coreforgeindia.com/about): Company background, mission, and MSME engineering team.
-- [Engineering Services](https://coreforgeindia.com/services): Hardware design, embedded firmware, custom software, and workshops.
-- [Portfolio & Case Studies](https://coreforgeindia.com/portfolio): Delivered engineering projects, PCB prototypes, and software platforms.
-- [Engineering FAQs](https://coreforgeindia.com/faqs): Technical FAQs, service processes, and project timelines.
-- [Careers & Internships](https://coreforgeindia.com/careers): Job openings and paid engineering internships in Bengaluru.
-- [Contact CoreForge](https://coreforgeindia.com/contact): Inquiries, technical consultation, and custom project quotes.
-- [Engineering Blog](https://coreforgeindia.com/blog): Technical articles, IoT architecture tutorials, and PCB design guides.
+### [360° Digital Marketing & Branding](https://www.coreforgeindia.com/services/digital-marketing-branding)
+Data-driven digital marketing, brand positioning frameworks, technical SEO, and multi-channel customer acquisition architectures managed from Bengaluru.
 
-## Hardware & Embedded Solutions
+**Capabilities & Sub-services:**
+- **Brand Strategy & Identity**: Comprehensive brand positioning frameworks, typographic scale design, logo guidelines, and unified visual identity systems.
+- **Website Design & Development**: Headless, high-performance websites engineered with React, Vite, and modern CSS for sub-second load times and high conversion rates.
+- **Digital Marketing & Advertising**: Data-driven paid media campaigns across Google Search, Meta Ads, LinkedIn, and programmatic display targeting verified ROI metrics.
+- **Social Media Management**: B2B and B2C brand growth across LinkedIn, Instagram, X, and YouTube with consistent technical storytelling and community moderation.
+- **Creative Design & Graphic Designing**: Precision digital and print graphic design: pitch decks, product datasheets, packaging, corporate reports, and marketing collateral.
+- **Video Production & Content Creation**: Script-to-screen video production including hardware product demos, software walkthroughs, corporate profiles, and 3D motion graphics.
+- **Search Engine Optimisation (SEO)**: Technical on-page, architecture, and backlink strategies designed to capture high-intent commercial keywords organically.
+- **Influencer & PR Marketing**: Strategic technical influencer partnerships, media releases, and digital PR amplification to establish industry authority.
+- **Marketing Automation**: Automated nurture workflows, email drip sequences, lead scoring, and CRM pipeline triggers using HubSpot, ActiveCampaign, and custom webhooks.
+- **Business Growth & Consulting**: Go-to-market roadmaps, pricing models, CAC optimization, and unit economics validation for tech startups and emerging enterprises.
 
-- [PCB Design Services](https://coreforgeindia.com/services/hardware/pcb-design): Multi-layer PCB schematic design, high-speed routing, and prototyping.
-- [Embedded Systems & Firmware](https://coreforgeindia.com/services/hardware/embedded-systems): STM32, ESP32, FreeRTOS programming, and sensor integration.
-- [Electronics Product Design](https://coreforgeindia.com/services/hardware/product-design): End-to-end electronic product engineering from concept to assembly.
-- [Hardware Consulting](https://coreforgeindia.com/services/hardware/consulting): Design reviews, thermal analysis, and component selection.
+### [Software & App Development](https://www.coreforgeindia.com/services/software-app-development)
+Full-lifecycle software engineering from architecture design and database modeling to cloud deployment, mobile apps, and SLA-backed maintenance.
 
-## Software & Digital Solutions
+**Capabilities & Sub-services:**
+- **Website Development**: High-speed corporate portals and conversion websites built with React, Vite, and Next.js, optimized for zero layout shift and sub-second TTFB.
+- **Web Application Development**: Complex web applications featuring real-time state, role-based access control, interactive dashboards, and scalable database backends.
+- **Android & iOS App Development**: Cross-platform and native mobile applications with offline storage, background push notifications, hardware Bluetooth/GPS integration, and app store compliance.
+- **Custom Software Development**: Bespoke software engines tailored to proprietary business logic, eliminating generic SaaS limitations and recurring licensing costs.
+- **ERP & CRM Solutions**: Enterprise resource planning, inventory control, purchase order tracking, and CRM sales pipelines engineered for manufacturing and logistics.
+- **SaaS Product Development**: End-to-end multi-tenant SaaS architecture with automated subscription billing, user tenant isolation, analytics, and self-service onboarding.
+- **API Development & Integration**: High-throughput REST and GraphQL APIs, third-party payment gateway links, webhook consumers, and legacy enterprise system connectors.
+- **AI & Business Automation**: Intelligent document extraction, automated customer support assistants, OCR processing, and predictive analytics integrated into existing workflows.
+- **Database Management Solutions**: Relational and NoSQL database modeling, query index optimization, zero-downtime migrations, and automated high-availability clustering.
+- **Cloud, Server & Hosting Solutions**: Cloud architecture sizing, Kubernetes orchestration, automated Docker pipelines, and cost-optimized infrastructure on AWS, GCP, and Cloudflare.
+- **Cybersecurity & IT Solutions**: Application security testing, penetration test reports, vulnerability remediation, SSL hardening, and OWASP Top 10 compliance audits.
+- **Software Maintenance & Technical Support**: SLA-guaranteed uptime monitoring, patch deployment, dependency upgrades, bug fixes, and continuous technical enhancements.
 
-- [Custom Software Development](https://coreforgeindia.com/services/software/custom-software): Enterprise ERP, CRM, and automated business platforms.
-- [Web Development & E-Commerce](https://coreforgeindia.com/services/software/web-development): Fast web platforms, portals, and e-commerce applications.
-- [Mobile App Development](https://coreforgeindia.com/services/software/mobile-apps): Android & iOS cross-platform mobile app engineering.
-- [Business Intelligence & Dashboards](https://coreforgeindia.com/services/software/business-intelligence): Real-time telemetry, analytics, and data portals.
+## Auxiliary Hardware Supply: Antenna & RF Communication Products (/products)
 
-## Training & Education
+### [Antenna Systems](https://www.coreforgeindia.com/products/antennas)
+High-reliability antenna systems engineered for harsh environments, base station communications, vehicle tracking, marine telemetry, and IoT wireless networks.
 
-- [Embedded Systems Bootcamps](https://coreforgeindia.com/services/training/embedded-training): Hands-on STM32 and IoT engineering bootcamps.
-- [Hardware & PCB Design Courses](https://coreforgeindia.com/services/training/hardware-courses): Practical KiCad and multi-layer PCB design training.
-- [Software Development Programs](https://coreforgeindia.com/services/training/software-programs): Full-stack web and mobile development courses.
-- [Corporate & College Workshops](https://coreforgeindia.com/services/training/workshops): FDPs, student bootcamps, and technical mentoring.
-- [DIY Electronics Kits](https://coreforgeindia.com/services/training/diy-kits): Prototyping hardware, robotics kits, and STEM education modules.
+**Engineered Hardware Lines:**
+- **VHF / UHF Base Station & Mobile Antennas** (136 - 174 MHz (VHF) / 380 - 470 MHz (UHF)): Heavy-duty collinear omnidirectional and directional Yagi antennas covering VHF (136-174 MHz) and UHF (380-470 MHz) commercial and public safety bands.
+- **GSM / LTE / 4G / 5G Cellular Antennas** (698 - 960 MHz & 1710 - 2700 MHz (Broadband)): Broadband cellular antennas in magnetic mount, rubber duck, and low-profile puck configurations supporting GSM 900/1800, 3G, 4G LTE, and sub-6 GHz 5G.
+- **Wi-Fi / WLAN Dual-Band Antennas** (2400 - 2500 MHz & 5150 - 5850 MHz): High-gain dual-band 2.4 GHz and 5.8 GHz Wi-Fi antennas in omnidirectional rubber duck, ceiling dome, directional panel, and cone configurations.
+- **GPS / GNSS Active & Passive Antennas** (Industrial Grade): Precision active GPS L1, GLONASS, and Galileo reception antennas with integrated low-noise amplifier (LNA) for vehicle tracking and marine navigation.
+- **Log-Periodic & Wideband Antennas** (400 MHz to 6.0 GHz (Continuous broadband)): Broadband directional log-periodic dipole arrays (LPA) covering wide spectrums for EMC testing, surveillance, and multi-band telemetry.
+- **UHF RFID Reader Antennas** (865 - 868 MHz (India/EU) / 902 - 928 MHz (US FCC)): Circularly polarized UHF RFID reader panel antennas for automated warehouse inventory, asset tracking portals, and logistics gates.
 
-## Profiles & Verification
+### [RF Passive Components](https://www.coreforgeindia.com/products/rf-passive-components)
+Precision machined RF passive hardware delivering ultra-low insertion loss, high power handling, and sharp out-of-band rejection.
 
-- [LinkedIn Company Page](https://www.linkedin.com/company/coreforge-india/): Official corporate updates and career announcements.
-- [Instagram Page](https://www.instagram.com/coreforgeindiaofficial/): Visual project showcases, workshops, and lab updates.
-- [GoodFirms Profile](https://www.goodfirms.co/company/coreforge): Verified company profile and client reviews.
+**Engineered Hardware Lines:**
+- **High-Q RF Cavity Duplexers** (136 - 174 MHz (VHF) / 380 - 470 MHz (UHF)): Precision CNC-machined cavity duplexers for VHF and UHF repeater base stations providing superior TX/RX frequency isolation.
+- **Directional Couplers & Power Taps** (698 - 2700 MHz (Broadband)): Low PIM broad-band directional couplers for signal monitoring, transmitter power reflection measurement, and distributed antenna systems.
+- **Power Splitters & Combiners** (698 - 3800 MHz (Covers 4G & 5G bands)): 2-Way, 3-Way, and 4-Way reactive power dividers for multi-antenna transmitter feeds and cellular coverage distribution.
+- **RF Coaxial Fixed Attenuators** (DC to 3.0 GHz / DC to 6.0 GHz): Precision continuous power RF attenuators engineered for test equipment protection, power leveling, and impedance matching.
+- **Cavity Band Pass Filters** (Industrial Grade): Narrowband and wideband cavity filters providing steep skirt selectivity and deep rejection of out-of-band interference.
+
+### [RF Cables & Connectivity](https://www.coreforgeindia.com/products/rf-cables-connectivity)
+Mil-spec and industrial grade low-loss RF coaxial cable assemblies, phase-stable jumper cables, and adapters tested 100% on Vector Network Analyzers.
+
+**Engineered Hardware Lines:**
+- **Low-Loss RF Coaxial Cable Assemblies** (Industrial Grade): Custom length coaxial cables (LMR-400, LMR-200, RG-58, RG-174, RG-213) terminated with precision gold and silver plated connectors.
+- **RF Lightning & Surge Protectors** (DC to 3.0 GHz / DC to 6.0 GHz): Gas discharge tube coaxial lightning protectors shielding base stations and transceivers against electrical surges and direct lightning strikes.
+
+## Company Information
+- Name: CoreForge
+- Founded: October 2024
+- Location: Peenya, Bengaluru, Karnataka, India
+- Email: info@coreforgeindia.com
+- Phone: +91 93808 41227
+- Website: https://www.coreforgeindia.com
+
+## Core URLs
+- Home: https://www.coreforgeindia.com/
+- Services: https://www.coreforgeindia.com/services
+- Products: https://www.coreforgeindia.com/products
+- About Us: https://www.coreforgeindia.com/about
+- FAQs: https://www.coreforgeindia.com/faqs
+- Blog: https://www.coreforgeindia.com/blog
+- Contact: https://www.coreforgeindia.com/contact

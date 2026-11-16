@@ -4,7 +4,7 @@ const CONFIG = {
   companyRecipients: ['info@coreforgeindia.com'],
   companyName: 'CoreForge',
   companyEmail: 'info@coreforgeindia.com',
-  websiteUrl: 'https://coreforgeindia.info',
+  websiteUrl: 'https://www.coreforgeindia.com',
 }
 
 const CONTACT_COLUMNS = [
@@ -191,7 +191,7 @@ function sendLeadAcknowledgement_(record) {
     ...submittedLines,
     '─────────────────────────────',
     '',
-    'We will respond within 24–48 hours.',
+    'We will respond within 24-48 hours.',
     '',
     'Warm regards,',
     'CoreForge Engineering Lab',
