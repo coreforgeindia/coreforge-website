@@ -239,10 +239,10 @@ html.dark .pattern-dots {
 
 /* Dark Mode (Uiverse.io by csemszepp) */
 html.dark .pattern-conic {
-  --s: 140px;
-  --c1: #161616;
-  --c2: #2e2f31;
-  --c3: #222222;
+  --s: 200px; /* control the size */
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
 
   background: repeating-conic-gradient(
         from 30deg,

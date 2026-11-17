@@ -30,7 +30,10 @@ export default function Home() {
       />
 
       {/* ── 1. Hero Section (Strict Neo-Brutalist & Premium, 100dvh Full Viewport) ── */}
-      <section className="relative overflow-hidden min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 border-b-4 border-black dark:border-white pattern-grid" aria-labelledby="hero-title">
+      <section className="relative overflow-hidden min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 border-b-4 border-black dark:border-white pattern-conic" aria-labelledby="hero-title">
+        {/* High-legibility brutalist backdrop scrim */}
+        <div className="absolute inset-0 bg-white/85 dark:bg-black/80 backdrop-blur-[1px] pointer-events-none" />
+
         <div className="section-shell relative z-10 text-center max-w-4xl mx-auto">
           {/* Main H1 in Space Grotesk */}
           <h1
