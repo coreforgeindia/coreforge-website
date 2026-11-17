@@ -3,37 +3,71 @@ import SEO from '../components/SEO'
 import { serviceCategories } from '../data/verticals'
 import { HiOutlineSparkles, HiOutlineCode } from 'react-icons/hi'
 
-// Distinct sub-service images
-import brandImg from '../assets/services/brand-strategy.jpg'
-import webImg from '../assets/services/web-development.jpg'
-import adsImg from '../assets/services/paid-advertising.jpg'
-import customWebImg from '../assets/services/custom-webapp.jpg'
-import mobileImg from '../assets/services/mobile-app.jpg'
+// Distinct sub-service images for each individual capability (100% unique, zero duplicates)
+import mktgBrandImg from '../assets/services/brand-strategy.jpg'
+import mktgWebImg from '../assets/services/web-development.jpg'
+import mktgAdsImg from '../assets/services/paid-advertising.jpg'
+import mktgSocialImg from '../assets/services/mktg-social-media.jpg'
+import mktgCreativeImg from '../assets/services/mktg-creative-design.jpg'
+import mktgVideoImg from '../assets/services/mktg-video-production.jpg'
+import mktgSeoImg from '../assets/services/mktg-seo.jpg'
+import mktgInfluencerImg from '../assets/services/mktg-influencer-pr.jpg'
+import mktgAutomationImg from '../assets/services/mktg-automation.jpg'
+import mktgAnalyticsImg from '../assets/services/mktg-analytics.jpg'
+
+import swCustomWebImg from '../assets/services/software-custom-web.jpg'
+import swMobileImg from '../assets/services/software-mobile-app.jpg'
+import swApiImg from '../assets/services/software-api-microservices.jpg'
+import swCloudImg from '../assets/services/software-cloud-devops.jpg'
+import swDbImg from '../assets/services/software-database-arch.jpg'
+import swUiUxImg from '../assets/services/software-ui-ux.jpg'
+import swLegacyImg from '../assets/services/software-legacy-modern.jpg'
+import swQaImg from '../assets/services/software-testing-qa.jpg'
+import swIotImg from '../assets/services/software-iot-embedded.jpg'
+import swSlaImg from '../assets/services/software-sla-maintenance.jpg'
+
 import marketingDefaultImg from '../assets/services/service-marketing.jpg'
 import softwareDefaultImg from '../assets/services/service-software.jpg'
 
 const serviceThumbnails = {
-  'brand-strategy-identity': brandImg,
-  'website-design-development': webImg,
-  'digital-marketing-advertising': adsImg,
-  'social-media-management': adsImg,
-  'creative-design-graphic-designing': brandImg,
-  'video-production-content-creation': webImg,
-  'search-engine-optimisation': adsImg,
-  'influencer-pr-marketing': brandImg,
-  'marketing-automation': adsImg,
-  'analytics-conversion-tracking': adsImg,
+  // Marketing & Branding Capabilities (exact slugs from verticals.js)
+  'brand-strategy-identity': mktgBrandImg,
+  'website-design-development': mktgWebImg,
+  'digital-marketing-advertising': mktgAdsImg,
+  'social-media-management': mktgSocialImg,
+  'creative-design-graphic-designing': mktgCreativeImg,
+  'video-production-content-creation': mktgVideoImg,
+  'search-engine-optimisation': mktgSeoImg,
+  'influencer-pr-marketing': mktgInfluencerImg,
+  'marketing-automation': mktgAutomationImg,
+  'business-growth-consulting': mktgAnalyticsImg,
+  'analytics-conversion-tracking': mktgAnalyticsImg,
 
-  'custom-web-applications': customWebImg,
-  'mobile-application-development': mobileImg,
-  'api-microservices-engineering': customWebImg,
-  'cloud-infrastructure-devops': customWebImg,
-  'database-architecture-optimisation': customWebImg,
-  'ui-ux-design-systems': webImg,
-  'legacy-application-modernisation': customWebImg,
-  'automated-testing-qa-engineering': customWebImg,
-  'iot-embedded-software-integration': mobileImg,
-  'software-maintenance-sla-support': customWebImg,
+  // Software & App Engineering Capabilities (exact slugs from verticals.js)
+  'website-development': swCustomWebImg,
+  'web-application-development': swCustomWebImg,
+  'android-ios-app-development': swMobileImg,
+  'custom-software-development': swLegacyImg,
+  'erp-crm-solutions': swDbImg,
+  'saas-product-development': swUiUxImg,
+  'api-development-integration': swApiImg,
+  'ai-business-automation': swIotImg,
+  'database-management-solutions': swDbImg,
+  'cloud-server-hosting-solutions': swCloudImg,
+  'cybersecurity-it-solutions': swQaImg,
+  'software-maintenance-technical-support': swSlaImg,
+
+  // Backward compatibility aliases
+  'custom-web-applications': swCustomWebImg,
+  'mobile-application-development': swMobileImg,
+  'api-microservices-engineering': swApiImg,
+  'cloud-infrastructure-devops': swCloudImg,
+  'database-architecture-optimisation': swDbImg,
+  'ui-ux-design-systems': swUiUxImg,
+  'legacy-application-modernisation': swLegacyImg,
+  'automated-testing-qa-engineering': swQaImg,
+  'iot-embedded-software-integration': swIotImg,
+  'software-maintenance-sla-support': swSlaImg,
 }
 
 export default function Services() {
@@ -50,12 +84,15 @@ export default function Services() {
       />
 
       {/* Hero Header with Conic Pattern (100dvh Screen Fitting) */}
-      <section className="relative min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 pattern-conic text-white border-b-4 border-black dark:border-white">
+      <section className="relative overflow-hidden min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 pattern-conic border-b-4 border-black dark:border-white">
+        {/* High-legibility brutalist backdrop scrim */}
+        <div className="absolute inset-0 bg-white/85 dark:bg-black/80 backdrop-blur-[1px] pointer-events-none" />
+
         <div className="section-shell relative z-10 text-center max-w-4xl mx-auto">
-          <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white leading-tight mb-6">
+          <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-neutral-950 dark:text-white leading-tight mb-6">
             Services Architecture
           </h1>
-          <p className="text-base sm:text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-base sm:text-xl text-neutral-800 dark:text-neutral-300 max-w-3xl mx-auto leading-relaxed mb-8">
             Two distinct, uncompromised disciplines: <strong>360° Digital Marketing & Branding</strong> to engineer market authority and customer acquisition, and <strong>Custom Software Development</strong> to build resilient cloud architectures that elevate enterprise performance.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">

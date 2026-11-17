@@ -335,12 +335,33 @@ export default function Navbar() {
             >
               Blog
             </NavLink>
+
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `text-sm font-bold tracking-wide transition-colors py-1 border-b-2 ${
+                  isActive
+                    ? 'text-black dark:text-white border-black dark:border-white'
+                    : 'text-neutral-600 dark:text-neutral-300 border-transparent hover:text-black dark:hover:text-white hover:border-neutral-300'
+                }`
+              }
+              aria-current={location.pathname === '/contact' ? 'page' : undefined}
+            >
+              Contact
+            </NavLink>
           </nav>
 
           {/* Desktop Right CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <ThemeToggle />
-            <Link to="/contact" className="btn-primary text-xs">
+            <Link
+              to="/contact"
+              className={`btn-primary !py-2 !px-4 text-xs font-mono uppercase tracking-wider ${
+                location.pathname === '/contact'
+                  ? 'ring-2 ring-black dark:ring-white ring-offset-2'
+                  : ''
+              }`}
+            >
               Contact Us
             </Link>
           </div>
@@ -355,7 +376,7 @@ export default function Navbar() {
               aria-expanded={mobileOpen}
               aria-controls="mobile-nav-panel"
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-              className="flex items-center justify-center w-11 h-11 text-neutral-900 hover:bg-neutral-100 cursor-pointer rounded-sm"
+              className="flex items-center justify-center w-11 h-11 text-black dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 cursor-pointer rounded-sm"
             >
               {mobileOpen ? (
                 <HiOutlineX className="h-6 w-6" aria-hidden="true" />
@@ -371,25 +392,27 @@ export default function Navbar() {
           <div
             id="mobile-nav-panel"
             ref={mobileMenuRef}
-            className="lg:hidden absolute top-16 left-0 w-full bg-white border-b border-neutral-200 shadow-2xl max-h-[calc(100vh-4rem)] overflow-y-auto p-5 z-50 text-left"
+            className="lg:hidden absolute top-16 left-0 w-full bg-white dark:bg-neutral-950 border-b-2 border-black dark:border-white shadow-2xl max-h-[calc(100vh-4rem)] overflow-y-auto p-5 z-50 text-left"
           >
             <nav className="flex flex-col gap-2" aria-label="Mobile Navigation">
               <Link
                 to="/"
                 onClick={() => setMobileOpen(false)}
                 className={`py-3 px-3 text-base font-bold ${
-                  location.pathname === '/' ? 'bg-neutral-100 text-black' : 'text-neutral-700'
+                  location.pathname === '/'
+                    ? 'bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white'
+                    : 'text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white'
                 }`}
               >
                 Home
               </Link>
 
               {/* Mobile Services Accordion */}
-              <div className="border border-neutral-200 rounded-sm overflow-hidden">
+              <div className="border border-neutral-200 dark:border-neutral-800 rounded-sm overflow-hidden">
                 <button
                   type="button"
                   onClick={() => setMobileAccordion(mobileAccordion === 'services' ? null : 'services')}
-                  className="flex items-center justify-between w-full py-3 px-3 text-base font-bold text-neutral-800"
+                  className="flex items-center justify-between w-full py-3 px-3 text-base font-bold text-neutral-800 dark:text-neutral-200"
                 >
                   <span>Services</span>
                   <HiChevronDown
@@ -399,11 +422,11 @@ export default function Navbar() {
                   />
                 </button>
                 {mobileAccordion === 'services' && (
-                  <div className="bg-neutral-50 p-3 space-y-2 border-t border-neutral-200">
+                  <div className="bg-neutral-50 dark:bg-neutral-900 p-3 space-y-2 border-t border-neutral-200 dark:border-neutral-800">
                     <Link
                       to="/services"
                       onClick={() => setMobileOpen(false)}
-                      className="block text-xs font-bold uppercase tracking-wider text-black pb-1 border-b border-neutral-200"
+                      className="block text-xs font-bold uppercase tracking-wider text-black dark:text-white pb-1 border-b border-neutral-200 dark:border-neutral-800"
                     >
                       Services Overview Page →
                     </Link>
@@ -412,7 +435,7 @@ export default function Navbar() {
                         key={c.slug}
                         to={`/services/${c.slug}`}
                         onClick={() => setMobileOpen(false)}
-                        className="block text-sm font-semibold text-neutral-700 py-1"
+                        className="block text-sm font-semibold text-neutral-700 dark:text-neutral-300 py-1"
                       >
                         {c.name}
                       </Link>
@@ -422,11 +445,11 @@ export default function Navbar() {
               </div>
 
               {/* Mobile Products Accordion */}
-              <div className="border border-neutral-200 rounded-sm overflow-hidden">
+              <div className="border border-neutral-200 dark:border-neutral-800 rounded-sm overflow-hidden">
                 <button
                   type="button"
                   onClick={() => setMobileAccordion(mobileAccordion === 'products' ? null : 'products')}
-                  className="flex items-center justify-between w-full py-3 px-3 text-base font-bold text-neutral-800"
+                  className="flex items-center justify-between w-full py-3 px-3 text-base font-bold text-neutral-800 dark:text-neutral-200"
                 >
                   <span>Products</span>
                   <HiChevronDown
@@ -436,11 +459,11 @@ export default function Navbar() {
                   />
                 </button>
                 {mobileAccordion === 'products' && (
-                  <div className="bg-neutral-50 p-3 space-y-2 border-t border-neutral-200">
+                  <div className="bg-neutral-50 dark:bg-neutral-900 p-3 space-y-2 border-t border-neutral-200 dark:border-neutral-800">
                     <Link
                       to="/products"
                       onClick={() => setMobileOpen(false)}
-                      className="block text-xs font-bold uppercase tracking-wider text-black pb-1 border-b border-neutral-200"
+                      className="block text-xs font-bold uppercase tracking-wider text-black dark:text-white pb-1 border-b border-neutral-200 dark:border-neutral-800"
                     >
                       Products Overview Page →
                     </Link>
@@ -449,7 +472,7 @@ export default function Navbar() {
                         key={c.slug}
                         to={`/products/${c.slug}`}
                         onClick={() => setMobileOpen(false)}
-                        className="block text-sm font-semibold text-neutral-700 py-1"
+                        className="block text-sm font-semibold text-neutral-700 dark:text-neutral-300 py-1"
                       >
                         {c.name}
                       </Link>
@@ -462,7 +485,9 @@ export default function Navbar() {
                 to="/about"
                 onClick={() => setMobileOpen(false)}
                 className={`py-3 px-3 text-base font-bold ${
-                  location.pathname === '/about' ? 'bg-neutral-100 text-black' : 'text-neutral-700'
+                  location.pathname === '/about'
+                    ? 'bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white'
+                    : 'text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white'
                 }`}
               >
                 About Us
@@ -472,7 +497,9 @@ export default function Navbar() {
                 to="/faqs"
                 onClick={() => setMobileOpen(false)}
                 className={`py-3 px-3 text-base font-bold ${
-                  location.pathname === '/faqs' ? 'bg-neutral-100 text-black' : 'text-neutral-700'
+                  location.pathname === '/faqs'
+                    ? 'bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white'
+                    : 'text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white'
                 }`}
               >
                 FAQs
@@ -482,19 +509,33 @@ export default function Navbar() {
                 to="/blog"
                 onClick={() => setMobileOpen(false)}
                 className={`py-3 px-3 text-base font-bold ${
-                  location.pathname === '/blog' ? 'bg-neutral-100 text-black' : 'text-neutral-700'
+                  location.pathname === '/blog'
+                    ? 'bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white'
+                    : 'text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white'
                 }`}
               >
                 Blog
               </Link>
 
-              <div className="pt-3 mt-2 border-t border-neutral-200">
+              <Link
+                to="/contact"
+                onClick={() => setMobileOpen(false)}
+                className={`py-3 px-3 text-base font-bold ${
+                  location.pathname === '/contact'
+                    ? 'bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white'
+                    : 'text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white'
+                }`}
+              >
+                Contact Us
+              </Link>
+
+              <div className="pt-3 mt-2 border-t border-neutral-200 dark:border-neutral-800">
                 <Link
                   to="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="btn-primary w-full text-center"
+                  className="btn-primary w-full text-center block"
                 >
-                  Contact Us
+                  Get Started / Contact Us
                 </Link>
               </div>
             </nav>

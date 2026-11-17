@@ -42,12 +42,15 @@ export default function Products() {
       />
 
       {/* Hero Header with Conic Pattern (100dvh Screen Fitting) */}
-      <section className="relative min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 pattern-conic text-white border-b-4 border-black dark:border-white">
+      <section className="relative overflow-hidden min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 pattern-conic border-b-4 border-black dark:border-white">
+        {/* High-legibility brutalist backdrop scrim */}
+        <div className="absolute inset-0 bg-white/85 dark:bg-black/80 backdrop-blur-[1px] pointer-events-none" />
+
         <div className="section-shell relative z-10 text-center max-w-4xl mx-auto">
-          <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white leading-tight mb-6">
+          <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-neutral-950 dark:text-white leading-tight mb-6">
             Antenna & RF Hardware Catalogue
           </h1>
-          <p className="text-base sm:text-xl text-neutral-300 max-w-2xl mx-auto leading-relaxed mb-8">
+          <p className="text-base sm:text-xl text-neutral-800 dark:text-neutral-300 max-w-2xl mx-auto leading-relaxed mb-8">
             An industrial-grade hardware portfolio engineered to strict telecommunication, telemetry, and defense RF standards across global frequency bands.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">

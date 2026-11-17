@@ -14,16 +14,19 @@ export default function About() {
       />
 
       {/* Header (100dvh Full Viewport Fitting) */}
-      <section className="relative overflow-hidden min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 px-4 sm:px-6 pattern-conic text-white border-b-4 border-black dark:border-white">
-        <div className="section-shell">
+      <section className="relative overflow-hidden min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 px-4 sm:px-6 pattern-conic border-b-4 border-black dark:border-white">
+        {/* High-legibility brutalist backdrop scrim */}
+        <div className="absolute inset-0 bg-white/85 dark:bg-black/80 backdrop-blur-[1px] pointer-events-none" />
+
+        <div className="section-shell relative z-10">
           <div className="max-w-3xl">
-            <span className="font-mono text-xs uppercase tracking-widest px-2.5 py-1 border border-white bg-black/60 font-bold mb-4 inline-block text-white">
+            <span className="font-mono text-xs uppercase tracking-widest px-2.5 py-1 border-2 border-black dark:border-white bg-black text-white dark:bg-white dark:text-black font-bold mb-4 inline-block">
               BENGALURU HEADQUARTERS
             </span>
-            <h1 className="font-heading text-4xl sm:text-6xl font-black uppercase tracking-tight text-white leading-tight mb-6">
+            <h1 className="font-heading text-4xl sm:text-6xl font-black uppercase tracking-tight text-neutral-950 dark:text-white leading-tight mb-6">
               360° Digital Marketing & Custom Software Engineering
             </h1>
-            <p className="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl">
+            <p className="text-base sm:text-lg text-neutral-800 dark:text-neutral-300 leading-relaxed max-w-2xl">
               Founded in October 2024, CoreForge is an engineering firm headquartered in Bengaluru, built to deliver high-velocity digital marketing systems and custom software platforms without agency overhead.
             </p>
           </div>

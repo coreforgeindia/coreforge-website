@@ -660,7 +660,7 @@ export function getAllRoutes() {
     }
   }
 
-  // Add blog article routes
+  // Add all 30 blog article routes
   const blogSlugs = [
     'modern-search-seo-aeo-geo-playbook',
     'custom-web-applications-vs-off-the-shelf-saas',
@@ -672,6 +672,26 @@ export function getAllRoutes() {
     'vhf-uhf-base-station-antennas-selection-guide',
     'industrial-iot-antenna-selection-gsm-gnss-integration',
     'conversion-rate-optimization-cognitive-engineering',
+    'microservices-vs-modular-monolith-enterprise-guide',
+    'kubernetes-cost-optimization-production-workloads',
+    'postgresql-database-indexing-query-performance',
+    'react-19-server-components-client-side-spa',
+    'cross-platform-mobile-react-native-vs-flutter',
+    'legacy-codebase-refactoring-strangler-fig-pattern',
+    'zero-trust-cloud-security-api-gateways',
+    'automated-qa-testing-playwright-cypress-ci-cd',
+    'b2b-customer-acquisition-funnel-engineering',
+    'google-ads-pmax-vs-search-campaigns-b2b',
+    'meta-ads-algorithmic-targeting-creative-scaling',
+    'conversion-rate-optimization-cro-friction-audit',
+    'brand-equity-vs-direct-response-marketing',
+    'marketing-automation-lead-scoring-crm-integration',
+    'programmatic-seo-large-scale-directory-indexing',
+    'vswr-return-loss-rf-antenna-performance',
+    'lpda-vs-yagi-directional-antenna-comparison',
+    'cavity-duplexer-tuning-repeater-isolation',
+    'rf-coaxial-cable-attenuation-loss-lmr400-vs-rg58',
+    'industrial-iot-antenna-selection-lora-gsm-zigbee'
   ]
   for (const slug of blogSlugs) {
     routes.push({ path: `/blog/${slug}`, priority: '0.75', changefreq: 'monthly' })

@@ -116,13 +116,16 @@ export default function BlogPost() {
       />
 
       {/* Hero Header with Conic Pattern (100dvh Screen Fitting) */}
-      <header className="relative overflow-hidden min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 px-4 sm:px-6 pattern-conic text-white border-b-4 border-black dark:border-white">
-        <div className="section-shell max-w-4xl">
+      <header className="relative overflow-hidden min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 px-4 sm:px-6 pattern-conic border-b-4 border-black dark:border-white">
+        {/* High-legibility brutalist backdrop scrim */}
+        <div className="absolute inset-0 bg-white/85 dark:bg-black/80 backdrop-blur-[1px] pointer-events-none" />
+
+        <div className="section-shell relative z-10 max-w-4xl">
           <Motion.div initial="hidden" animate="visible" variants={fadeUp}>
             {/* Breadcrumb */}
             <Link
               to="/blog"
-              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neutral-300 hover:text-white transition-colors mb-6"
+              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors mb-6"
             >
               <HiArrowLeft className="h-4 w-4" />
               Back to All Articles
@@ -130,15 +133,15 @@ export default function BlogPost() {
 
             {/* Meta */}
             <div className="flex flex-wrap items-center gap-3 mb-4">
-              <span className="border-2 border-white bg-black px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-white">
+              <span className="border-2 border-black dark:border-white bg-black text-white dark:bg-white dark:text-black px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider">
                 {post.category}
               </span>
-              <div className="flex items-center gap-1.5 text-xs text-neutral-300 font-mono">
+              <div className="flex items-center gap-1.5 text-xs text-neutral-700 dark:text-neutral-300 font-mono">
                 <HiOutlineClock className="h-4 w-4" />
                 <span>{post.readTime}</span>
               </div>
               <span className="text-xs text-neutral-400">/</span>
-              <span className="text-xs text-neutral-300 font-mono">
+              <span className="text-xs text-neutral-700 dark:text-neutral-300 font-mono">
                 {new Date(post.date).toLocaleDateString('en-IN', {
                   year: 'numeric',
                   month: 'long',
@@ -148,12 +151,12 @@ export default function BlogPost() {
             </div>
 
             {/* Title */}
-            <h1 className="font-heading text-3xl font-black uppercase tracking-tight text-white sm:text-4xl md:text-5xl leading-tight">
+            <h1 className="font-heading text-3xl font-black uppercase tracking-tight text-neutral-950 dark:text-white sm:text-4xl md:text-5xl leading-tight">
               {post.title}
             </h1>
 
             {/* Excerpt */}
-            <p className="mt-4 max-w-3xl text-base sm:text-lg leading-relaxed text-neutral-200">
+            <p className="mt-4 max-w-3xl text-base sm:text-lg leading-relaxed text-neutral-800 dark:text-neutral-200">
               {post.excerpt}
             </p>
 

@@ -202,8 +202,31 @@ html.dark .pattern-dots {
   background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
 }
 
-/* ── Conic Pattern for Service & Product Hero Sections (Uiverse.io by csemszepp) ── */
+/* ── Conic Pattern for Service & Product Hero Sections ── */
+/* Light Mode (Uiverse.io by Juanes200122) */
 .pattern-conic {
+  --s: 200px;
+  --c1: #414141;
+  --c2: #bebebe;
+  --c3: #ffffff;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+}
+
+/* Dark Mode (Uiverse.io by csemszepp) */
+html.dark .pattern-conic {
   --s: 140px;
   --c1: #161616;
   --c2: #2e2f31;
