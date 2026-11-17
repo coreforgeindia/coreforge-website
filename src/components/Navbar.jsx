@@ -113,7 +113,7 @@ export default function Navbar() {
             <img
               src={logoImg}
               alt="CoreForge logo"
-              className="h-8 w-8 object-contain"
+              className="h-8 w-8 object-contain dark:invert logo-img"
               width="32"
               height="32"
             />

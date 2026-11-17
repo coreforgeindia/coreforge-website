@@ -266,7 +266,7 @@ export default function ServiceDetailPage() {
                 <img
                   src={heroImage}
                   alt={service.name}
-                  className="w-full h-80 sm:h-96 object-cover filter contrast-105"
+                  className="w-full h-80 sm:h-96 object-cover filter grayscale contrast-115"
                 />
                 <div className="p-3 bg-black text-white text-xs font-mono flex justify-between">
                   <span>DISCIPLINE: {service.name.toUpperCase()}</span>

@@ -162,6 +162,18 @@ select {
   min-height: 100vh;
 }
 
+/* ── Universal Strict Black & White / Monochrome Image Enforcement ── */
+img:not(.logo-img),
+picture img {
+  filter: grayscale(100%) contrast(115%) !important;
+  -webkit-filter: grayscale(100%) contrast(115%) !important;
+}
+
+.logo-img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
 /* ── Typography Helpers ── */
 .font-heading {
   font-family: var(--font-heading);

@@ -173,7 +173,7 @@ export default function ProductDetailPage() {
                   <img
                     src={productImage}
                     alt={product.name}
-                    className="w-full max-h-[380px] object-contain filter contrast-105"
+                    className="w-full max-h-[380px] object-contain filter grayscale contrast-115"
                   />
                 </div>
                 <div className="p-3 bg-black text-white text-xs font-mono flex justify-between border-t-2 border-black">

@@ -157,7 +157,7 @@ export default function Home() {
                 <img
                   src={marketingImg}
                   alt="360 Digital Marketing Studio"
-                  className="w-full h-72 object-cover filter contrast-110"
+                  className="w-full h-72 object-cover filter grayscale contrast-115"
                   loading="lazy"
                 />
                 <div className="p-3 bg-black text-white text-xs font-mono flex justify-between">
@@ -217,7 +217,7 @@ export default function Home() {
                 <img
                   src={softwareImg}
                   alt="Custom Software & Application Engineering"
-                  className="w-full h-72 object-cover filter contrast-110"
+                  className="w-full h-72 object-cover filter grayscale contrast-115"
                   loading="lazy"
                 />
                 <div className="p-3 bg-black text-white text-xs font-mono flex justify-between">
@@ -373,13 +373,13 @@ export default function Home() {
               {/* Hardware Preview Thumbnails */}
               <div className="lg:col-span-4 grid grid-cols-2 gap-4">
                 <Link to="/products/vhf-uhf-antennas" className="border-2 border-black dark:border-white overflow-hidden bg-neutral-900 h-28 relative block group">
-                  <img src={vhfImg} alt="VHF UHF Antenna" className="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition-transform" loading="lazy" />
+                  <img src={vhfImg} alt="VHF UHF Antenna" className="w-full h-full object-cover filter grayscale contrast-115 group-hover:scale-105 transition-transform" loading="lazy" />
                   <span className="absolute bottom-1 left-1.5 text-[9px] font-mono font-bold text-white bg-black/80 px-1 py-0.5">
                     VHF/UHF →
                   </span>
                 </Link>
                 <Link to="/products/rf-cavity-duplexers" className="border-2 border-black dark:border-white overflow-hidden bg-neutral-900 h-28 relative block group">
-                  <img src={duplexerImg} alt="RF Cavity Duplexer" className="w-full h-full object-cover filter contrast-110 group-hover:scale-105 transition-transform" loading="lazy" />
+                  <img src={duplexerImg} alt="RF Cavity Duplexer" className="w-full h-full object-cover filter grayscale contrast-115 group-hover:scale-105 transition-transform" loading="lazy" />
                   <span className="absolute bottom-1 left-1.5 text-[9px] font-mono font-bold text-white bg-black/80 px-1 py-0.5">
                     DUPLEXERS →
                   </span>

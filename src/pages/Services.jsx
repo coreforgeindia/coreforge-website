@@ -137,7 +137,7 @@ export default function Services() {
                 <img
                   src={marketingDefaultImg}
                   alt="360 Digital Marketing & Brand Identity"
-                  className="w-full h-64 sm:h-72 object-cover filter contrast-110"
+                  className="w-full h-64 sm:h-72 object-cover filter grayscale contrast-115"
                   loading="lazy"
                 />
                 <div className="p-3 bg-black text-white text-xs font-mono flex justify-between">
@@ -173,7 +173,7 @@ export default function Services() {
                       <img
                         src={thumb}
                         alt={item.name}
-                        className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-cover filter grayscale contrast-115 group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
                       />
                       <span className="absolute bottom-1 left-1 bg-black text-white text-[9px] font-mono font-bold px-1.5 py-0.5 uppercase hidden sm:block">
@@ -229,7 +229,7 @@ export default function Services() {
                 <img
                   src={softwareDefaultImg}
                   alt="Custom Software & Application Engineering"
-                  className="w-full h-64 sm:h-72 object-cover filter contrast-110"
+                  className="w-full h-64 sm:h-72 object-cover filter grayscale contrast-115"
                   loading="lazy"
                 />
                 <div className="p-3 bg-black text-white text-xs font-mono flex justify-between">
@@ -265,7 +265,7 @@ export default function Services() {
                       <img
                         src={thumb}
                         alt={item.name}
-                        className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-cover filter grayscale contrast-115 group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
                       />
                       <span className="absolute bottom-1 left-1 bg-black text-white text-[9px] font-mono font-bold px-1.5 py-0.5 uppercase hidden sm:block">

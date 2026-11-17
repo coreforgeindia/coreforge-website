@@ -101,7 +101,7 @@ export default function Products() {
                           <img
                             src={imageSrc}
                             alt={item.name}
-                            className="w-full h-full object-contain filter contrast-105 group-hover:scale-105 transition-transform duration-300"
+                            className="w-full h-full object-contain filter grayscale contrast-115 group-hover:scale-105 transition-transform duration-300"
                             loading="lazy"
                           />
                           <span className="absolute top-1 left-1 bg-black text-white text-[9px] font-mono font-bold px-1.5 py-0.5 uppercase hidden sm:block">
