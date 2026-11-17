@@ -39,8 +39,8 @@ export default function Accordion({ items, allowMultiple = false, className = ''
               >
                 <span>{item.question || item.title}</span>
                 <HiChevronDown
-                  className={`h-5 w-5 flex-shrink-0 text-neutral-500 transition-transform duration-200 ${
-                    isOpen ? 'rotate-180 text-black' : ''
+                  className={`h-5 w-5 flex-shrink-0 text-neutral-500 dark:text-neutral-400 transition-transform duration-200 ${
+                    isOpen ? 'rotate-180 text-black dark:text-white' : ''
                   }`}
                   aria-hidden="true"
                 />

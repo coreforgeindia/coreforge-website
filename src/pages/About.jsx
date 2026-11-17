@@ -13,10 +13,13 @@ export default function About() {
         canonicalUrl="https://www.coreforgeindia.com/about"
       />
 
-      {/* Header */}
-      <section className="relative py-20 sm:py-28 pattern-conic text-white border-b-4 border-black dark:border-white">
+      {/* Header (100dvh Full Viewport Fitting) */}
+      <section className="relative overflow-hidden min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 px-4 sm:px-6 pattern-conic text-white border-b-4 border-black dark:border-white">
         <div className="section-shell">
           <div className="max-w-3xl">
+            <span className="font-mono text-xs uppercase tracking-widest px-2.5 py-1 border border-white bg-black/60 font-bold mb-4 inline-block text-white">
+              BENGALURU HEADQUARTERS
+            </span>
             <h1 className="font-heading text-4xl sm:text-6xl font-black uppercase tracking-tight text-white leading-tight mb-6">
               360° Digital Marketing & Custom Software Engineering
             </h1>
@@ -28,17 +31,17 @@ export default function About() {
       </section>
 
       {/* Philosophy & Facility Details */}
-      <section className="py-20 sm:py-24 border-b border-black/10 bg-white" aria-label="Core Facts">
+      <section className="py-20 sm:py-24 border-b-4 border-black dark:border-white bg-white dark:bg-neutral-950 transition-colors" aria-label="Core Facts">
         <div className="section-shell">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="font-mono text-xs font-bold text-neutral-400 block mb-2 uppercase tracking-wider">
+              <span className="font-mono text-xs font-bold text-neutral-500 dark:text-neutral-400 block mb-2 uppercase tracking-wider">
                 CORE PHILOSOPHY
               </span>
-              <h2 className="font-heading text-3xl font-extrabold text-neutral-950 mb-6">
+              <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-neutral-950 dark:text-white mb-6">
                 Direct Technical Authorship Over Agency Bloat
               </h2>
-              <div className="space-y-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
+              <div className="space-y-4 text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-sans">
                 <p>
                   CoreForge was founded on a simple premise: marketing and software should be engineered with measurable precision, not treated as superficial creative experiments.
                 </p>
@@ -62,43 +65,43 @@ export default function About() {
 
             {/* Quick Fact Cards */}
             <div className="space-y-6">
-              <div className="border border-black/10 p-6 bg-[#fbfbfa] flex items-start gap-4">
-                <div className="p-3 border border-black/10 bg-white text-black">
+              <div className="border-2 border-black dark:border-white p-6 bg-[#fbfbfa] dark:bg-neutral-900 flex items-start gap-4 shadow-[4px_4px_0_#000] dark:shadow-[4px_4px_0_#fff]">
+                <div className="p-3 border-2 border-black dark:border-white bg-white dark:bg-neutral-800 text-black dark:text-white">
                   <HiOutlineClock className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-lg font-bold text-neutral-950 mb-1">
+                  <h3 className="font-heading text-lg font-bold text-neutral-950 dark:text-white mb-1">
                     Founded October 2024
                   </h3>
-                  <p className="text-xs sm:text-sm text-neutral-600">
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
                     MSME-registered technology firm headquartered in Bengaluru, Karnataka, delivering client-focused execution across India and global markets.
                   </p>
                 </div>
               </div>
 
-              <div className="border border-black/10 p-6 bg-[#fbfbfa] flex items-start gap-4">
-                <div className="p-3 border border-black/10 bg-white text-black">
+              <div className="border-2 border-black dark:border-white p-6 bg-[#fbfbfa] dark:bg-neutral-900 flex items-start gap-4 shadow-[4px_4px_0_#000] dark:shadow-[4px_4px_0_#fff]">
+                <div className="p-3 border-2 border-black dark:border-white bg-white dark:bg-neutral-800 text-black dark:text-white">
                   <HiOutlineLocationMarker className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-lg font-bold text-neutral-950 mb-1">
+                  <h3 className="font-heading text-lg font-bold text-neutral-950 dark:text-white mb-1">
                     Bengaluru Headquarters
                   </h3>
-                  <p className="text-xs sm:text-sm text-neutral-600">
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
                     Located at 352, 4th Cross Rd, Rajagopala Nagar, Peenya, Bengaluru 560058, positioned in Karnataka's primary manufacturing and technology corridor.
                   </p>
                 </div>
               </div>
 
-              <div className="border border-black/10 p-6 bg-[#fbfbfa] flex items-start gap-4">
-                <div className="p-3 border border-black/10 bg-white text-black">
+              <div className="border-2 border-black dark:border-white p-6 bg-[#fbfbfa] dark:bg-neutral-900 flex items-start gap-4 shadow-[4px_4px_0_#000] dark:shadow-[4px_4px_0_#fff]">
+                <div className="p-3 border-2 border-black dark:border-white bg-white dark:bg-neutral-800 text-black dark:text-white">
                   <HiOutlineCube className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-lg font-bold text-neutral-950 mb-1">
+                  <h3 className="font-heading text-lg font-bold text-neutral-950 dark:text-white mb-1">
                     Primary Practice: 360° Digital & Software
                   </h3>
-                  <p className="text-xs sm:text-sm text-neutral-600">
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
                     Dedicated focus on Brand Strategy, Performance Marketing, Custom Web & Mobile Apps, plus complementary RF hardware product distribution.
                   </p>
                 </div>
@@ -109,7 +112,7 @@ export default function About() {
       </section>
 
       {/* Direct Contact Banner */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-20 bg-black text-white dark:bg-neutral-900 border-b-4 border-black dark:border-white">
         <div className="section-shell text-center max-w-2xl mx-auto">
           <h2 className="font-heading text-3xl font-extrabold mb-4">
             Ready to Engineer Your Brand or Software Platform?
@@ -118,8 +121,11 @@ export default function About() {
             Connect directly with our technical leads in Bengaluru to discuss your project requirements, scope, and delivery milestones.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link to="/contact" className="border border-white bg-white px-6 py-3 text-xs font-bold uppercase tracking-wider !text-black hover:!bg-neutral-200 transition-colors">
-              Schedule Consultation
+            <Link to="/contact" className="btn-primary">
+              Contact Us Directly
+            </Link>
+            <Link to="/products" className="btn-secondary">
+              View RF Products
             </Link>
           </div>
         </div>

@@ -8,7 +8,7 @@ export default function PageHero({
   children,
 }) {
   return (
-    <section className="relative overflow-hidden py-20 sm:py-28 pattern-conic text-white border-b-4 border-black dark:border-white">
+    <section className="relative overflow-hidden min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 px-4 sm:px-6 pattern-conic text-white border-b-4 border-black dark:border-white">
       <div className="section-shell relative z-10">
         {breadcrumbItems.length > 0 && (
           <div className="mb-6">

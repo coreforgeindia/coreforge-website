@@ -115,8 +115,8 @@ export default function BlogPost() {
         }}
       />
 
-      {/* Hero Header with Conic Pattern */}
-      <header className="relative overflow-hidden pattern-conic text-white border-b-4 border-black dark:border-white py-14 sm:py-20 px-4 sm:px-6">
+      {/* Hero Header with Conic Pattern (100dvh Screen Fitting) */}
+      <header className="relative overflow-hidden min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 px-4 sm:px-6 pattern-conic text-white border-b-4 border-black dark:border-white">
         <div className="section-shell max-w-4xl">
           <Motion.div initial="hidden" animate="visible" variants={fadeUp}>
             {/* Breadcrumb */}

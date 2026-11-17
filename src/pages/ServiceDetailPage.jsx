@@ -66,8 +66,8 @@ export default function ServiceDetailPage() {
         canonicalUrl={`https://www.coreforgeindia.com/services/${service.slug}`}
       />
 
-      {/* Hero Header with Conic Pattern */}
-      <section className="relative py-20 sm:py-28 pattern-conic text-white border-b-4 border-black dark:border-white">
+      {/* Hero Header with Conic Pattern (100dvh Screen Fitting) */}
+      <section className="relative min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 pattern-conic text-white border-b-4 border-black dark:border-white">
         <div className="section-shell relative z-10">
           {/* Breadcrumbs */}
           <nav className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-neutral-400 mb-6">

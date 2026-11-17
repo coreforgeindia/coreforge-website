@@ -8,7 +8,12 @@ import vhfImg from '../assets/products/antenna-vhf-uhf.jpg'
 import gsmImg from '../assets/products/antenna-gsm-lte.jpg'
 import wifiImg from '../assets/products/antenna-wifi.jpg'
 import gpsImg from '../assets/products/antenna-gps-gnss.jpg'
+import lpdaImg from '../assets/products/antenna-lpda.jpg'
+import rfidImg from '../assets/products/antenna-rfid.jpg'
 import duplexerImg from '../assets/products/rf-duplexer.jpg'
+import couplerImg from '../assets/products/rf-coupler.jpg'
+import splitterImg from '../assets/products/rf-splitter.jpg'
+import attenuatorImg from '../assets/products/rf-attenuator.jpg'
 import cablesImg from '../assets/products/rf-cables.jpg'
 
 const productPhotos = {
@@ -16,15 +21,15 @@ const productPhotos = {
   'gsm-lte-antennas': gsmImg,
   'wifi-wlan-antennas': wifiImg,
   'gps-gnss-antennas': gpsImg,
-  'lpa-wideband-antennas': vhfImg,
-  'rfid-antennas': wifiImg,
+  'lpa-wideband-antennas': lpdaImg,
+  'rfid-antennas': rfidImg,
   'rf-cavity-duplexers': duplexerImg,
-  'rf-directional-couplers': duplexerImg,
-  'rf-power-splitters': duplexerImg,
-  'rf-coaxial-attenuators': duplexerImg,
+  'rf-directional-couplers': couplerImg,
+  'rf-power-splitters': splitterImg,
+  'rf-coaxial-attenuators': attenuatorImg,
   'rf-bandpass-filters': duplexerImg,
   'rf-coaxial-cable-assemblies': cablesImg,
-  'rf-lightning-surge-arrestors': cablesImg,
+  'rf-lightning-surge-arrestors': couplerImg,
 }
 
 export default function ProductDetailPage() {
@@ -52,8 +57,8 @@ export default function ProductDetailPage() {
         canonicalUrl={`https://www.coreforgeindia.com/products/${product.slug}`}
       />
 
-      {/* Hero Header with Conic Pattern */}
-      <section className="relative py-20 sm:py-28 pattern-conic text-white border-b-4 border-black dark:border-white">
+      {/* Hero Header with Conic Pattern (100dvh Screen Fitting) */}
+      <section className="relative min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 pattern-conic text-white border-b-4 border-black dark:border-white">
         <div className="section-shell relative z-10">
           {/* Breadcrumbs */}
           <nav className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-neutral-400 mb-6">
@@ -99,14 +104,16 @@ export default function ProductDetailPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Left Column: Image, Specs & Operating Parameters */}
             <div className="lg:col-span-7 space-y-12">
-              {/* Product Photograph */}
-              <div className="border-4 border-black dark:border-white overflow-hidden bg-neutral-900 shadow-[8px_8px_0_#000] dark:shadow-[8px_8px_0_#fff]">
-                <img
-                  src={productImage}
-                  alt={product.name}
-                  className="w-full h-80 sm:h-96 object-cover filter contrast-105"
-                />
-                <div className="p-3 bg-black text-white text-xs font-mono flex justify-between">
+              {/* Product Photograph on pure white background, uncropped */}
+              <div className="border-4 border-black dark:border-white overflow-hidden bg-white shadow-[8px_8px_0_#000] dark:shadow-[8px_8px_0_#fff]">
+                <div className="p-4 sm:p-8 flex items-center justify-center bg-white min-h-[320px]">
+                  <img
+                    src={productImage}
+                    alt={product.name}
+                    className="w-full max-h-[360px] object-contain filter contrast-105"
+                  />
+                </div>
+                <div className="p-3 bg-black text-white text-xs font-mono flex justify-between border-t-2 border-black">
                   <span>EQUIPMENT: {product.name.toUpperCase()}</span>
                   <span>CALIBRATION: 50 OHM IMPEDANCE</span>
                 </div>

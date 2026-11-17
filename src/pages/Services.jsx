@@ -49,8 +49,8 @@ export default function Services() {
         canonicalUrl="https://www.coreforgeindia.com/services"
       />
 
-      {/* Hero Header with Conic Pattern (Uiverse.io by csemszepp) */}
-      <section className="relative py-24 sm:py-32 pattern-conic text-white border-b-4 border-black dark:border-white">
+      {/* Hero Header with Conic Pattern (100dvh Screen Fitting) */}
+      <section className="relative min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 pattern-conic text-white border-b-4 border-black dark:border-white">
         <div className="section-shell relative z-10 text-center max-w-4xl mx-auto">
           <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white leading-tight mb-6">
             Services Architecture
@@ -121,42 +121,37 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Individual Service Cards Grid: 3-column mobile & desktop (3x3 grid) */}
+          <div className="grid grid-cols-3 gap-2.5 sm:gap-4 md:gap-6">
             {marketingCategory?.items.map((item, idx) => {
               const thumb = serviceThumbnails[item.slug] || marketingDefaultImg
               return (
                 <Link
                   key={item.slug}
                   to={`/services/${item.slug}`}
-                  className="brutalist-card group text-left"
+                  className="group flex flex-col justify-between border-2 border-black dark:border-white bg-white dark:bg-neutral-900 p-2 sm:p-4 text-center transition-all duration-200 hover:shadow-[4px_4px_0_#000] dark:hover:shadow-[4px_4px_0_#fff] active:translate-x-0.5 active:translate-y-0.5"
                 >
                   <div>
-                    <div className="relative h-44 w-full overflow-hidden border-2 border-black dark:border-white bg-neutral-100 mb-4">
+                    <div className="relative aspect-square w-full overflow-hidden border-2 border-black dark:border-white bg-white mb-2">
                       <img
                         src={thumb}
                         alt={item.name}
                         className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
                       />
-                      <span className="absolute bottom-2 left-2 bg-black text-white text-[10px] font-mono font-bold px-2 py-0.5 uppercase">
+                      <span className="absolute bottom-1 left-1 bg-black text-white text-[9px] font-mono font-bold px-1.5 py-0.5 uppercase hidden sm:block">
                         0{idx + 1}
                       </span>
                     </div>
 
-                    <span className="brutalist-card__title">
+                    <span className="font-heading text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-tight text-neutral-950 dark:text-white line-clamp-2 leading-tight group-hover:underline">
                       {item.name}
                     </span>
-                    <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6 line-clamp-3">
-                      {item.shortDescription}
-                    </p>
                   </div>
 
-                  <div className="pt-4 border-t-2 border-black dark:border-white flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-black dark:text-white uppercase tracking-wider group-hover:underline">
-                      Explore Capability →
-                    </span>
-                    <span className="text-[10px] font-mono text-neutral-400">
-                      {item.deliverables?.length || 4} Deliverables
+                  <div className="pt-2 sm:pt-3 border-t border-black/10 dark:border-white/10 mt-2 flex items-center justify-center">
+                    <span className="font-mono text-[9px] sm:text-[11px] font-bold text-black dark:text-white uppercase tracking-wider">
+                      Explore →
                     </span>
                   </div>
                 </Link>
@@ -218,42 +213,37 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Individual Service Cards Grid: 3-column mobile & desktop (3x3 / 3x4 grid) */}
+          <div className="grid grid-cols-3 gap-2.5 sm:gap-4 md:gap-6">
             {softwareCategory?.items.map((item, idx) => {
               const thumb = serviceThumbnails[item.slug] || softwareDefaultImg
               return (
                 <Link
                   key={item.slug}
                   to={`/services/${item.slug}`}
-                  className="brutalist-card group text-left"
+                  className="group flex flex-col justify-between border-2 border-black dark:border-white bg-white dark:bg-neutral-900 p-2 sm:p-4 text-center transition-all duration-200 hover:shadow-[4px_4px_0_#000] dark:hover:shadow-[4px_4px_0_#fff] active:translate-x-0.5 active:translate-y-0.5"
                 >
                   <div>
-                    <div className="relative h-44 w-full overflow-hidden border-2 border-black dark:border-white bg-neutral-900 mb-4">
+                    <div className="relative aspect-square w-full overflow-hidden border-2 border-black dark:border-white bg-white mb-2">
                       <img
                         src={thumb}
                         alt={item.name}
                         className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
                       />
-                      <span className="absolute bottom-2 left-2 bg-black text-white text-[10px] font-mono font-bold px-2 py-0.5 uppercase">
+                      <span className="absolute bottom-1 left-1 bg-black text-white text-[9px] font-mono font-bold px-1.5 py-0.5 uppercase hidden sm:block">
                         0{idx + 1}
                       </span>
                     </div>
 
-                    <span className="brutalist-card__title">
+                    <span className="font-heading text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-tight text-neutral-950 dark:text-white line-clamp-2 leading-tight group-hover:underline">
                       {item.name}
                     </span>
-                    <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6 line-clamp-3">
-                      {item.shortDescription}
-                    </p>
                   </div>
 
-                  <div className="pt-4 border-t-2 border-black dark:border-white flex items-center justify-between">
-                    <span className="font-mono text-xs font-bold text-black dark:text-white uppercase tracking-wider group-hover:underline">
-                      Explore Capability →
-                    </span>
-                    <span className="text-[10px] font-mono text-neutral-400">
-                      {item.deliverables?.length || 4} Deliverables
+                  <div className="pt-2 sm:pt-3 border-t border-black/10 dark:border-white/10 mt-2 flex items-center justify-center">
+                    <span className="font-mono text-[9px] sm:text-[11px] font-bold text-black dark:text-white uppercase tracking-wider">
+                      Explore →
                     </span>
                   </div>
                 </Link>

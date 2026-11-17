@@ -29,8 +29,8 @@ export default function Home() {
         canonicalUrl="https://www.coreforgeindia.com/"
       />
 
-      {/* ── 1. Hero Section (Strict Neo-Brutalist & Premium, No Heading Pills) ── */}
-      <section className="relative overflow-hidden py-24 sm:py-36 border-b-4 border-black dark:border-white pattern-grid" aria-labelledby="hero-title">
+      {/* ── 1. Hero Section (Strict Neo-Brutalist & Premium, 100dvh Full Viewport) ── */}
+      <section className="relative overflow-hidden min-h-[100dvh] flex flex-col justify-center pt-24 pb-16 border-b-4 border-black dark:border-white pattern-grid" aria-labelledby="hero-title">
         <div className="section-shell relative z-10 text-center max-w-4xl mx-auto">
           {/* Main H1 in Space Grotesk */}
           <h1
